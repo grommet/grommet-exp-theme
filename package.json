@@ -8,11 +8,12 @@
   },
   "authors": [
     "Eric Soderberg",
-    "Taylor Seamus"
+    "Taylor Seamans"
   ],
   "license": "Apache-2.0",
   "dependencies": {
     "@vanilla-extract/css": "^1.9.5",
-    "@vanilla-extract/recipes": "^0.3.0"
+    "@vanilla-extract/recipes": "^0.3.0",
+    "grommet-exp-tokens": "file:.yalc/grommet-exp-tokens"
   }
 }

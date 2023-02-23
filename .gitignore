@@ -4,3 +4,5 @@ node_modules/
 .npm
 .eslintcache
 dist
+.DS_Store
+.yalc/
