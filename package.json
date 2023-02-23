@@ -12,6 +12,7 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "@vanilla-extract/css": "^1.9.5"
+    "@vanilla-extract/css": "^1.9.5",
+    "@vanilla-extract/recipes": "^0.3.0"
   }
 }
