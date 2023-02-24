@@ -1,5 +1,6 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { tokens } from "grommet-exp-tokens";
+import { vars } from "./theme.css";
 
 export const button = recipe({
   base: {
@@ -21,11 +22,11 @@ export const button = recipe({
       secondary: {
         background: `none`,
         borderWidth: tokens[`stroke.weight.small`],
-        borderColor: tokens[`palette.green.400`],
+        borderColor: vars.color.brand,
         borderStyle: `solid`,
       },
       primary: {
-        background: tokens[`palette.green.400`],
+        background: vars.color.brand,
         border: `none`,
         color: `#FFF`,
       },
