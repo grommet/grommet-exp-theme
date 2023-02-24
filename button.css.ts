@@ -4,11 +4,12 @@ import { vars } from "./theme.css";
 
 export const button = recipe({
   base: {
-    borderRadius: tokens[`radius.full`],
-    color: tokens[`palette.green.400`],
-    fontWeight: tokens[`font.weight.bold`],
-    fontSize: tokens[`font.size.text.medium`],
-    lineHeight: tokens[`font.height.text.medium`],
+    background: "none",
+    borderRadius: vars.radius.full,
+    color: vars.color.text,
+    fontWeight: vars.font.weight.bold,
+    fontSize: vars.font.size.text.medium,
+    lineHeight: vars.font.height.text.medium,
     selectors: {
       [`&:hover`]: {
         cursor: `pointer`,
@@ -20,8 +21,7 @@ export const button = recipe({
     kind: {
       default: {},
       secondary: {
-        background: `none`,
-        borderWidth: tokens[`stroke.weight.small`],
+        borderWidth: vars.stroke.weight.small,
         borderColor: vars.color.brand,
         borderStyle: `solid`,
       },
@@ -33,23 +33,24 @@ export const button = recipe({
     },
     size: {
       small: {
-        paddingLeft: tokens[`spacing.medium`],
-        paddingRight: tokens[`spacing.medium`],
-        paddingTop: tokens[`spacing.xsmall`],
-        paddingBottom: tokens[`spacing.xsmall`],
+        paddingLeft: vars.spacing.medium,
+        paddingRight: vars.spacing.medium,
+        paddingTop: vars.spacing.xsmall,
+        paddingBottom: vars.spacing.xsmall,
         fontSize: tokens[`font.size.text.small`],
+        lineHeight: tokens[`font.height.text.small`],
       },
       medium: {
-        paddingLeft: tokens[`spacing.medium`],
-        paddingRight: tokens[`spacing.medium`],
-        paddingTop: tokens[`spacing.xsmall`],
-        paddingBottom: tokens[`spacing.xsmall`],
+        paddingLeft: vars.spacing.medium,
+        paddingRight: vars.spacing.medium,
+        paddingTop: vars.spacing.xsmall,
+        paddingBottom: vars.spacing.xsmall,
       },
       large: {
-        paddingLeft: tokens[`spacing.medium`],
-        paddingRight: tokens[`spacing.medium`],
-        paddingTop: tokens[`spacing.small`],
-        paddingBottom: tokens[`spacing.small`],
+        paddingLeft: vars.spacing.medium,
+        paddingRight: vars.spacing.medium,
+        paddingTop: vars.spacing.small,
+        paddingBottom: vars.spacing.small,
       },
     },
     iconOnly: {
@@ -65,7 +66,7 @@ export const button = recipe({
         size: `medium`,
       },
       style: {
-        padding: tokens[`spacing.xsmall`],
+        padding: vars.spacing.xsmall,
       },
     },
   ],
