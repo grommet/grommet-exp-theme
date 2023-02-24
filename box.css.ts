@@ -40,4 +40,9 @@ export const box = recipe({
       large: { padding: vars.spacing.large },
     },
   },
+  defaultVariants: {
+    align: 'stretch',
+    direction: 'column',
+    justify: 'start',
+  },
 });
