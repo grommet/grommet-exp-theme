@@ -1,20 +1,20 @@
-import { recipe } from '@vanilla-extract/recipes';
-import { vars } from "./vars.css";
+import { recipe } from "@vanilla-extract/recipes";
+import { vars } from "./theme.css";
 
 export const box = recipe({
   base: {
-    display: 'flex',
+    display: "flex",
   },
   variants: {
     align: {
-      start: { alignItems: 'flex-start' },
-      center: { alignItems: 'center' },
-      stretch: { alignItems: 'stretch' },
-      end: { alignItems: 'flex-end' },
+      start: { alignItems: "flex-start" },
+      center: { alignItems: "center" },
+      stretch: { alignItems: "stretch" },
+      end: { alignItems: "flex-end" },
     },
     direction: {
-      column: { flexDirection: 'column' },
-      row: { flexDirection: 'row' },
+      column: { flexDirection: "column" },
+      row: { flexDirection: "row" },
     },
     gap: {
       small: { gap: vars.spacing.small },
@@ -22,12 +22,12 @@ export const box = recipe({
       large: { gap: vars.spacing.large },
     },
     justify: {
-      around: { justifyContent: 'space-around' },
-      between: { justifyContent: 'space-between' },
-      center: { justifyContent: 'center' },
-      end: { justifyContent: 'flex-end' },
-      evenly: { justifyContent: 'space-evenly' },
-      start: { justifyContent: 'flex-start' },
+      around: { justifyContent: "space-around" },
+      between: { justifyContent: "space-between" },
+      center: { justifyContent: "center" },
+      end: { justifyContent: "flex-end" },
+      evenly: { justifyContent: "space-evenly" },
+      start: { justifyContent: "flex-start" },
     },
     margin: {
       small: { margin: vars.spacing.small },
