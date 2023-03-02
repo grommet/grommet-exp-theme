@@ -1,7 +1,37 @@
 import { createTheme, createThemeContract } from "@vanilla-extract/css";
 import { tokens } from "grommet-exp-tokens";
 
-const commonVars = {
+type Pallete = { [key:string]: string }
+
+const base = {
+  pallete: Object
+    .keys(tokens)
+    .filter(k => k.startsWith('pallete'))
+    .reduce((o:Pallete, k:string) => o[k] = tokens[k], {} as Pallete),
+  color: {
+    background: {
+      base: `${tokens["color.background.base"]}`,
+      back: `${tokens["color.background.back"]}`,
+      front: `${tokens["color.background.front"]}`,
+      contrast: `${tokens["color.background.contrast"]}`,
+    },
+    border: `${tokens["color.border"]}`,
+    brand: `${tokens["color.brand"]}`,
+    heading: `${tokens["color.text"]}`,
+    text: `${tokens["color.text"]}`,
+  },
+  elevation: {
+    small: `${tokens["elevation.small"]}`,
+    medium: `${tokens["elevation.medium"]}`,
+    large: `${tokens["elevation.large"]}`,
+  },
+  size: {
+    content: {
+      small: `${tokens["size.content.small"]}`,
+      medium: `${tokens["size.content.medium"]}`,
+      large: `${tokens["size.content.large"]}`,
+    },
+  },
   spacing: {
     "3xsmall": `${tokens["spacing.3xsmall"]}`,
     "2xsmall": `${tokens["spacing.2xsmall"]}`,
@@ -52,20 +82,15 @@ const commonVars = {
   },
 };
 
-export const vars = createThemeContract({
-  color: {
-    text: ``,
-    heading: ``,
-    brand: ``,
-  },
-  ...commonVars,
-});
+export const vars = createThemeContract(base);
 
 export const lightThemeClass = createTheme(vars, {
+  ...base,
   color: {
+    ...base.color,
     text: `#333`,
     heading: `#222`,
+    border: `${tokens[`color.border`]}`,
     brand: `${tokens[`color.brand`]}`,
   },
-  ...commonVars,
 });
