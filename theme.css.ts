@@ -59,6 +59,11 @@ const base = {
     },
   },
   font: {
+    family: `${tokens["font.family"]}`,
+    fallback: `${tokens["font.fallback"]}`,
+    // url: {
+    //   light: `${tokens["font.url.light"]}`,
+    // },
     weight: {
       light: `${tokens["font.weight.light"]}`,
       regular: `${tokens["font.weight.regular"]}`,
@@ -84,7 +89,7 @@ const base = {
 
 export const vars = createThemeContract(base);
 
-export const lightThemeClass = createTheme(vars, {
+export const theme = createTheme(vars, {
   ...base,
   color: {
     ...base.color,
