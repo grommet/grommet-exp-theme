@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
-  "files": ["*.css.ts", ".yalc"],
+  "files": [
+    "*.css.ts",
+    ".yalc"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

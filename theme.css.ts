@@ -31,6 +31,13 @@ const base = {
       medium: `${tokens["size.content.medium"]}`,
       large: `${tokens["size.content.large"]}`,
     },
+    page: {
+      min: tokens["size.page.min"],
+      max: {
+        narrow: tokens["size.page.max.narrow"],
+        wide: tokens["size.page.max.wide"],
+      }
+    }
   },
   spacing: {
     "3xsmall": `${tokens["spacing.3xsmall"]}`,

@@ -1,5 +1,6 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "./theme.css";
+import { background } from "./background.css";
 
 export const box = recipe({
   base: {
@@ -12,14 +13,11 @@ export const box = recipe({
       stretch: { alignItems: "stretch" },
       end: { alignItems: "flex-end" },
     },
-    background: {
-      base: { backgroundColor: vars.color.background.base },
-      back: { backgroundColor: vars.color.background.back },
-      front: { backgroundColor: vars.color.background.front },
-      contrast: { backgroundColor: vars.color.background.contrast },
-    },
+    background,
     border: {
-      true: { border: `${vars.stroke.weight.medium} solid ${vars.color.border}`},
+      true: {
+        border: `${vars.stroke.weight.medium} solid ${vars.color.border}`,
+      },
       false: { border: "none" },
     },
     direction: {
@@ -27,9 +25,9 @@ export const box = recipe({
       row: { flexDirection: "row" },
     },
     elevation: {
-      small: { gap: vars.elevation.small },
-      medium: { gap: vars.elevation.medium },
-      large: { gap: vars.elevation.large },
+      small: { boxShadow: vars.elevation.small },
+      medium: { boxShadow: vars.elevation.medium },
+      large: { boxShadow: vars.elevation.large },
     },
     flex: {
       true: { flex: "1 1 auto" },
@@ -41,11 +39,12 @@ export const box = recipe({
       small: { gap: vars.spacing.small },
       medium: { gap: vars.spacing.medium },
       large: { gap: vars.spacing.large },
+      none: { gap: 0 },
     },
     height: {
-      small: { padding: vars.size.content.small },
-      medium: { padding: vars.size.content.medium },
-      large: { padding: vars.size.content.large },
+      small: { height: vars.size.content.small },
+      medium: { height: vars.size.content.medium },
+      large: { height: vars.size.content.large },
     },
     justify: {
       around: { justifyContent: "space-around" },
@@ -59,21 +58,78 @@ export const box = recipe({
       small: { margin: vars.spacing.small },
       medium: { margin: vars.spacing.medium },
       large: { margin: vars.spacing.large },
+      none: { margin: 0 },
     },
     pad: {
       small: { padding: vars.spacing.small },
       medium: { padding: vars.spacing.medium },
       large: { padding: vars.spacing.large },
+      none: { padding: 0 },
+    },
+    padHorizontal: {
+      small: {
+        paddingInlineStart: vars.spacing.small,
+        paddingInlineEnd: vars.spacing.small,
+      },
+      medium: {
+        paddingInlineStart: vars.spacing.medium,
+        paddingInlineEnd: vars.spacing.medium,
+      },
+      large: {
+        paddingInlineStart: vars.spacing.large,
+        paddingInlineEnd: vars.spacing.large,
+      },
+      none: { paddingInlineStart: 0, paddingInlineEnd: 0 },
+    },
+    padVertical: {
+      small: {
+        paddingTop: vars.spacing.small,
+        paddingBottom: vars.spacing.small,
+      },
+      medium: {
+        paddingTop: vars.spacing.medium,
+        paddingBottom: vars.spacing.medium,
+      },
+      large: {
+        paddingTop: vars.spacing.large,
+        paddingBottom: vars.spacing.large,
+      },
+      none: { paddingTop: 0, paddingBottom: 0 },
+    },
+    padTop: {
+      small: { paddingTop: vars.spacing.small },
+      medium: { paddingTop: vars.spacing.medium },
+      large: { paddingTop: vars.spacing.large },
+      none: { paddingTop: 0 },
+    },
+    paddingBottom: {
+      small: { paddingBottom: vars.spacing.small },
+      medium: { paddingBottom: vars.spacing.medium },
+      large: { paddingBottom: vars.spacing.large },
+      none: { paddingBottom: 0 },
+    },
+    paddingStart: {
+      small: { paddingInlineStart: vars.spacing.small },
+      medium: { paddingInlineStart: vars.spacing.medium },
+      large: { paddingInlineStart: vars.spacing.large },
+      none: { paddingInlineStart: 0 },
+    },
+    paddingEnd: {
+      small: { paddingInlineEnd: vars.spacing.small },
+      medium: { paddingInlineEnd: vars.spacing.medium },
+      large: { paddingInlineEnd: vars.spacing.large },
+      none: { paddingInlineEnd: 0 },
     },
     round: {
       small: { borderRadius: vars.radius.small },
       medium: { borderRadius: vars.radius.medium },
       large: { borderRadius: vars.radius.large },
+      none: { padding: 0 },
     },
     width: {
-      small: { padding: vars.size.content.small },
-      medium: { padding: vars.size.content.medium },
-      large: { padding: vars.size.content.large },
+      small: { width: vars.size.content.small },
+      medium: { width: vars.size.content.medium },
+      large: { width: vars.size.content.large },
     },
     wrap: {
       true: { flexWrap: "wrap" },
@@ -81,8 +137,8 @@ export const box = recipe({
     },
   },
   defaultVariants: {
-    align: 'stretch',
-    direction: 'column',
-    justify: 'start',
+    align: "stretch",
+    direction: "column",
+    justify: "start",
   },
 });

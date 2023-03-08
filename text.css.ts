@@ -4,6 +4,7 @@ import { vars } from "./theme.css";
 export const text = recipe({
   base: {
     color: vars.color.text,
+    margin: 0, // for paragraph
   },
   variants: {
     size: {

@@ -4,6 +4,7 @@ import { vars } from "./theme.css";
 export const heading = recipe({
   base: {
     color: vars.color.heading,
+    margin: 0,
   },
   variants: {
     level: {
