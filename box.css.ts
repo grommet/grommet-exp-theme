@@ -60,6 +60,60 @@ export const box = recipe({
       large: { margin: vars.spacing.large },
       none: { margin: 0 },
     },
+    marginHorizontal: {
+      small: {
+        marginInlineStart: vars.spacing.small,
+        marginInlineEnd: vars.spacing.small,
+      },
+      medium: {
+        marginInlineStart: vars.spacing.medium,
+        marginInlineEnd: vars.spacing.medium,
+      },
+      large: {
+        marginInlineStart: vars.spacing.large,
+        marginInlineEnd: vars.spacing.large,
+      },
+      none: { marginInlineStart: 0, marginInlineEnd: 0 },
+    },
+    marginVertical: {
+      small: {
+        marginTop: vars.spacing.small,
+        marginBottom: vars.spacing.small,
+      },
+      medium: {
+        marginTop: vars.spacing.medium,
+        marginBottom: vars.spacing.medium,
+      },
+      large: {
+        marginTop: vars.spacing.large,
+        marginBottom: vars.spacing.large,
+      },
+      none: { marginTop: 0, marginBottom: 0 },
+    },
+    marginTop: {
+      small: { marginTop: vars.spacing.small },
+      medium: { marginTop: vars.spacing.medium },
+      large: { marginTop: vars.spacing.large },
+      none: { marginTop: 0 },
+    },
+    marginBottom: {
+      small: { marginBottom: vars.spacing.small },
+      medium: { marginBottom: vars.spacing.medium },
+      large: { marginBottom: vars.spacing.large },
+      none: { marginBottom: 0 },
+    },
+    marginStart: {
+      small: { marginInlineStart: vars.spacing.small },
+      medium: { marginInlineStart: vars.spacing.medium },
+      large: { marginInlineStart: vars.spacing.large },
+      none: { marginInlineStart: 0 },
+    },
+    marginEnd: {
+      small: { marginInlineEnd: vars.spacing.small },
+      medium: { marginInlineEnd: vars.spacing.medium },
+      large: { marginInlineEnd: vars.spacing.large },
+      none: { marginInlineEnd: 0 },
+    },
     pad: {
       small: { padding: vars.spacing.small },
       medium: { padding: vars.spacing.medium },
@@ -102,19 +156,19 @@ export const box = recipe({
       large: { paddingTop: vars.spacing.large },
       none: { paddingTop: 0 },
     },
-    paddingBottom: {
+    padBottom: {
       small: { paddingBottom: vars.spacing.small },
       medium: { paddingBottom: vars.spacing.medium },
       large: { paddingBottom: vars.spacing.large },
       none: { paddingBottom: 0 },
     },
-    paddingStart: {
+    padStart: {
       small: { paddingInlineStart: vars.spacing.small },
       medium: { paddingInlineStart: vars.spacing.medium },
       large: { paddingInlineStart: vars.spacing.large },
       none: { paddingInlineStart: 0 },
     },
-    paddingEnd: {
+    padEnd: {
       small: { paddingInlineEnd: vars.spacing.small },
       medium: { paddingInlineEnd: vars.spacing.medium },
       large: { paddingInlineEnd: vars.spacing.large },

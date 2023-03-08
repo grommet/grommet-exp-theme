@@ -1,24 +1,25 @@
 import { createTheme, createThemeContract } from "@vanilla-extract/css";
 import { tokens } from "grommet-exp-tokens";
 
-type Pallete = { [key:string]: string }
-
-const base = {
-  pallete: Object
-    .keys(tokens)
-    .filter(k => k.startsWith('pallete'))
-    .reduce((o:Pallete, k:string) => o[k] = tokens[k], {} as Pallete),
-  color: {
+const base = {color: {
     background: {
-      base: `${tokens["color.background.base"]}`,
+      normal: `${tokens["color.background.base"]}`,
       back: `${tokens["color.background.back"]}`,
       front: `${tokens["color.background.front"]}`,
       contrast: `${tokens["color.background.contrast"]}`,
     },
-    border: `${tokens["color.border"]}`,
+    border: {
+      normal: `${tokens["color.border"]}`,
+      weak: `${tokens["color.border.weak"]}`,
+      strong: `${tokens["color.border.strong"]}`,
+    },
     brand: `${tokens["color.brand"]}`,
     heading: `${tokens["color.text"]}`,
-    text: `${tokens["color.text"]}`,
+    text: {
+      normal: `${tokens["color.text"]}`,
+      weak: `${tokens["color.text.weak"]}`,
+      strong: `${tokens["color.text.strong"]}`,
+    },
   },
   elevation: {
     small: `${tokens["elevation.small"]}`,
@@ -83,12 +84,16 @@ const base = {
       text: {
         small: `${tokens["font.height.text.small"]}`,
         medium: `${tokens["font.height.text.medium"]}`,
+        large: `${tokens["font.height.text.large"]}`,
+        xlarge: `${tokens["font.height.text.xlarge"]}`,
       },
     },
     size: {
       text: {
         small: `${tokens["font.size.text.small"]}`,
         medium: `${tokens["font.size.text.medium"]}`,
+        large: `${tokens["font.size.text.large"]}`,
+        xlarge: `${tokens["font.size.text.xlarge"]}`,
       },
     },
   },
@@ -100,9 +105,15 @@ export const theme = createTheme(vars, {
   ...base,
   color: {
     ...base.color,
-    text: `#333`,
+    text: {
+      ...base.color.text,
+      normal: `#333`,
+    },
     heading: `#222`,
-    border: `${tokens[`color.border`]}`,
+    border: {
+      ...base.color.border,
+      normal: `${tokens[`color.border`]}`,
+    },
     brand: `${tokens[`color.brand`]}`,
   },
 });

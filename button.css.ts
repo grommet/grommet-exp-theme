@@ -6,7 +6,7 @@ export const button = recipe({
   base: {
     background: "none",
     borderRadius: vars.radius.full,
-    color: vars.color.text,
+    color: vars.color.text.normal,
     fontWeight: vars.font.weight.bold,
     fontSize: vars.font.size.text.medium,
     lineHeight: vars.font.height.text.medium,
