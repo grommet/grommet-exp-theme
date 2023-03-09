@@ -6,6 +6,7 @@ export const button = recipe({
   base: {
     background: "none",
     borderRadius: vars.radius.full,
+    boxSizing: "border-box",
     color: vars.color.text.normal,
     fontWeight: vars.font.weight.bold,
     fontSize: vars.font.size.text.medium,
@@ -19,7 +20,16 @@ export const button = recipe({
 
   variants: {
     kind: {
-      default: {},
+      default: {
+        borderRadius: '2em',
+        borderStyle: 'none',
+        color: vars.color.text.strong,
+        fontWeight: vars.font.weight.bold,
+        ':hover': {
+          backgroundColor: vars.color.background.contrast,
+          color: undefined,
+        },
+      },
       secondary: {
         borderWidth: vars.stroke.weight.small,
         borderColor: vars.color.brand,
@@ -54,7 +64,10 @@ export const button = recipe({
       },
     },
     iconOnly: {
-      true: {},
+      true: {
+        padding: vars.spacing.xsmall,
+        lineHeight: 0,
+      },
     },
   },
 

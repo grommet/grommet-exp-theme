@@ -5,6 +5,7 @@ import { background } from "./background.css";
 export const box = recipe({
   base: {
     display: "flex",
+    boxSizing: "border-box",
   },
   variants: {
     align: {
@@ -16,9 +17,15 @@ export const box = recipe({
     background,
     border: {
       true: {
-        border: `${vars.stroke.weight.medium} solid ${vars.color.border}`,
+        border: `${vars.stroke.weight.xsmall} solid ${vars.color.border.normal}`,
       },
       false: { border: "none" },
+      top: {
+        borderTop: `${vars.stroke.weight.xsmall} solid ${vars.color.border.normal}`,
+      },
+      bottom: {
+        borderBottom: `${vars.stroke.weight.xsmall} solid ${vars.color.border.normal}`,
+      },
     },
     direction: {
       column: { flexDirection: "column" },
@@ -45,6 +52,7 @@ export const box = recipe({
       small: { height: vars.size.content.small },
       medium: { height: vars.size.content.medium },
       large: { height: vars.size.content.large },
+      xlarge: { height: vars.size.content.xlarge },
     },
     justify: {
       around: { justifyContent: "space-around" },
@@ -184,6 +192,7 @@ export const box = recipe({
       small: { width: vars.size.content.small },
       medium: { width: vars.size.content.medium },
       large: { width: vars.size.content.large },
+      xlarge: { width: vars.size.content.xlarge },
     },
     wrap: {
       true: { flexWrap: "wrap" },

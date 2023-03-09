@@ -1,7 +1,8 @@
 import { createTheme, createThemeContract } from "@vanilla-extract/css";
 import { tokens } from "grommet-exp-tokens";
 
-const base = {color: {
+const base = {
+  color: {
     background: {
       normal: `${tokens["color.background.base"]}`,
       back: `${tokens["color.background.back"]}`,
@@ -27,18 +28,25 @@ const base = {color: {
     large: `${tokens["elevation.large"]}`,
   },
   size: {
+    icon: {
+      small: `${tokens["size.icon.small"]}`,
+      medium: `${tokens["size.icon.medium"]}`,
+      large: `${tokens["size.icon.large"]}`,
+      xlarge: `${tokens["size.icon.xlarge"]}`,
+    },
     content: {
       small: `${tokens["size.content.small"]}`,
       medium: `${tokens["size.content.medium"]}`,
       large: `${tokens["size.content.large"]}`,
+      xlarge: `${tokens["size.content.xlarge"]}`,
     },
     page: {
       min: tokens["size.page.min"],
       max: {
         narrow: tokens["size.page.max.narrow"],
         wide: tokens["size.page.max.wide"],
-      }
-    }
+      },
+    },
   },
   spacing: {
     "3xsmall": `${tokens["spacing.3xsmall"]}`,
