@@ -8,9 +8,10 @@ export const button = recipe({
     borderRadius: vars.radius.full,
     boxSizing: "border-box",
     color: vars.color.text.normal,
+    fontFamily: vars.font.family,
     fontWeight: vars.font.weight.bold,
-    fontSize: vars.font.size.text.medium,
-    lineHeight: vars.font.height.text.medium,
+    fontSize: vars.text.medium.desktop.size,
+    lineHeight: vars.text.medium.desktop.size,
     selectors: {
       [`&:hover`]: {
         cursor: `pointer`,
@@ -21,11 +22,11 @@ export const button = recipe({
   variants: {
     kind: {
       default: {
-        borderRadius: '2em',
-        borderStyle: 'none',
+        borderRadius: "2em",
+        borderStyle: "none",
         color: vars.color.text.strong,
         fontWeight: vars.font.weight.bold,
-        ':hover': {
+        ":hover": {
           backgroundColor: vars.color.background.contrast,
           color: undefined,
         },

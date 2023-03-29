@@ -77,9 +77,13 @@ const base = {
   font: {
     family: `${tokens["font.family"]}`,
     fallback: `${tokens["font.fallback"]}`,
-    // url: {
-    //   light: `${tokens["font.url.light"]}`,
-    // },
+    url: {
+      light: `${tokens["font.url.light"]}`,
+      regular: `${tokens["font.url.regular"]}`,
+      medium: `${tokens["font.url.medium"]}`,
+      semibold: `${tokens["font.url.semibold"]}`,
+      bold: `${tokens["font.url.bold"]}`,
+    },
     weight: {
       light: `${tokens["font.weight.light"]}`,
       regular: `${tokens["font.weight.regular"]}`,
@@ -88,20 +92,144 @@ const base = {
       bold: `${tokens["font.weight.bold"]}`,
       black: `${tokens["font.weight.black"]}`,
     },
-    height: {
-      text: {
-        small: `${tokens["font.height.text.small"]}`,
-        medium: `${tokens["font.height.text.medium"]}`,
-        large: `${tokens["font.height.text.large"]}`,
-        xlarge: `${tokens["font.height.text.xlarge"]}`,
+  },
+  heading: {
+    1: {
+      mobile: {
+        height: `${tokens["heading.1.mobile.height"]}`,
+        size: `${tokens["heading.1.mobile.size"]}`,
+        weight: `${tokens["heading.1.mobile.weight"]}`,
+      },
+      tablet: {
+        height: `${tokens["heading.1.tablet.height"]}`,
+        size: `${tokens["heading.1.tablet.size"]}`,
+        weight: `${tokens["heading.1.tablet.weight"]}`,
+      },
+      desktop: {
+        height: `${tokens["heading.1.desktop.height"]}`,
+        size: `${tokens["heading.1.desktop.size"]}`,
+        weight: `${tokens["heading.1.desktop.weight"]}`,
       },
     },
-    size: {
-      text: {
-        small: `${tokens["font.size.text.small"]}`,
-        medium: `${tokens["font.size.text.medium"]}`,
-        large: `${tokens["font.size.text.large"]}`,
-        xlarge: `${tokens["font.size.text.xlarge"]}`,
+    2: {
+      mobile: {
+        height: `${tokens["heading.2.mobile.height"]}`,
+        size: `${tokens["heading.2.mobile.size"]}`,
+        weight: `${tokens["heading.2.mobile.weight"]}`,
+      },
+      tablet: {
+        height: `${tokens["heading.2.tablet.height"]}`,
+        size: `${tokens["heading.2.tablet.size"]}`,
+        weight: `${tokens["heading.2.tablet.weight"]}`,
+      },
+      desktop: {
+        height: `${tokens["heading.2.desktop.height"]}`,
+        size: `${tokens["heading.2.desktop.size"]}`,
+        weight: `${tokens["heading.2.desktop.weight"]}`,
+      },
+    },
+    3: {
+      mobile: {
+        height: `${tokens["heading.3.mobile.height"]}`,
+        size: `${tokens["heading.3.mobile.size"]}`,
+        weight: `${tokens["heading.3.mobile.weight"]}`,
+      },
+      tablet: {
+        height: `${tokens["heading.3.tablet.height"]}`,
+        size: `${tokens["heading.3.tablet.size"]}`,
+        weight: `${tokens["heading.3.tablet.weight"]}`,
+      },
+      desktop: {
+        height: `${tokens["heading.3.desktop.height"]}`,
+        size: `${tokens["heading.3.desktop.size"]}`,
+        weight: `${tokens["heading.3.desktop.weight"]}`,
+      },
+    },
+  },
+  text: {
+    xsmall: {
+      mobile: {
+        height: `${tokens["text.xsmall.mobile.height"]}`,
+        size: `${tokens["text.xsmall.mobile.size"]}`,
+        weight: `${tokens["text.xsmall.mobile.weight"]}`,
+      },
+      tablet: {
+        height: `${tokens["text.xsmall.tablet.height"]}`,
+        size: `${tokens["text.xsmall.tablet.size"]}`,
+        weight: `${tokens["text.xsmall.tablet.weight"]}`,
+      },
+      desktop: {
+        height: `${tokens["text.xsmall.desktop.height"]}`,
+        size: `${tokens["text.xsmall.desktop.size"]}`,
+        weight: `${tokens["text.xsmall.desktop.weight"]}`,
+      },
+    },
+    small: {
+      mobile: {
+        height: `${tokens["text.small.mobile.height"]}`,
+        size: `${tokens["text.small.mobile.size"]}`,
+        weight: `${tokens["text.small.mobile.weight"]}`,
+      },
+      tablet: {
+        height: `${tokens["text.small.tablet.height"]}`,
+        size: `${tokens["text.small.tablet.size"]}`,
+        weight: `${tokens["text.small.tablet.weight"]}`,
+      },
+      desktop: {
+        height: `${tokens["text.small.desktop.height"]}`,
+        size: `${tokens["text.small.desktop.size"]}`,
+        weight: `${tokens["text.small.desktop.weight"]}`,
+      },
+    },
+    medium: {
+      mobile: {
+        height: `${tokens["text.medium.mobile.height"]}`,
+        size: `${tokens["text.medium.mobile.size"]}`,
+        weight: `${tokens["text.medium.mobile.weight"]}`,
+      },
+      tablet: {
+        height: `${tokens["text.medium.tablet.height"]}`,
+        size: `${tokens["text.medium.tablet.size"]}`,
+        weight: `${tokens["text.medium.tablet.weight"]}`,
+      },
+      desktop: {
+        height: `${tokens["text.medium.desktop.height"]}`,
+        size: `${tokens["text.medium.desktop.size"]}`,
+        weight: `${tokens["text.medium.desktop.weight"]}`,
+      },
+    },
+    large: {
+      mobile: {
+        height: `${tokens["text.large.mobile.height"]}`,
+        size: `${tokens["text.large.mobile.size"]}`,
+        weight: `${tokens["text.large.mobile.weight"]}`,
+      },
+      tablet: {
+        height: `${tokens["text.large.tablet.height"]}`,
+        size: `${tokens["text.large.tablet.size"]}`,
+        weight: `${tokens["text.large.tablet.weight"]}`,
+      },
+      desktop: {
+        height: `${tokens["text.large.desktop.height"]}`,
+        size: `${tokens["text.large.desktop.size"]}`,
+        weight: `${tokens["text.large.desktop.weight"]}`,
+      },
+    },
+    xlarge: {
+      mobile: {
+        height: `${tokens["text.xlarge.mobile.height"]}`,
+        size: `${tokens["text.xlarge.mobile.size"]}`,
+        weight: `${tokens["text.xlarge.mobile.weight"]}`,
+      },
+      tablet: {
+        height: `${tokens["text.xlarge.tablet.height"]}`,
+        size: `${tokens["text.xlarge.tablet.size"]}`,
+        weight: `${tokens["text.xlarge.tablet.weight"]}`,
+      },
+      desktop: {
+        height: `${tokens["text.xlarge.desktop.height"]}`,
+        size: `${tokens["text.xlarge.desktop.size"]}`,
+        weight: `${tokens["text.xlarge.desktop.weight"]}`,
       },
     },
   },
@@ -115,7 +243,6 @@ export const theme = createTheme(vars, {
     ...base.color,
     text: {
       ...base.color.text,
-      normal: `#333`,
     },
     heading: `#222`,
     border: {
