@@ -19,17 +19,20 @@ const sizeStyle = (size: "xsmall" | "small" | "medium" | "large" | "xlarge") => 
     fontSize: vars.text[size].mobile.size,
     lineHeight: vars.text[size].mobile.height,
     fontWeight: vars.text[size].mobile.weight,
+    maxWidth: '25em',
   },
   responsiveStyle({
     desktop: {
       fontSize: vars.text[size].desktop.size,
       lineHeight: vars.text[size].desktop.height,
       fontWeight: vars.text[size].desktop.weight,
+      maxWidth: '25em',
     },
     tablet: {
       fontSize: vars.text[size].tablet.size,
       lineHeight: vars.text[size].tablet.height,
       fontWeight: vars.text[size].tablet.weight,
+      maxWidth: '25em',
     },
   }),
 ];
