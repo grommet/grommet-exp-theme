@@ -1,5 +1,4 @@
 export * from "./anchor.css";
-export * from "./background.css";
 export * from "./box.css";
 export * from "./button.css";
 export * from "./grommet.css";
