@@ -1,42 +1,31 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "./theme.css";
 
-const responsiveStyle = ({
-  desktop,
-  tablet,
-}: {
-  desktop: any;
-  tablet: any;
-}) => ({
-  "@media": {
-    "only screen and (min-width: 768px)": tablet,
-    "only screen and (min-width: 1536px)": desktop,
-  },
-});
-
-const sizeStyle = (size: "xsmall" | "small" | "medium" | "large" | "xlarge") => [
-  {
-    fontSize: vars.text[size].mobile.size,
-    lineHeight: vars.text[size].mobile.height,
-    fontWeight: vars.text[size].mobile.weight,
-  },
-  responsiveStyle({
-    desktop: {
-      fontSize: vars.text[size].desktop.size,
-      lineHeight: vars.text[size].desktop.height,
-      fontWeight: vars.text[size].desktop.weight,
-    },
-    tablet: {
-      fontSize: vars.text[size].tablet.size,
-      lineHeight: vars.text[size].tablet.height,
-      fontWeight: vars.text[size].tablet.weight,
-    },
-  }),
-];
+const xsmall = {
+  fontSize: `${vars.text.xsmall.size}`,
+  fontWeight: `${vars.font.weight.regular}`,
+};
+const small = {
+  fontSize: `${vars.text.small.size}`,
+  fontWeight: `${vars.font.weight.regular}`,
+};
+const medium = {
+  fontSize: `${vars.text.medium.size}`,
+  fontWeight: `${vars.font.weight.regular}`,
+};
+const large = {
+  fontSize: `${vars.text.large.size}`,
+  fontWeight: `${vars.font.weight.light}`,
+};
+const xlarge = {
+  fontSize: `${vars.text.xlarge.size}`,
+  fontWeight: `${vars.font.weight.light}`,
+};
 
 export const text = recipe({
   base: {
     color: vars.text.color.normal,
+    lineHeight: vars.text.height,
     margin: 0, // for paragraph
   },
   variants: {
@@ -46,16 +35,16 @@ export const text = recipe({
       weak: { color: vars.text.color.weak },
     },
     size: {
-      xsmall: sizeStyle("xsmall"),
-      small: sizeStyle("small"),
-      medium: sizeStyle("medium"),
-      large: sizeStyle("large"),
-      xlarge: sizeStyle("xlarge"),
+      xlarge: xlarge,
+      large: large,
+      medium: medium,
+      small: small,
+      xsmall: xsmall,
     },
     level: {
-      1: sizeStyle("xlarge"),
-      2: sizeStyle("large"),
-      3: sizeStyle("medium"),
+      1: xlarge,
+      2: large,
+      3: medium,
     },
   },
 });
