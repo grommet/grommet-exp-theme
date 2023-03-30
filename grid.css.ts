@@ -8,10 +8,16 @@ export const grid = recipe({
   },
   variants: {
     columns: {
-      small: { gridAutoColumns: `fit-content(${vars.content.small})` },
-      medium: { gridAutoColumns: `fit-content(${vars.content.medium})` },
-      large: { gridAutoColumns: `fit-content(${vars.content.large})` },
-      none: { gridAutoColumns: 'auto' },
+      small: {
+        gridTemplateColumns: `repeat(auto-fill, minmax(min(${vars.content.small}, 100%), 1fr))`,
+      },
+      medium: {
+        gridTemplateColumns: `repeat(auto-fill, minmax(min(${vars.content.medium}, 100%), 1fr))`,
+      },
+      large: {
+        gridTemplateColumns: `repeat(auto-fill, minmax(min(${vars.content.large}, 100%), 1fr))`,
+      },
+      none: { gridAutoColumns: "auto" },
     },
     gap: {
       small: { gap: vars.content.spacing.small },
