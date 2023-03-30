@@ -14,10 +14,10 @@ export const box = recipe({
       end: { alignItems: "flex-end" },
     },
     background: {
-      normal: vars.content.background.normal,
-      back: vars.content.background.back,
-      front: vars.content.background.front,
-      contrast: vars.content.background.contrast,
+      normal: { backgroundColor: vars.content.background.normal },
+      back: { backgroundColor: vars.content.background.back },
+      front: { backgroundColor: vars.content.background.front },
+      contrast: { backgroundColor: vars.content.background.contrast },
     },
     border: {
       true: {
@@ -39,6 +39,7 @@ export const box = recipe({
       small: { boxShadow: vars.content.elevation.small },
       medium: { boxShadow: vars.content.elevation.medium },
       large: { boxShadow: vars.content.elevation.large },
+      none: { boxShadow: "none" },
     },
     flex: {
       true: { flex: "1 1 auto" },
@@ -57,6 +58,7 @@ export const box = recipe({
       medium: { height: vars.content.medium },
       large: { height: vars.content.large },
       xlarge: { height: vars.content.xlarge },
+      none: { height: "initial" },
     },
     justify: {
       around: { justifyContent: "space-around" },
@@ -197,6 +199,7 @@ export const box = recipe({
       medium: { width: vars.content.medium },
       large: { width: vars.content.large },
       xlarge: { width: vars.content.xlarge },
+      none: { width: "initial" },
     },
     wrap: {
       true: { flexWrap: "wrap" },
