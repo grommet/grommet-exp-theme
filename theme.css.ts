@@ -2,16 +2,53 @@ import { createTheme, createThemeContract } from "@vanilla-extract/css";
 import { tokens } from "grommet-exp-tokens";
 
 const base = {
+  // breakpoints
+  breakpoints: {
+    tablet: `${tokens["breakpoints.tablet"]}`,
+    desktop: `${tokens["breakpoints.desktop"]}`,
+  },
   // typography
   font: {
     family: `${tokens["font.family"]}`,
     fallback: `${tokens["font.fallback"]}`,
-    // url: {
-    //   light: `${tokens["font.url.light"]}`,
-    // },
+    url: {
+      light: `${tokens["font.url.light"]}`,
+      regular: `${tokens["font.url.regular"]}`,
+      medium: `${tokens["font.url.medium"]}`,
+      semibold: `${tokens["font.url.semibold"]}`,
+      bold: `${tokens["font.url.bold"]}`,
+    },
+    weight: {
+      light: `${tokens["font.weight.light"]}`,
+      regular: `${tokens["font.weight.regular"]}`,
+      medium: `${tokens["font.weight.medium"]}`,
+      semibold: `${tokens["font.weight.semibold"]}`,
+      bold: `${tokens["font.weight.bold"]}`,
+      black: `${tokens["font.weight.black"]}`,
+    },
+  },
+  heading: {
+    color: `${tokens["color.text.strong"]}`,
+    height: `${tokens["heading.height"]}`,
+    1: {
+      size: `${tokens["heading.1.size"]}`,
+    },
+    2: {
+      size: `${tokens["heading.2.size"]}`,
+    },
+    3: {
+      size: `${tokens["heading.3.size"]}`,
+    },
   },
   text: {
+    size: {
+      mobile: `${tokens["text.size.mobile"]}`,
+      tablet: `${tokens["text.size.tablet"]}`,
+      desktop: `${tokens["text.size.desktop"]}`,
+    },
+    height: `${tokens["text.height"]}`,
     xsmall: {
+      size: `${tokens["text.xsmall.size"]}`,
       desktop: {
         size: `${tokens["text.xsmall.desktop.size"]}`,
         height: `${tokens["text.xsmall.desktop.height"]}`,
@@ -29,6 +66,7 @@ const base = {
       },
     },
     small: {
+      size: `${tokens["text.small.size"]}`,
       desktop: {
         size: `${tokens["text.small.desktop.size"]}`,
         height: `${tokens["text.small.desktop.height"]}`,
@@ -46,6 +84,7 @@ const base = {
       },
     },
     medium: {
+      size: `${tokens["text.medium.size"]}`,
       desktop: {
         size: `${tokens["text.medium.desktop.size"]}`,
         height: `${tokens["text.medium.desktop.height"]}`,
@@ -63,6 +102,7 @@ const base = {
       },
     },
     large: {
+      size: `${tokens["text.large.size"]}`,
       desktop: {
         size: `${tokens["text.large.desktop.size"]}`,
         height: `${tokens["text.large.desktop.height"]}`,
@@ -80,6 +120,7 @@ const base = {
       },
     },
     xlarge: {
+      size: `${tokens["text.xlarge.size"]}`,
       desktop: {
         size: `${tokens["text.xlarge.desktop.size"]}`,
         height: `${tokens["text.xlarge.desktop.height"]}`,
@@ -109,60 +150,6 @@ const base = {
       bold: `${tokens["font.weight.bold"]}`,
       black: `${tokens["font.weight.black"]}`,
     },
-  },
-  heading: {
-    1: {
-      desktop: {
-        size: `${tokens["heading.1.desktop.size"]}`,
-        height: `${tokens["heading.1.desktop.height"]}`,
-        weight: `${tokens["heading.1.desktop.weight"]}`,
-      },
-      tablet: {
-        size: `${tokens["heading.1.tablet.size"]}`,
-        height: `${tokens["heading.1.tablet.height"]}`,
-        weight: `${tokens["heading.1.tablet.weight"]}`,
-      },
-      mobile: {
-        size: `${tokens["heading.1.mobile.size"]}`,
-        height: `${tokens["heading.1.mobile.height"]}`,
-        weight: `${tokens["heading.1.mobile.weight"]}`,
-      },
-    },
-    2: {
-      desktop: {
-        size: `${tokens["heading.2.desktop.size"]}`,
-        height: `${tokens["heading.2.desktop.height"]}`,
-        weight: `${tokens["heading.2.desktop.weight"]}`,
-      },
-      tablet: {
-        size: `${tokens["heading.2.tablet.size"]}`,
-        height: `${tokens["heading.2.tablet.height"]}`,
-        weight: `${tokens["heading.2.tablet.weight"]}`,
-      },
-      mobile: {
-        size: `${tokens["heading.2.mobile.size"]}`,
-        height: `${tokens["heading.2.mobile.height"]}`,
-        weight: `${tokens["heading.2.mobile.weight"]}`,
-      },
-    },
-    3: {
-      desktop: {
-        size: `${tokens["heading.3.desktop.size"]}`,
-        height: `${tokens["heading.3.desktop.height"]}`,
-        weight: `${tokens["heading.3.desktop.weight"]}`,
-      },
-      tablet: {
-        size: `${tokens["heading.3.tablet.size"]}`,
-        height: `${tokens["heading.3.tablet.height"]}`,
-        weight: `${tokens["heading.3.tablet.weight"]}`,
-      },
-      mobile: {
-        size: `${tokens["heading.3.mobile.size"]}`,
-        height: `${tokens["heading.3.mobile.height"]}`,
-        weight: `${tokens["heading.3.mobile.weight"]}`,
-      },
-    },
-    color: `${tokens["color.text"]}`,
   },
   // icon
   icon: {
