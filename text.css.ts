@@ -1,12 +1,42 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "./theme.css";
 
+const responsiveStyle = ({
+  desktop,
+  tablet,
+}: {
+  desktop: any;
+  tablet: any;
+}) => ({
+  "@media": {
+    "only screen and (min-width: 768px)": tablet,
+    "only screen and (min-width: 1536px)": desktop,
+  },
+});
+
+const sizeStyle = (size: "xsmall" | "small" | "medium" | "large" | "xlarge") => [
+  {
+    fontSize: vars.text[size].mobile.size,
+    lineHeight: vars.text[size].mobile.height,
+    fontWeight: vars.text[size].mobile.weight,
+  },
+  responsiveStyle({
+    desktop: {
+      fontSize: vars.text[size].desktop.size,
+      lineHeight: vars.text[size].desktop.height,
+      fontWeight: vars.text[size].desktop.weight,
+    },
+    tablet: {
+      fontSize: vars.text[size].tablet.size,
+      lineHeight: vars.text[size].tablet.height,
+      fontWeight: vars.text[size].tablet.weight,
+    },
+  }),
+];
+
 export const text = recipe({
   base: {
     color: vars.text.color.normal,
-    fontSize: vars.text.medium.desktop.size,
-    height: vars.text.medium.desktop.height,
-    fontWeight: vars.text.medium.desktop.weight,
     margin: 0, // for paragraph
   },
   variants: {
@@ -16,31 +46,16 @@ export const text = recipe({
       weak: { color: vars.text.color.weak },
     },
     size: {
-      xsmall: {
-        fontSize: vars.text.xsmall.desktop.size,
-        height: vars.text.xsmall.desktop.height,
-        fontWeight: vars.text.xsmall.desktop.weight,
-      },
-      small: {
-        fontSize: vars.text.small.desktop.size,
-        height: vars.text.small.desktop.height,
-        fontWeight: vars.text.small.desktop.weight,
-      },
-      medium: {
-        fontSize: vars.text.medium.desktop.size,
-        height: vars.text.medium.desktop.height,
-        fontWeight: vars.text.medium.desktop.weight,
-      },
-      large: {
-        fontSize: vars.text.large.desktop.size,
-        height: vars.text.large.desktop.height,
-        fontWeight: vars.text.large.desktop.weight,
-      },
-      xlarge: {
-        fontSize: vars.text.xlarge.desktop.size,
-        height: vars.text.xlarge.desktop.height,
-        fontWeight: vars.text.xlarge.desktop.weight,
-      },
+      xsmall: sizeStyle("xsmall"),
+      small: sizeStyle("small"),
+      medium: sizeStyle("medium"),
+      large: sizeStyle("large"),
+      xlarge: sizeStyle("xlarge"),
+    },
+    level: {
+      1: sizeStyle("xlarge"),
+      2: sizeStyle("large"),
+      3: sizeStyle("medium"),
     },
   },
 });
