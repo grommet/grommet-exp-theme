@@ -7,7 +7,9 @@ const base = {
     tablet: `${tokens["breakpoints.tablet"]}`,
     desktop: `${tokens["breakpoints.desktop"]}`,
   },
-
+  color: {
+    brand: `${tokens["color.brand"]}`,
+  },
   // typography
   font: {
     family: `${tokens["font.family"]}`,
@@ -32,111 +34,134 @@ const base = {
     color: `${tokens["color.text.strong"]}`,
     height: `${tokens["heading.height"]}`,
     1: {
-      size: `${tokens["heading.1.size"]}`,
+      mobile: {
+        size: `${tokens["heading.1.mobile.size"]}`,
+        weight: `${tokens["heading.1.mobile.weight"]}`,
+      },
+      tablet: {
+        size: `${tokens["heading.1.tablet.size"]}`,
+        weight: `${tokens["heading.1.tablet.weight"]}`,
+      },
+      desktop: {
+        size: `${tokens["heading.1.desktop.size"]}`,
+        weight: `${tokens["heading.1.desktop.weight"]}`,
+      },
     },
     2: {
-      size: `${tokens["heading.2.size"]}`,
+      mobile: {
+        size: `${tokens["heading.2.mobile.size"]}`,
+        weight: `${tokens["heading.2.mobile.weight"]}`,
+      },
+      tablet: {
+        size: `${tokens["heading.2.tablet.size"]}`,
+        weight: `${tokens["heading.2.tablet.weight"]}`,
+      },
+      desktop: {
+        size: `${tokens["heading.2.desktop.size"]}`,
+        weight: `${tokens["heading.2.desktop.weight"]}`,
+      },
     },
     3: {
-      size: `${tokens["heading.3.size"]}`,
+      mobile: {
+        size: `${tokens["heading.3.mobile.size"]}`,
+        weight: `${tokens["heading.3.mobile.weight"]}`,
+      },
+      tablet: {
+        size: `${tokens["heading.3.tablet.size"]}`,
+        weight: `${tokens["heading.3.tablet.weight"]}`,
+      },
+      desktop: {
+        size: `${tokens["heading.3.desktop.size"]}`,
+        weight: `${tokens["heading.3.desktop.weight"]}`,
+      },
     },
   },
   text: {
-    size: {
-      mobile: `${tokens["text.size.mobile"]}`,
-      tablet: `${tokens["text.size.tablet"]}`,
-      desktop: `${tokens["text.size.desktop"]}`,
-    },
     height: `${tokens["text.height"]}`,
     xsmall: {
-      size: `${tokens["text.xsmall.size"]}`,
       desktop: {
         size: `${tokens["text.xsmall.desktop.size"]}`,
-        height: `${tokens["text.xsmall.desktop.height"]}`,
         weight: `${tokens["text.xsmall.desktop.weight"]}`,
       },
       tablet: {
         size: `${tokens["text.xsmall.tablet.size"]}`,
-        height: `${tokens["text.xsmall.tablet.height"]}`,
         weight: `${tokens["text.xsmall.tablet.weight"]}`,
       },
       mobile: {
         size: `${tokens["text.xsmall.mobile.size"]}`,
-        height: `${tokens["text.xsmall.mobile.height"]}`,
         weight: `${tokens["text.xsmall.mobile.weight"]}`,
       },
+      height: `${tokens["text.xsmall.height"]}`,
+      size: `${tokens["text.xsmall.size"]}`,
+      weight: `${tokens["text.xsmall.weight"]}`,
     },
     small: {
-      size: `${tokens["text.small.size"]}`,
       desktop: {
         size: `${tokens["text.small.desktop.size"]}`,
-        height: `${tokens["text.small.desktop.height"]}`,
         weight: `${tokens["text.small.desktop.weight"]}`,
       },
       tablet: {
         size: `${tokens["text.small.tablet.size"]}`,
-        height: `${tokens["text.small.tablet.height"]}`,
         weight: `${tokens["text.small.tablet.weight"]}`,
       },
       mobile: {
         size: `${tokens["text.small.mobile.size"]}`,
-        height: `${tokens["text.small.mobile.height"]}`,
         weight: `${tokens["text.small.mobile.weight"]}`,
       },
+      height: `${tokens["text.small.height"]}`,
+      size: `${tokens["text.small.size"]}`,
+      weight: `${tokens["text.small.weight"]}`,
     },
     medium: {
-      size: `${tokens["text.medium.size"]}`,
       desktop: {
         size: `${tokens["text.medium.desktop.size"]}`,
-        height: `${tokens["text.medium.desktop.height"]}`,
         weight: `${tokens["text.medium.desktop.weight"]}`,
       },
       tablet: {
         size: `${tokens["text.medium.tablet.size"]}`,
-        height: `${tokens["text.medium.tablet.height"]}`,
         weight: `${tokens["text.medium.tablet.weight"]}`,
       },
       mobile: {
-        size: `${tokens["text.medium.mobile.size"]}`,
-        height: `${tokens["text.medium.mobile.height"]}`,
-        weight: `${tokens["text.medium.mobile.weight"]}`,
+        size: `${tokens["text.medium.tablet.size"]}`,
+        weight: `${tokens["text.medium.tablet.weight"]}`,
       },
+      height: `${tokens["text.medium.height"]}`,
+      size: `${tokens["text.medium.size"]}`,
+      weight: `${tokens["text.medium.weight"]}`,
     },
     large: {
-      size: `${tokens["text.large.size"]}`,
       desktop: {
         size: `${tokens["text.large.desktop.size"]}`,
-        height: `${tokens["text.large.desktop.height"]}`,
         weight: `${tokens["text.large.desktop.weight"]}`,
       },
       tablet: {
         size: `${tokens["text.large.tablet.size"]}`,
-        height: `${tokens["text.large.tablet.height"]}`,
         weight: `${tokens["text.large.tablet.weight"]}`,
       },
       mobile: {
         size: `${tokens["text.large.mobile.size"]}`,
-        height: `${tokens["text.large.mobile.height"]}`,
         weight: `${tokens["text.large.mobile.weight"]}`,
       },
+      height: `${tokens["text.large.height"]}`,
+      size: `${tokens["text.large.size"]}`,
+      weight: `${tokens["text.large.weight"]}`,
     },
     xlarge: {
-      size: `${tokens["text.xlarge.size"]}`,
       desktop: {
         size: `${tokens["text.xlarge.desktop.size"]}`,
-        height: `${tokens["text.xlarge.desktop.height"]}`,
         weight: `${tokens["text.xlarge.desktop.weight"]}`,
       },
       tablet: {
         size: `${tokens["text.xlarge.tablet.size"]}`,
-        height: `${tokens["text.xlarge.tablet.height"]}`,
         weight: `${tokens["text.xlarge.tablet.weight"]}`,
       },
       mobile: {
         size: `${tokens["text.xlarge.mobile.size"]}`,
-        height: `${tokens["text.xlarge.mobile.height"]}`,
         weight: `${tokens["text.xlarge.mobile.weight"]}`,
       },
+      height: `${tokens["text.xlarge.height"]}`,
+      size: `${tokens["text.xlarge.size"]}`,
+      weight: `${tokens["text.xlarge.weight"]}`,
     },
     color: {
       normal: `${tokens["color.text"]}`,

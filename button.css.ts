@@ -1,5 +1,4 @@
 import { recipe } from "@vanilla-extract/recipes";
-import { tokens } from "grommet-exp-tokens";
 import { vars } from "./theme.css";
 
 export const button = recipe({
@@ -8,8 +7,8 @@ export const button = recipe({
     borderRadius: "2em",
     boxSizing: "border-box",
     color: vars.text.color.strong,
+    fontFamily: vars.font.family,
     fontWeight: vars.text.weight.bold,
-    fontFamily: "Metric",
     selectors: {
       [`&:hover`]: {
         cursor: `pointer`,
@@ -20,8 +19,8 @@ export const button = recipe({
   variants: {
     kind: {
       default: {
-        borderStyle: 'none',
-        ':hover': {
+        borderStyle: "none",
+        ":hover": {
           backgroundColor: vars.background.contrast,
           color: undefined,
         },
@@ -32,7 +31,7 @@ export const button = recipe({
         borderStyle: `solid`,
       },
       primary: {
-        // background: vars.color.brand,
+        background: vars.color.brand,
         border: `none`,
         color: `#FFF`,
       },
@@ -43,32 +42,32 @@ export const button = recipe({
         paddingRight: vars.spacing.small,
         paddingTop: vars.spacing.xsmall,
         paddingBottom: vars.spacing.xsmall,
-        fontSize: vars.text.xsmall.desktop.size,
-        lineHeight: vars.text.xsmall.desktop.height,
+        fontSize: vars.text.xsmall.size,
+        lineHeight: vars.text.small.height,
       },
       small: {
         paddingLeft: vars.spacing.medium,
         paddingRight: vars.spacing.medium,
         paddingTop: vars.spacing.xsmall,
         paddingBottom: vars.spacing.xsmall,
-        fontSize: vars.text.small.desktop.size,
-        lineHeight: vars.text.small.desktop.height,
+        fontSize: vars.text.small.size,
+        lineHeight: vars.text.small.height,
       },
       medium: {
         paddingLeft: vars.spacing.medium,
         paddingRight: vars.spacing.medium,
         paddingTop: vars.spacing.xsmall,
         paddingBottom: vars.spacing.xsmall,
-        fontSize: vars.text.medium.desktop.size,
-        lineHeight: vars.text.medium.desktop.height,
+        fontSize: "19px",
+        lineHeight: vars.text.medium.height,
       },
       large: {
         paddingLeft: vars.spacing.medium,
         paddingRight: vars.spacing.medium,
         paddingTop: vars.spacing.small,
         paddingBottom: vars.spacing.small,
-        fontSize: vars.text.large.desktop.size,
-        lineHeight: vars.text.large.desktop.height,
+        fontSize: vars.text.large.size,
+        lineHeight: vars.text.large.height,
       },
     },
     iconOnly: {

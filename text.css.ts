@@ -1,33 +1,50 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "./theme.css";
 
-const xsmall = {
-  fontSize: vars.text.xsmall.size,
-  fontWeight: vars.font.weight.regular,
-};
-const small = {
-  fontSize: vars.text.small.size,
-  fontWeight: vars.font.weight.regular,
-};
-const medium = {
-  fontSize: vars.text.medium.size,
-  fontWeight: vars.font.weight.regular,
-};
-const large = {
-  fontSize: vars.text.large.size,
-  fontWeight: vars.font.weight.light,
-};
-const xlarge = {
-  fontSize: vars.text.xlarge.size,
-  fontWeight: vars.font.weight.light,
-};
+const responsiveStyle = ({
+  desktop,
+  tablet,
+}: {
+  desktop: any;
+  tablet: any;
+}) => ({
+  "@media": {
+    "only screen and (min-width: 768px)": tablet,
+    "only screen and (min-width: 1536px)": desktop,
+  },
+});
+
+const sizeStyle = (
+  size: "xsmall" | "small" | "medium" | "large" | "xlarge"
+) => [
+  {
+    fontSize: vars.text[size].mobile.size,
+    fontWeight: vars.text[size].mobile.weight,
+  },
+  responsiveStyle({
+    desktop: {
+      fontSize: vars.text[size].desktop.size,
+      fontWeight: vars.text[size].desktop.weight,
+    },
+    tablet: {
+      fontSize: vars.text[size].tablet.size,
+      fontWeight: vars.text[size].tablet.weight,
+    },
+  }),
+];
+
+const xsmall = sizeStyle("xsmall");
+const small = sizeStyle("small");
+const medium = sizeStyle("medium");
+const large = sizeStyle("large");
+const xlarge = sizeStyle("xlarge");
 
 export const text = recipe({
   base: {
     color: vars.text.color.normal,
     lineHeight: vars.text.height,
     margin: 0, // for paragraph
-    maxWidth: '25em',
+    maxWidth: "25em",
   },
   variants: {
     color: {
