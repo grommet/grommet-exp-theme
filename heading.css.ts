@@ -10,16 +10,16 @@ export const heading = recipe({
   variants: {
     level: {
       1: {
-        fontSize: `${vars.heading[1].size}`,
-        fontWeight: `${vars.font.weight.regular}`,
+        fontSize: vars.heading[1].size,
+        fontWeight: vars.font.weight.regular,
       },
       2: {
-        fontSize: `${vars.heading[2].size}`,
-        fontWeight: `${vars.font.weight.regular}`,
+        fontSize: vars.heading[2].size,
+        fontWeight: vars.font.weight.regular,
       },
       3: {
-        fontSize: `${vars.heading[3].size}`,
-        fontWeight: `${vars.font.weight.regular}`,
+        fontSize: vars.heading[3].size,
+        fontWeight: vars.font.weight.regular,
       },
     },
   },

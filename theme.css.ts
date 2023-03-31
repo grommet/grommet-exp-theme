@@ -7,6 +7,7 @@ const base = {
     tablet: `${tokens["breakpoints.tablet"]}`,
     desktop: `${tokens["breakpoints.desktop"]}`,
   },
+
   // typography
   font: {
     family: `${tokens["font.family"]}`,
@@ -151,61 +152,65 @@ const base = {
       black: `${tokens["font.weight.black"]}`,
     },
   },
+
+  elevation: {
+    small: `${tokens["elevation.small"]}`,
+    medium: `${tokens["elevation.medium"]}`,
+    large: `${tokens["elevation.large"]}`,
+  },
+  spacing: {
+    "3xsmall": `${tokens["spacing.3xsmall"]}`,
+    "2xsmall": `${tokens["spacing.2xsmall"]}`,
+    xsmall: `${tokens["spacing.xsmall"]}`,
+    small: `${tokens["spacing.small"]}`,
+    medium: `${tokens["spacing.medium"]}`,
+    large: `${tokens["spacing.large"]}`,
+    xlarge: `${tokens["spacing.xlarge"]}`,
+  },
+  radius: {
+    xsmall: `${tokens["radius.xsmall"]}`,
+    small: `${tokens["radius.small"]}`,
+    medium: `${tokens["radius.medium"]}`,
+    large: `${tokens["radius.large"]}`,
+    xlarge: `${tokens["radius.xlarge"]}`,
+    full: `${tokens["radius.full"]}`,
+  },
+  background: {
+    normal: `${tokens["color.background.base"]}`,
+    back: `${tokens["color.background.back"]}`,
+    front: `${tokens["color.background.front"]}`,
+    contrast: `${tokens["color.background.contrast"]}`,
+  },
+  border: {
+    normal: `${tokens["color.border"]}`,
+    weak: `${tokens["color.border.weak"]}`,
+    strong: `${tokens["color.border.strong"]}`,
+    width: `${tokens["stroke.weight.xsmall"]}`,
+  },
+
   // icon
   icon: {
-    small: `${tokens["size.icon.small"]}`,
-    medium: `${tokens["size.icon.medium"]}`,
-    large: `${tokens["size.icon.large"]}`,
-    xlarge: `${tokens["size.icon.xlarge"]}`,
+    small: `${tokens["icon.small"]}`,
+    medium: `${tokens["icon.medium"]}`,
+    large: `${tokens["icon.large"]}`,
+    xlarge: `${tokens["icon.xlarge"]}`,
   },
+
   // content
   content: {
-    small: `${tokens["size.content.small"]}`,
-    medium: `${tokens["size.content.medium"]}`,
-    large: `${tokens["size.content.large"]}`,
-    xlarge: `${tokens["size.content.xlarge"]}`,
-    elevation: {
-      small: `${tokens["elevation.small"]}`,
-      medium: `${tokens["elevation.medium"]}`,
-      large: `${tokens["elevation.large"]}`,
-    },
-    spacing: {
-      "3xsmall": `${tokens["spacing.3xsmall"]}`,
-      "2xsmall": `${tokens["spacing.2xsmall"]}`,
-      xsmall: `${tokens["spacing.xsmall"]}`,
-      small: `${tokens["spacing.small"]}`,
-      medium: `${tokens["spacing.medium"]}`,
-      large: `${tokens["spacing.large"]}`,
-      xlarge: `${tokens["spacing.xlarge"]}`,
-    },
-    radius: {
-      xsmall: `${tokens["radius.xsmall"]}`,
-      small: `${tokens["radius.small"]}`,
-      medium: `${tokens["radius.medium"]}`,
-      large: `${tokens["radius.large"]}`,
-      xlarge: `${tokens["radius.xlarge"]}`,
-      full: `${tokens["radius.full"]}`,
-    },
-    background: {
-      normal: `${tokens["color.background.base"]}`,
-      back: `${tokens["color.background.back"]}`,
-      front: `${tokens["color.background.front"]}`,
-      contrast: `${tokens["color.background.contrast"]}`,
-    },
-    border: {
-      normal: `${tokens["color.border"]}`,
-      weak: `${tokens["color.border.weak"]}`,
-      strong: `${tokens["color.border.strong"]}`,
-      width: `${tokens["stroke.weight.xsmall"]}`,
-    },
+    small: `${tokens["content.small"]}`,
+    medium: `${tokens["content.medium"]}`,
+    large: `${tokens["content.large"]}`,
+    xlarge: `${tokens["content.xlarge"]}`,
   },
+
   // page
   page: {
     narrow: {
-      max: `${tokens["size.page.max.narrow"]}`,
+      max: `${tokens["page.narrow.max"]}`,
     },
     wide: {
-      max: `${tokens["size.page.max.wide"]}`,
+      max: `${tokens["page.wide.max"]}`,
     },
   },
 };

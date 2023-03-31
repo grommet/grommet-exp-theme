@@ -10,10 +10,10 @@ export const pageContent = recipe({
   },
   variants: {
     background: {
-      normal: vars.content.background.normal,
-      back: vars.content.background.back,
-      front: vars.content.background.front,
-      contrast: vars.content.background.contrast,
+      normal: vars.background.normal,
+      back: vars.background.back,
+      front: vars.background.front,
+      contrast: vars.background.contrast,
     },
     kind: {
       wide: {

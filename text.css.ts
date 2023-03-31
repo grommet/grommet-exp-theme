@@ -2,24 +2,24 @@ import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "./theme.css";
 
 const xsmall = {
-  fontSize: `${vars.text.xsmall.size}`,
-  fontWeight: `${vars.font.weight.regular}`,
+  fontSize: vars.text.xsmall.size,
+  fontWeight: vars.font.weight.regular,
 };
 const small = {
-  fontSize: `${vars.text.small.size}`,
-  fontWeight: `${vars.font.weight.regular}`,
+  fontSize: vars.text.small.size,
+  fontWeight: vars.font.weight.regular,
 };
 const medium = {
-  fontSize: `${vars.text.medium.size}`,
-  fontWeight: `${vars.font.weight.regular}`,
+  fontSize: vars.text.medium.size,
+  fontWeight: vars.font.weight.regular,
 };
 const large = {
-  fontSize: `${vars.text.large.size}`,
-  fontWeight: `${vars.font.weight.light}`,
+  fontSize: vars.text.large.size,
+  fontWeight: vars.font.weight.light,
 };
 const xlarge = {
-  fontSize: `${vars.text.xlarge.size}`,
-  fontWeight: `${vars.font.weight.light}`,
+  fontSize: vars.text.xlarge.size,
+  fontWeight: vars.font.weight.light,
 };
 
 export const text = recipe({
