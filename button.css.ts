@@ -9,8 +9,7 @@ export const button = recipe({
     boxSizing: "border-box",
     color: vars.text.color.strong,
     fontWeight: vars.text.weight.bold,
-    // fontSize: vars.text.medium.desktop.size,
-    // lineHeight: vars.text.medium.desktop.height,
+    fontFamily: "Metric",
     selectors: {
       [`&:hover`]: {
         cursor: `pointer`,
