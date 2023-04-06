@@ -26,7 +26,7 @@ export const button = recipe({
         },
       },
       secondary: {
-        // borderWidth: vars.stroke.weight.small,
+        // borderWidth: vars.stroke.small,
         // borderColor: vars.color.brand,
         borderStyle: `solid`,
       },

@@ -1,5 +1,5 @@
 import { globalFontFace, style } from "@vanilla-extract/css";
-import { tokens } from "grommet-exp-tokens";
+import { tokens } from "hpe-design-tokens";
 import { theme } from "./theme.css";
 
 const metric = "Metric";

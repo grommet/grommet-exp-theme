@@ -1,8 +1,8 @@
 {
   "version": "v1",
   "packages": {
-    "grommet-exp-tokens": {
-      "signature": "ca65a53fb5da7296275b5e195634b11d",
+    "hpe-design-tokens": {
+      "signature": "4ca9ec048ee7acb8ddd4666dccc7c51b",
       "file": true
     }
   }

@@ -1,5 +1,5 @@
 import { createTheme, createThemeContract } from "@vanilla-extract/css";
-import { tokens } from "grommet-exp-tokens";
+import { tokens } from "hpe-design-tokens";
 
 const base = {
   // breakpoints
@@ -177,7 +177,13 @@ const base = {
       black: `${tokens["font.weight.black"]}`,
     },
   },
-
+  stroke: {
+    xsmall: `${tokens["stroke.xsmall"]}`,
+    small: `${tokens["stroke.small"]}`,
+    medium: `${tokens["stroke.medium"]}`,
+    large: `${tokens["stroke.large"]}`,
+    xlarge: `${tokens["stroke.xlarge"]}`,
+  },
   elevation: {
     small: `${tokens["elevation.small"]}`,
     medium: `${tokens["elevation.medium"]}`,
@@ -201,7 +207,7 @@ const base = {
     full: `${tokens["radius.full"]}`,
   },
   background: {
-    normal: `${tokens["color.background.base"]}`,
+    normal: `${tokens["color.background"]}`,
     back: `${tokens["color.background.back"]}`,
     front: `${tokens["color.background.front"]}`,
     contrast: `${tokens["color.background.contrast"]}`,
@@ -210,7 +216,7 @@ const base = {
     normal: `${tokens["color.border"]}`,
     weak: `${tokens["color.border.weak"]}`,
     strong: `${tokens["color.border.strong"]}`,
-    width: `${tokens["stroke.weight.xsmall"]}`,
+    width: `${tokens["stroke.xsmall"]}`,
   },
 
   // icon
