@@ -1,6 +1,5 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "./theme.css";
-import { box } from "./box.css";
 
 // TODO: container queries for padding
 
@@ -10,22 +9,22 @@ export const pageContent = recipe({
   },
   variants: {
     background: {
-      normal: vars.background.normal,
-      back: vars.background.back,
-      front: vars.background.front,
-      contrast: vars.background.contrast,
+      normal: vars.color.background.light,
+      back: vars.color.background.back.light,
+      front: vars.color.background.front.light,
+      contrast: vars.color.background.contrast.light,
     },
     kind: {
       wide: {
-        minWidth: vars.page.narrow.max,
-        maxWidth: vars.page.wide.max,
+        minWidth: vars.page.narrow.maxWidth,
+        maxWidth: vars.page.wide.maxWidth,
       },
       narrow: {
-        maxWidth: vars.page.narrow.max,
+        maxWidth: vars.page.narrow.maxWidth,
       },
       full: {
-        minWidth: vars.page.wide.max,
-        maxWidth: "100%",
+        minWidth: vars.page.wide.maxWidth,
+        maxWidth: vars.page.full.maxWidth,
       },
     },
   },

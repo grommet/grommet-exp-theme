@@ -16,17 +16,17 @@ const responsiveStyle = ({
 
 const sizeStyle = (size: 1 | 2 | 3) => [
   {
-    fontSize: vars.heading[size].mobile.size,
-    fontWeight: vars.heading[size].mobile.weight,
+    fontSize: vars.heading[size].mobile.fontSize,
+    fontWeight: vars.heading[size].mobile.fontWeight,
   },
   responsiveStyle({
     desktop: {
-      fontSize: vars.heading[size].desktop.size,
-      fontWeight: vars.heading[size].desktop.weight,
+      fontSize: vars.heading[size].desktop.fontSize,
+      fontWeight: vars.heading[size].desktop.fontWeight,
     },
     tablet: {
-      fontSize: vars.heading[size].tablet.size,
-      fontWeight: vars.heading[size].tablet.weight,
+      fontSize: vars.heading[size].tablet.fontSize,
+      fontWeight: vars.heading[size].tablet.fontWeight,
     },
   }),
 ];
