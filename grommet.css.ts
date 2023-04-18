@@ -1,28 +1,17 @@
 import { globalFontFace, style } from "@vanilla-extract/css";
-import { tokens } from "hpe-design-tokens";
-import { theme } from "./theme.css";
+import { vars } from "./theme.css";
 
 const metric = "Metric";
 
-globalFontFace(metric, {
-  src: `url("${tokens["font.url.light"]}") format("woff2")`,
-  fontWeight: `${tokens["font.weight.light"]}`,
-});
-globalFontFace(metric, {
-  src: `url("${tokens["font.url.regular"]}") format("woff2")`,
-  fontWeight: `${tokens["font.weight.regular"]}`,
-});
-globalFontFace(metric, {
-  src: `url("${tokens["font.url.medium"]}") format("woff2")`,
-  fontWeight: `${tokens["font.weight.medium"]}`,
-});
-globalFontFace(metric, {
-  src: `url("${tokens["font.url.bold"]}") format("woff2")`,
-  fontWeight: `${tokens["font.weight.bold"]}`,
+Object.keys(vars).forEach(weight => {
+  globalFontFace(metric, {
+    src: `url("${vars.font[weight].url}") format("woff2")`,
+    fontWeight: `${vars.font[weight]['font-weight']}`,
+  });
 });
 
 const font = style({
   fontFamily: metric,
 });
 
-export const grommet = style([theme, font]);
+export const grommet = style([font]);
