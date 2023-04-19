@@ -1,6 +1,168 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "./theme.css";
 
+export const gapVariants = {
+  gap: {
+    xsmall: { gap: vars.spacing.xsmall.desktop },
+    small: { gap: vars.spacing.small.desktop },
+    medium: { gap: vars.spacing.medium.desktop },
+    large: { gap: vars.spacing.large.desktop },
+    none: { gap: 0 },
+  },
+};
+
+export const marginVariants = {
+  margin: {
+    xsmall: { margin: vars.spacing.xsmall.desktop },
+    small: { margin: vars.spacing.small.desktop },
+    medium: { margin: vars.spacing.medium.desktop },
+    large: { margin: vars.spacing.large.desktop },
+    none: { margin: 0 },
+  },
+  marginHorizontal: {
+    xsmall: {
+      marginInlineStart: vars.spacing.xsmall.desktop,
+      marginInlineEnd: vars.spacing.xsmall.desktop,
+    },
+    small: {
+      marginInlineStart: vars.spacing.small.desktop,
+      marginInlineEnd: vars.spacing.small.desktop,
+    },
+    medium: {
+      marginInlineStart: vars.spacing.medium.desktop,
+      marginInlineEnd: vars.spacing.medium.desktop,
+    },
+    large: {
+      marginInlineStart: vars.spacing.large.desktop,
+      marginInlineEnd: vars.spacing.large.desktop,
+    },
+    none: { marginInlineStart: 0, marginInlineEnd: 0 },
+  },
+  marginVertical: {
+    xsmall: {
+      marginTop: vars.spacing.xsmall.desktop,
+      marginBottom: vars.spacing.xsmall.desktop,
+    },
+    small: {
+      marginTop: vars.spacing.small.desktop,
+      marginBottom: vars.spacing.small.desktop,
+    },
+    medium: {
+      marginTop: vars.spacing.medium.desktop,
+      marginBottom: vars.spacing.medium.desktop,
+    },
+    large: {
+      marginTop: vars.spacing.large.desktop,
+      marginBottom: vars.spacing.large.desktop,
+    },
+    none: { marginTop: 0, marginBottom: 0 },
+  },
+  marginTop: {
+    xsmall: { marginTop: vars.spacing.xsmall.desktop },
+    small: { marginTop: vars.spacing.small.desktop },
+    medium: { marginTop: vars.spacing.medium.desktop },
+    large: { marginTop: vars.spacing.large.desktop },
+    none: { marginTop: 0 },
+  },
+  marginBottom: {
+    xsmall: { marginBottom: vars.spacing.xsmall.desktop },
+    small: { marginBottom: vars.spacing.small.desktop },
+    medium: { marginBottom: vars.spacing.medium.desktop },
+    large: { marginBottom: vars.spacing.large.desktop },
+    none: { marginBottom: 0 },
+  },
+  marginStart: {
+    xsmall: { marginInlineStart: vars.spacing.xsmall.desktop },
+    small: { marginInlineStart: vars.spacing.small.desktop },
+    medium: { marginInlineStart: vars.spacing.medium.desktop },
+    large: { marginInlineStart: vars.spacing.large.desktop },
+    none: { marginInlineStart: 0 },
+  },
+  marginEnd: {
+    xsmall: { marginInlineEnd: vars.spacing.xsmall.desktop },
+    small: { marginInlineEnd: vars.spacing.small.desktop },
+    medium: { marginInlineEnd: vars.spacing.medium.desktop },
+    large: { marginInlineEnd: vars.spacing.large.desktop },
+    none: { marginInlineEnd: 0 },
+  },
+};
+
+export const padVariants = {
+  pad: {
+    xsmall: { padding: vars.spacing.xsmall.desktop },
+    small: { padding: vars.spacing.small.desktop },
+    medium: { padding: vars.spacing.medium.desktop },
+    large: { padding: vars.spacing.large.desktop },
+    none: { padding: 0 },
+  },
+  padHorizontal: {
+    xsmall: {
+      paddingInlineStart: vars.spacing.xsmall.desktop,
+      paddingInlineEnd: vars.spacing.xsmall.desktop,
+    },
+    small: {
+      paddingInlineStart: vars.spacing.small.desktop,
+      paddingInlineEnd: vars.spacing.small.desktop,
+    },
+    medium: {
+      paddingInlineStart: vars.spacing.medium.desktop,
+      paddingInlineEnd: vars.spacing.medium.desktop,
+    },
+    large: {
+      paddingInlineStart: vars.spacing.large.desktop,
+      paddingInlineEnd: vars.spacing.large.desktop,
+    },
+    none: { paddingInlineStart: 0, paddingInlineEnd: 0 },
+  },
+  padVertical: {
+    xsmall: {
+      paddingTop: vars.spacing.xsmall.desktop,
+      paddingBottom: vars.spacing.xsmall.desktop,
+    },
+    small: {
+      paddingTop: vars.spacing.small.desktop,
+      paddingBottom: vars.spacing.small.desktop,
+    },
+    medium: {
+      paddingTop: vars.spacing.medium.desktop,
+      paddingBottom: vars.spacing.medium.desktop,
+    },
+    large: {
+      paddingTop: vars.spacing.large.desktop,
+      paddingBottom: vars.spacing.large.desktop,
+    },
+    none: { paddingTop: 0, paddingBottom: 0 },
+  },
+  padTop: {
+    xsmall: { paddingTop: vars.spacing.xsmall.desktop },
+    small: { paddingTop: vars.spacing.small.desktop },
+    medium: { paddingTop: vars.spacing.medium.desktop },
+    large: { paddingTop: vars.spacing.large.desktop },
+    none: { paddingTop: 0 },
+  },
+  padBottom: {
+    xsmall: { paddingBottom: vars.spacing.xsmall.desktop },
+    small: { paddingBottom: vars.spacing.small.desktop },
+    medium: { paddingBottom: vars.spacing.medium.desktop },
+    large: { paddingBottom: vars.spacing.large.desktop },
+    none: { paddingBottom: 0 },
+  },
+  padStart: {
+    xsmall: { paddingInlineStart: vars.spacing.xsmall.desktop },
+    small: { paddingInlineStart: vars.spacing.small.desktop },
+    medium: { paddingInlineStart: vars.spacing.medium.desktop },
+    large: { paddingInlineStart: vars.spacing.large.desktop },
+    none: { paddingInlineStart: 0 },
+  },
+  padEnd: {
+    xsmall: { paddingInlineEnd: vars.spacing.xsmall.desktop },
+    small: { paddingInlineEnd: vars.spacing.small.desktop },
+    medium: { paddingInlineEnd: vars.spacing.medium.desktop },
+    large: { paddingInlineEnd: vars.spacing.large.desktop },
+    none: { paddingInlineEnd: 0 },
+  },
+};
+
 export const box = recipe({
   base: {
     display: "flex",
@@ -47,13 +209,7 @@ export const box = recipe({
       grow: { flexGrow: "1 0 auto" },
       shrink: { flexShrink: "0 1 auto" },
     },
-    gap: {
-      xsmall: { gap: vars.spacing.xsmall.desktop },
-      small: { gap: vars.spacing.small.desktop },
-      medium: { gap: vars.spacing.medium.desktop },
-      large: { gap: vars.spacing.large.desktop },
-      none: { gap: 0 },
-    },
+    ...gapVariants,
     height: {
       xsmall: { height: vars.content.xsmall },
       small: { height: vars.content.small },
@@ -70,126 +226,8 @@ export const box = recipe({
       evenly: { justifyContent: "space-evenly" },
       start: { justifyContent: "flex-start" },
     },
-    margin: {
-      small: { margin: vars.spacing.small.desktop },
-      medium: { margin: vars.spacing.medium.desktop },
-      large: { margin: vars.spacing.large.desktop },
-      none: { margin: 0 },
-    },
-    marginHorizontal: {
-      small: {
-        marginInlineStart: vars.spacing.small.desktop,
-        marginInlineEnd: vars.spacing.small.desktop,
-      },
-      medium: {
-        marginInlineStart: vars.spacing.medium.desktop,
-        marginInlineEnd: vars.spacing.medium.desktop,
-      },
-      large: {
-        marginInlineStart: vars.spacing.large.desktop,
-        marginInlineEnd: vars.spacing.large.desktop,
-      },
-      none: { marginInlineStart: 0, marginInlineEnd: 0 },
-    },
-    marginVertical: {
-      small: {
-        marginTop: vars.spacing.small.desktop,
-        marginBottom: vars.spacing.small.desktop,
-      },
-      medium: {
-        marginTop: vars.spacing.medium.desktop,
-        marginBottom: vars.spacing.medium.desktop,
-      },
-      large: {
-        marginTop: vars.spacing.large.desktop,
-        marginBottom: vars.spacing.large.desktop,
-      },
-      none: { marginTop: 0, marginBottom: 0 },
-    },
-    marginTop: {
-      small: { marginTop: vars.spacing.small.desktop },
-      medium: { marginTop: vars.spacing.medium.desktop },
-      large: { marginTop: vars.spacing.large.desktop },
-      none: { marginTop: 0 },
-    },
-    marginBottom: {
-      small: { marginBottom: vars.spacing.small.desktop },
-      medium: { marginBottom: vars.spacing.medium.desktop },
-      large: { marginBottom: vars.spacing.large.desktop },
-      none: { marginBottom: 0 },
-    },
-    marginStart: {
-      small: { marginInlineStart: vars.spacing.small.desktop },
-      medium: { marginInlineStart: vars.spacing.medium.desktop },
-      large: { marginInlineStart: vars.spacing.large.desktop },
-      none: { marginInlineStart: 0 },
-    },
-    marginEnd: {
-      small: { marginInlineEnd: vars.spacing.small.desktop },
-      medium: { marginInlineEnd: vars.spacing.medium.desktop },
-      large: { marginInlineEnd: vars.spacing.large.desktop },
-      none: { marginInlineEnd: 0 },
-    },
-    pad: {
-      small: { padding: vars.spacing.small.desktop },
-      medium: { padding: vars.spacing.medium.desktop },
-      large: { padding: vars.spacing.large.desktop },
-      none: { padding: 0 },
-    },
-    padHorizontal: {
-      small: {
-        paddingInlineStart: vars.spacing.small.desktop,
-        paddingInlineEnd: vars.spacing.small.desktop,
-      },
-      medium: {
-        paddingInlineStart: vars.spacing.medium.desktop,
-        paddingInlineEnd: vars.spacing.medium.desktop,
-      },
-      large: {
-        paddingInlineStart: vars.spacing.large.desktop,
-        paddingInlineEnd: vars.spacing.large.desktop,
-      },
-      none: { paddingInlineStart: 0, paddingInlineEnd: 0 },
-    },
-    padVertical: {
-      small: {
-        paddingTop: vars.spacing.small.desktop,
-        paddingBottom: vars.spacing.small.desktop,
-      },
-      medium: {
-        paddingTop: vars.spacing.medium.desktop,
-        paddingBottom: vars.spacing.medium.desktop,
-      },
-      large: {
-        paddingTop: vars.spacing.large.desktop,
-        paddingBottom: vars.spacing.large.desktop,
-      },
-      none: { paddingTop: 0, paddingBottom: 0 },
-    },
-    padTop: {
-      small: { paddingTop: vars.spacing.small.desktop },
-      medium: { paddingTop: vars.spacing.medium.desktop },
-      large: { paddingTop: vars.spacing.large.desktop },
-      none: { paddingTop: 0 },
-    },
-    padBottom: {
-      small: { paddingBottom: vars.spacing.small.desktop },
-      medium: { paddingBottom: vars.spacing.medium.desktop },
-      large: { paddingBottom: vars.spacing.large.desktop },
-      none: { paddingBottom: 0 },
-    },
-    padStart: {
-      small: { paddingInlineStart: vars.spacing.small.desktop },
-      medium: { paddingInlineStart: vars.spacing.medium.desktop },
-      large: { paddingInlineStart: vars.spacing.large.desktop },
-      none: { paddingInlineStart: 0 },
-    },
-    padEnd: {
-      small: { paddingInlineEnd: vars.spacing.small.desktop },
-      medium: { paddingInlineEnd: vars.spacing.medium.desktop },
-      large: { paddingInlineEnd: vars.spacing.large.desktop },
-      none: { paddingInlineEnd: 0 },
-    },
+    ...marginVariants,
+    ...padVariants,
     round: {
       xsmall: { borderRadius: vars.radius.xsmall },
       small: { borderRadius: vars.radius.small },
