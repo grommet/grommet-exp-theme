@@ -85,5 +85,65 @@ export const grid = recipe({
       large: { marginInlineEnd: vars.spacing.large.desktop },
       none: { marginInlineEnd: 0 },
     },
+    pad: {
+      small: { padding: vars.spacing.small.desktop },
+      medium: { padding: vars.spacing.medium.desktop },
+      large: { padding: vars.spacing.large.desktop },
+      none: { padding: 0 },
+    },
+    padHorizontal: {
+      small: {
+        paddingInlineStart: vars.spacing.small.desktop,
+        paddingInlineEnd: vars.spacing.small.desktop,
+      },
+      medium: {
+        paddingInlineStart: vars.spacing.medium.desktop,
+        paddingInlineEnd: vars.spacing.medium.desktop,
+      },
+      large: {
+        paddingInlineStart: vars.spacing.large.desktop,
+        paddingInlineEnd: vars.spacing.large.desktop,
+      },
+      none: { paddingInlineStart: 0, paddingInlineEnd: 0 },
+    },
+    padVertical: {
+      small: {
+        paddingTop: vars.spacing.small.desktop,
+        paddingBottom: vars.spacing.small.desktop,
+      },
+      medium: {
+        paddingTop: vars.spacing.medium.desktop,
+        paddingBottom: vars.spacing.medium.desktop,
+      },
+      large: {
+        paddingTop: vars.spacing.large.desktop,
+        paddingBottom: vars.spacing.large.desktop,
+      },
+      none: { paddingTop: 0, paddingBottom: 0 },
+    },
+    padTop: {
+      small: { paddingTop: vars.spacing.small.desktop },
+      medium: { paddingTop: vars.spacing.medium.desktop },
+      large: { paddingTop: vars.spacing.large.desktop },
+      none: { paddingTop: 0 },
+    },
+    padBottom: {
+      small: { paddingBottom: vars.spacing.small.desktop },
+      medium: { paddingBottom: vars.spacing.medium.desktop },
+      large: { paddingBottom: vars.spacing.large.desktop },
+      none: { paddingBottom: 0 },
+    },
+    padStart: {
+      small: { paddingInlineStart: vars.spacing.small.desktop },
+      medium: { paddingInlineStart: vars.spacing.medium.desktop },
+      large: { paddingInlineStart: vars.spacing.large.desktop },
+      none: { paddingInlineStart: 0 },
+    },
+    padEnd: {
+      small: { paddingInlineEnd: vars.spacing.small.desktop },
+      medium: { paddingInlineEnd: vars.spacing.medium.desktop },
+      large: { paddingInlineEnd: vars.spacing.large.desktop },
+      none: { paddingInlineEnd: 0 },
+    },
   },
 });
