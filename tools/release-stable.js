@@ -4,9 +4,9 @@ import fs from "fs-extra";
 import path from "path";
 import { simpleGit as git } from "simple-git";
 
-const repoURL = `https://${process.env.GH_TOKEN}@github.com/grommet/hpe-design-tokens.git`;
-const localFolder = path.resolve(".tmp/hpe-design-tokens");
-const localDist = path.resolve("dist");
+const repoURL = `https://${process.env.GH_TOKEN}@github.com/grommet/grommet-exp-theme.git`;
+const localFolder = path.resolve(".tmp/grommet-exp-theme");
+const localDist = path.resolve(".");
 
 if (process.env.CI) {
   del(localFolder).then(() => {
@@ -15,6 +15,7 @@ if (process.env.CI) {
       .then(() => git(localFolder).checkout("stable"))
       .then(() => del([`${localFolder}/**/*`]))
       .then(() => fs.copy(localDist, localFolder))
+      .then(() => del([`${localFolder}/[!.]**/*`]))
       .then(() => git(localFolder).add(["--all", "."]))
       .then(() => git(localFolder).commit("stable updated"))
       .then(() => git(localFolder).push("origin", "stable"))
