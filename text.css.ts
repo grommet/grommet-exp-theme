@@ -64,5 +64,12 @@ export const text = recipe({
       2: large,
       3: medium,
     },
+    weight: {
+      light: vars.font.light.fontWeight,
+      regular: vars.font.regular.fontWeight,
+      medium: vars.font.medium.fontWeight,
+      semibold: vars.font.semibold.fontWeight,
+      bold: vars.font.bold.fontWeight,
+    },
   },
 });
