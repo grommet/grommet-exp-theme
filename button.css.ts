@@ -76,6 +76,11 @@ export const button = recipe({
         lineHeight: 0,
       },
     },
+    active: {
+      true: {
+        background: vars.color.background.contrast,
+      }
+    }
   },
 
   // Applied when multiple variants are set at once
