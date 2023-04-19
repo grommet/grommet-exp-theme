@@ -1,9 +1,0 @@
-{
-  "version": "v1",
-  "packages": {
-    "hpe-design-tokens": {
-      "signature": "81c6c8a1b7d80d24c419720e09c45ebc",
-      "file": true
-    }
-  }
-}
