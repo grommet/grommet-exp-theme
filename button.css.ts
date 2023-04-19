@@ -78,7 +78,7 @@ export const button = recipe({
     },
     active: {
       true: {
-        background: vars.color.background.contrast,
+        background: vars.color.background.active,
       }
     }
   },
