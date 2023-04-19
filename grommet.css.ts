@@ -1,5 +1,5 @@
 import { globalFontFace, style } from "@vanilla-extract/css";
-import { vars } from "./theme.css";
+import { theme, vars } from "./theme.css";
 
 const metric = "Metric";
 
@@ -22,4 +22,4 @@ const font = style({
   fontFamily: metric,
 });
 
-export const grommet = style([font]);
+export const grommet = style([theme, font]);
