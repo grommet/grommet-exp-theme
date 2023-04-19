@@ -9,10 +9,10 @@ export const pageContent = recipe({
   },
   variants: {
     background: {
-      normal: vars.color.background.light,
-      back: vars.color.background.back.light,
-      front: vars.color.background.front.light,
-      contrast: vars.color.background.contrast.light,
+      default: vars.color.background.default,
+      back: vars.color.background.back,
+      front: vars.color.background.front,
+      contrast: vars.color.background.contrast,
     },
     kind: {
       wide: {

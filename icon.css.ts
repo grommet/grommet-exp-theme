@@ -12,46 +12,46 @@ export const icon = recipe({
   },
   variants: {
     size: {
-      small: { height: vars.icon.small },
-      medium: { height: vars.icon.medium },
-      large: { height: vars.icon.large },
-      xlarge: { height: vars.icon.xlarge },
+      small: { height: vars.icon.small.height },
+      medium: { height: vars.icon.medium.height },
+      large: { height: vars.icon.large.height },
+      xlarge: { height: vars.icon.xlarge.height },
     },
     height: {
       small: {
         paddingTop: `calc((${
-          parseInt(vars.text.small.desktop.size, 10) *
+          parseInt(vars.text.small.desktop.fontSize, 10) *
           rem *
-          parseInt(vars.text.height, 10)
+          parseInt(vars.text.lineHeight, 10)
         } - ${vars.icon.small}) / 2)px`,
         paddingBottom: `calc((${
-          parseInt(vars.text.small.desktop.size, 10) *
+          parseInt(vars.text.small.desktop.fontSize, 10) *
           rem *
-          parseInt(vars.text.height, 10)
+          parseInt(vars.text.lineHeight, 10)
         } - ${vars.icon.small}) / 2)px`,
       },
       medium: {
         paddingTop: `calc((${
-          parseInt(vars.text.medium.desktop.size, 10) *
+          parseInt(vars.text.medium.desktop.fontSize, 10) *
           rem *
-          parseInt(vars.text.height, 10)
+          parseInt(vars.text.lineHeight, 10)
         } - ${vars.icon.medium}) / 2)px`,
         paddingBottom: `calc((${
-          parseInt(vars.text.medium.desktop.size, 10) *
+          parseInt(vars.text.medium.desktop.fontSize, 10) *
           rem *
-          parseInt(vars.text.height, 10)
+          parseInt(vars.text.lineHeight, 10)
         } - ${vars.icon.medium}) / 2)px`,
       },
       large: {
         paddingTop: `calc((${
-          parseInt(vars.text.large.desktop.size, 10) *
+          parseInt(vars.text.large.desktop.fontSize, 10) *
           rem *
-          parseInt(vars.text.height, 10)
+          parseInt(vars.text.lineHeight, 10)
         } - ${vars.icon.large}) / 2)px`,
         paddingBottom: `calc((${
-          parseInt(vars.text.large.desktop.size, 10) *
+          parseInt(vars.text.large.desktop.fontSize, 10) *
           rem *
-          parseInt(vars.text.height, 10)
+          parseInt(vars.text.lineHeight, 10)
         } - ${vars.icon.large}) / 2)px`,
       },
     },
