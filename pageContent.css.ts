@@ -24,7 +24,7 @@ export const pageContent = recipe({
       },
       full: {
         minWidth: vars.page.wide.maxWidth,
-        maxWidth: vars.page.full.maxWidth,
+        maxWidth: '100%',
       },
     },
   },
