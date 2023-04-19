@@ -10,7 +10,8 @@
   ],
   "scripts": {
     "lint": "eslint",
-    "test": "tsc --noEmit index.ts"
+    "test": "tsc --noEmit index.ts",
+    "release-stable": "babel-node ./tools/release-stable.js"
   },
   "authors": [
     "Eric Soderberg",
@@ -23,6 +24,8 @@
     "hpe-design-tokens": "https://github.com/grommet/hpe-design-tokens/tarball/stable"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/node": "^7.20.7",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
     "@typescript-eslint/parser": "^5.57.0",
     "eslint": "^8.37.0",
