@@ -20,7 +20,7 @@
   "dependencies": {
     "@vanilla-extract/css": "^1.9.5",
     "@vanilla-extract/recipes": "^0.3.0",
-    "hpe-design-tokens": "file:.yalc/hpe-design-tokens"
+    "hpe-design-tokens": "https://github.com/grommet/hpe-design-tokens/tarball/stable"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.57.0",
