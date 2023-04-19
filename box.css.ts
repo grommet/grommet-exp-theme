@@ -191,6 +191,7 @@ export const box = recipe({
       none: { paddingInlineEnd: 0 },
     },
     round: {
+      xsmall: { borderRadius: vars.radius.xsmall },
       small: { borderRadius: vars.radius.small },
       medium: { borderRadius: vars.radius.medium },
       large: { borderRadius: vars.radius.large },
