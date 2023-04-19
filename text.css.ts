@@ -66,7 +66,7 @@ export const text = recipe({
     },
     weight: {
       light: vars.font.light.fontWeight,
-      regular: vars.font.regular.fontWeight,
+      normal: vars.font.regular.fontWeight,
       medium: vars.font.medium.fontWeight,
       semibold: vars.font.semibold.fontWeight,
       bold: vars.font.bold.fontWeight,
