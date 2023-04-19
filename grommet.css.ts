@@ -3,10 +3,18 @@ import { vars } from "./theme.css";
 
 const metric = "Metric";
 
-Object.keys(vars).forEach(weight => {
+const weights = [
+  "light",
+  "regular",
+  "medium",
+  "semibold",
+  "bold",
+] as const;
+
+weights.forEach((weight) => {
   globalFontFace(metric, {
     src: `url("${vars.font[weight].url}") format("woff2")`,
-    fontWeight: `${vars.font[weight]['font-weight']}`,
+    fontWeight: vars.font[weight].fontWeight,
   });
 });
 
