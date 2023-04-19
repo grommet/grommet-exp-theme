@@ -48,12 +48,14 @@ export const box = recipe({
       shrink: { flexShrink: "0 1 auto" },
     },
     gap: {
+      xsmall: { gap: vars.spacing.xsmall.desktop },
       small: { gap: vars.spacing.small.desktop },
       medium: { gap: vars.spacing.medium.desktop },
       large: { gap: vars.spacing.large.desktop },
       none: { gap: 0 },
     },
     height: {
+      xsmall: { height: vars.content.xsmall },
       small: { height: vars.content.small },
       medium: { height: vars.content.medium },
       large: { height: vars.content.large },
@@ -195,6 +197,7 @@ export const box = recipe({
       none: { padding: 0 },
     },
     width: {
+      xsmall: { width: vars.content.xsmall },
       small: { width: vars.content.small },
       medium: { width: vars.content.medium },
       large: { width: vars.content.large },
