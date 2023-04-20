@@ -64,12 +64,27 @@ export const text = recipe({
       2: large,
       3: medium,
     },
+    textAlign: {
+      start: { textAlign: "left" },
+      center: { textAlign: "center" },
+      end: { textAlign: "right" },
+    },
     weight: {
-      light: vars.font.light.fontWeight,
-      normal: vars.font.regular.fontWeight,
-      medium: vars.font.medium.fontWeight,
-      semibold: vars.font.semibold.fontWeight,
-      bold: vars.font.bold.fontWeight,
+      light: {
+        fontWeight: vars.font.light.fontWeight,
+      },
+      regular: {
+        fontWeight: vars.font.regular.fontWeight,
+      },
+      medium: {
+        fontWeight: vars.font.medium.fontWeight,
+      },
+      semibold: {
+        fontWeight: vars.font.semibold.fontWeight,
+      },
+      bold: {
+        fontWeight: vars.font.bold.fontWeight,
+      },
     },
   },
 });
