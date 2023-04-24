@@ -6,7 +6,7 @@ import { simpleGit as git } from "simple-git";
 
 const repoURL = `https://${process.env.GH_TOKEN}@github.com/grommet/grommet-exp-theme.git`;
 const localFolder = path.resolve(".tmp/grommet-exp-theme");
-const localDist = path.resolve(".");
+const localDist = path.resolve("dist");
 
 if (process.env.CI) {
   del(localFolder).then(() => {

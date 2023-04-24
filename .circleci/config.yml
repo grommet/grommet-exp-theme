@@ -31,6 +31,18 @@ jobs:
       - run:
           name: Running linter
           command: yarn lint
+  build:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/grommet-ci
+      - run:
+          name: Build
+          command: yarn build
+      - persist_to_workspace:
+          root: ~/grommet-ci
+          paths:
+            - ./
   release-stable:
     <<: *defaults
     steps:
@@ -48,7 +60,7 @@ workflows:
           filters:
             tags:
               only: /.*/
-      - lint:
+      - build:
           requires:
             - checkout
           filters:
@@ -59,7 +71,7 @@ workflows:
                 - stable
       - release-stable:
           requires:
-            - lint
+            - build
           filters:
             branches:
               only:
