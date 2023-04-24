@@ -1,22 +1,30 @@
-import typescript from 'rollup-plugin-typescript2';
-import pkg from './package.json' assert { type: 'json' };
+import typescript from "rollup-plugin-typescript2";
+import copy from "rollup-plugin-copy";
+import pkg from "./package.json" assert { type: "json" };
 
 export default {
-  input: './index.ts',
+  input: "./index.ts",
   treeshake: false,
   output: [
     {
-      file: './dist/index.js',
-      format: 'cjs',
+      file: "./dist/index.js",
+      format: "cjs",
     },
     {
-      file: './dist/index.mjs',
-      format: 'es',
+      file: "./dist/index.mjs",
+      format: "es",
     },
   ],
   external: [
     ...Object.keys(pkg.dependencies || {}),
     ...Object.keys(pkg.peerDependencies || {}),
   ],
-  plugins: [typescript()],
+  plugins: [
+    typescript(),
+    copy({
+      targets: [
+        { src: ["package.json", "LICENSE", "README.md"], dest: "dist" },
+      ],
+    }),
+  ],
 };

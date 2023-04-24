@@ -4,7 +4,9 @@
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "files": [ "dist" ],
+  "files": [
+    "dist"
+  ],
   "types": "./dist/index.d.ts",
   "scripts": {
     "lint": "eslint",
@@ -31,6 +33,7 @@
     "eslint": "^8.37.0",
     "fs-extra": "^11.1.1",
     "rollup": "^3.21.0",
+    "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-typescript2": "^0.34.1",
     "simple-git": "^3.17.0",
     "typescript": "^5.0.3"
