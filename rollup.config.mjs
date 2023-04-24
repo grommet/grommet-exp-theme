@@ -1,5 +1,4 @@
 import typescript from "rollup-plugin-typescript2";
-import { vanillaExtractPlugin } from "@vanilla-extract/rollup-plugin";
 import copy from "rollup-plugin-copy";
 import pkg from "./package.json" assert { type: "json" };
 
@@ -21,7 +20,6 @@ export default {
     ...Object.keys(pkg.peerDependencies || {}),
   ],
   plugins: [
-    vanillaExtractPlugin(),
     typescript(),
     copy({
       targets: [
