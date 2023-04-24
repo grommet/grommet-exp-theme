@@ -2,9 +2,11 @@
   "name": "grommet-exp-theme",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "files": [ "dist" ],
+  "main": "index.js",
+  "module": "index.mjs",
+  "files": [
+    "dist"
+  ],
   "types": "./dist/index.d.ts",
   "scripts": {
     "lint": "eslint",
