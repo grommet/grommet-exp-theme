@@ -1,48 +1,721 @@
 'use strict';
 
-require('./assets/theme.css.ts.vanilla-cbf3525f.css');
-require('./assets/anchor.css.ts.vanilla-5566ab8a.css');
-require('./assets/box.css.ts.vanilla-f939408a.css');
-var createRuntimeFn = require('@vanilla-extract/recipes/createRuntimeFn');
-require('./assets/button.css.ts.vanilla-278f9ca6.css');
-require('./assets/grid.css.ts.vanilla-eb95705e.css');
-require('./assets/grommet.css.ts.vanilla-d1c32bf2.css');
-require('./assets/heading.css.ts.vanilla-0cf92e38.css');
-require('./assets/icon.css.ts.vanilla-d7720eb5.css');
-require('./assets/page.css.ts.vanilla-949bf119.css');
-require('./assets/pageContent.css.ts.vanilla-97de3098.css');
-require('./assets/reset.css.ts.vanilla-a108dc6e.css');
-require('./assets/text.css.ts.vanilla-1114b499.css');
-require('./assets/textInput.css.ts.vanilla-cf6679f3.css');
+var css = require('@vanilla-extract/css');
+var hpeDesignTokens = require('hpe-design-tokens');
+var recipes = require('@vanilla-extract/recipes');
 
-var anchor = 'anchor_anchor__17q3zg10';
+const vars = css.createThemeContract(hpeDesignTokens.structuredTokens);
+const theme = css.createTheme(vars, hpeDesignTokens.structuredTokens);
+// export const darkTheme = createTheme(vars, structuredTokensDark);
 
-var box = createRuntimeFn.createRuntimeFn({ defaultClassName: 'box_box__16c0ntc0', variantClassNames: { align: { start: 'box_box_align_start__16c0ntc1', center: 'box_box_align_center__16c0ntc2', stretch: 'box_box_align_stretch__16c0ntc3', end: 'box_box_align_end__16c0ntc4' }, background: { 'default': 'box_box_background_default__16c0ntc5', back: 'box_box_background_back__16c0ntc6', front: 'box_box_background_front__16c0ntc7', contrast: 'box_box_background_contrast__16c0ntc8' }, border: { true: 'box_box_border_true__16c0ntc9', false: 'box_box_border_false__16c0ntca', top: 'box_box_border_top__16c0ntcb', bottom: 'box_box_border_bottom__16c0ntcc' }, direction: { column: 'box_box_direction_column__16c0ntcd', row: 'box_box_direction_row__16c0ntce' }, elevation: { small: 'box_box_elevation_small__16c0ntcf', medium: 'box_box_elevation_medium__16c0ntcg', large: 'box_box_elevation_large__16c0ntch', none: 'box_box_elevation_none__16c0ntci' }, flex: { true: 'box_box_flex_true__16c0ntcj', false: 'box_box_flex_false__16c0ntck', grow: 'box_box_flex_grow__16c0ntcl', shrink: 'box_box_flex_shrink__16c0ntcm' }, gap: { xxsmall: 'box_box_gap_xxsmall__16c0ntcn', xsmall: 'box_box_gap_xsmall__16c0ntco', small: 'box_box_gap_small__16c0ntcp', medium: 'box_box_gap_medium__16c0ntcq', large: 'box_box_gap_large__16c0ntcr', xlarge: 'box_box_gap_xlarge__16c0ntcs', none: 'box_box_gap_none__16c0ntct' }, height: { xxsmall: 'box_box_height_xxsmall__16c0ntcu', xsmall: 'box_box_height_xsmall__16c0ntcv', small: 'box_box_height_small__16c0ntcw', medium: 'box_box_height_medium__16c0ntcx', large: 'box_box_height_large__16c0ntcy', xlarge: 'box_box_height_xlarge__16c0ntcz', none: 'box_box_height_none__16c0ntc10' }, width: { xxsmall: 'box_box_width_xxsmall__16c0ntc11', xsmall: 'box_box_width_xsmall__16c0ntc12', small: 'box_box_width_small__16c0ntc13', medium: 'box_box_width_medium__16c0ntc14', large: 'box_box_width_large__16c0ntc15', xlarge: 'box_box_width_xlarge__16c0ntc16', none: 'box_box_width_none__16c0ntc17' }, justify: { around: 'box_box_justify_around__16c0ntc18', between: 'box_box_justify_between__16c0ntc19', center: 'box_box_justify_center__16c0ntc1a', end: 'box_box_justify_end__16c0ntc1b', evenly: 'box_box_justify_evenly__16c0ntc1c', start: 'box_box_justify_start__16c0ntc1d' }, margin: { xxsmall: 'box_box_margin_xxsmall__16c0ntc1e', xsmall: 'box_box_margin_xsmall__16c0ntc1f', small: 'box_box_margin_small__16c0ntc1g', medium: 'box_box_margin_medium__16c0ntc1h', large: 'box_box_margin_large__16c0ntc1i', xlarge: 'box_box_margin_xlarge__16c0ntc1j', none: 'box_box_margin_none__16c0ntc1k' }, marginHorizontal: { xxsmall: 'box_box_marginHorizontal_xxsmall__16c0ntc1l', xsmall: 'box_box_marginHorizontal_xsmall__16c0ntc1m', small: 'box_box_marginHorizontal_small__16c0ntc1n', medium: 'box_box_marginHorizontal_medium__16c0ntc1o', large: 'box_box_marginHorizontal_large__16c0ntc1p', xlarge: 'box_box_marginHorizontal_xlarge__16c0ntc1q', none: 'box_box_marginHorizontal_none__16c0ntc1r' }, marginVertical: { xxsmall: 'box_box_marginVertical_xxsmall__16c0ntc1s', xsmall: 'box_box_marginVertical_xsmall__16c0ntc1t', small: 'box_box_marginVertical_small__16c0ntc1u', medium: 'box_box_marginVertical_medium__16c0ntc1v', large: 'box_box_marginVertical_large__16c0ntc1w', xlarge: 'box_box_marginVertical_xlarge__16c0ntc1x', none: 'box_box_marginVertical_none__16c0ntc1y' }, marginTop: { xxsmall: 'box_box_marginTop_xxsmall__16c0ntc1z', xsmall: 'box_box_marginTop_xsmall__16c0ntc20', small: 'box_box_marginTop_small__16c0ntc21', medium: 'box_box_marginTop_medium__16c0ntc22', large: 'box_box_marginTop_large__16c0ntc23', xlarge: 'box_box_marginTop_xlarge__16c0ntc24', none: 'box_box_marginTop_none__16c0ntc25' }, marginBottom: { xxsmall: 'box_box_marginBottom_xxsmall__16c0ntc26', xsmall: 'box_box_marginBottom_xsmall__16c0ntc27', small: 'box_box_marginBottom_small__16c0ntc28', medium: 'box_box_marginBottom_medium__16c0ntc29', large: 'box_box_marginBottom_large__16c0ntc2a', xlarge: 'box_box_marginBottom_xlarge__16c0ntc2b', none: 'box_box_marginBottom_none__16c0ntc2c' }, marginStart: { xxsmall: 'box_box_marginStart_xxsmall__16c0ntc2d', xsmall: 'box_box_marginStart_xsmall__16c0ntc2e', small: 'box_box_marginStart_small__16c0ntc2f', medium: 'box_box_marginStart_medium__16c0ntc2g', large: 'box_box_marginStart_large__16c0ntc2h', xlarge: 'box_box_marginStart_xlarge__16c0ntc2i', none: 'box_box_marginStart_none__16c0ntc2j' }, marginEnd: { xxsmall: 'box_box_marginEnd_xxsmall__16c0ntc2k', xsmall: 'box_box_marginEnd_xsmall__16c0ntc2l', small: 'box_box_marginEnd_small__16c0ntc2m', medium: 'box_box_marginEnd_medium__16c0ntc2n', large: 'box_box_marginEnd_large__16c0ntc2o', xlarge: 'box_box_marginEnd_xlarge__16c0ntc2p', none: 'box_box_marginEnd_none__16c0ntc2q' }, pad: { xxsmall: 'box_box_pad_xxsmall__16c0ntc2r', xsmall: 'box_box_pad_xsmall__16c0ntc2s', small: 'box_box_pad_small__16c0ntc2t', medium: 'box_box_pad_medium__16c0ntc2u', large: 'box_box_pad_large__16c0ntc2v', xlarge: 'box_box_pad_xlarge__16c0ntc2w', none: 'box_box_pad_none__16c0ntc2x' }, padHorizontal: { xxsmall: 'box_box_padHorizontal_xxsmall__16c0ntc2y', xsmall: 'box_box_padHorizontal_xsmall__16c0ntc2z', small: 'box_box_padHorizontal_small__16c0ntc30', medium: 'box_box_padHorizontal_medium__16c0ntc31', large: 'box_box_padHorizontal_large__16c0ntc32', xlarge: 'box_box_padHorizontal_xlarge__16c0ntc33', none: 'box_box_padHorizontal_none__16c0ntc34' }, padVertical: { xxsmall: 'box_box_padVertical_xxsmall__16c0ntc35', xsmall: 'box_box_padVertical_xsmall__16c0ntc36', small: 'box_box_padVertical_small__16c0ntc37', medium: 'box_box_padVertical_medium__16c0ntc38', large: 'box_box_padVertical_large__16c0ntc39', xlarge: 'box_box_padVertical_xlarge__16c0ntc3a', none: 'box_box_padVertical_none__16c0ntc3b' }, padTop: { xxsmall: 'box_box_padTop_xxsmall__16c0ntc3c', xsmall: 'box_box_padTop_xsmall__16c0ntc3d', small: 'box_box_padTop_small__16c0ntc3e', medium: 'box_box_padTop_medium__16c0ntc3f', large: 'box_box_padTop_large__16c0ntc3g', xlarge: 'box_box_padTop_xlarge__16c0ntc3h', none: 'box_box_padTop_none__16c0ntc3i' }, padBottom: { xxsmall: 'box_box_padBottom_xxsmall__16c0ntc3j', xsmall: 'box_box_padBottom_xsmall__16c0ntc3k', small: 'box_box_padBottom_small__16c0ntc3l', medium: 'box_box_padBottom_medium__16c0ntc3m', large: 'box_box_padBottom_large__16c0ntc3n', xlarge: 'box_box_padBottom_xlarge__16c0ntc3o', none: 'box_box_padBottom_none__16c0ntc3p' }, padStart: { xxsmall: 'box_box_padStart_xxsmall__16c0ntc3q', xsmall: 'box_box_padStart_xsmall__16c0ntc3r', small: 'box_box_padStart_small__16c0ntc3s', medium: 'box_box_padStart_medium__16c0ntc3t', large: 'box_box_padStart_large__16c0ntc3u', xlarge: 'box_box_padStart_xlarge__16c0ntc3v', none: 'box_box_padStart_none__16c0ntc3w' }, padEnd: { xxsmall: 'box_box_padEnd_xxsmall__16c0ntc3x', xsmall: 'box_box_padEnd_xsmall__16c0ntc3y', small: 'box_box_padEnd_small__16c0ntc3z', medium: 'box_box_padEnd_medium__16c0ntc40', large: 'box_box_padEnd_large__16c0ntc41', xlarge: 'box_box_padEnd_xlarge__16c0ntc42', none: 'box_box_padEnd_none__16c0ntc43' }, round: { xsmall: 'box_box_round_xsmall__16c0ntc44', small: 'box_box_round_small__16c0ntc45', medium: 'box_box_round_medium__16c0ntc46', large: 'box_box_round_large__16c0ntc47', xlarge: 'box_box_round_xlarge__16c0ntc48', full: 'box_box_round_full__16c0ntc49', none: 'box_box_round_none__16c0ntc4a' }, wrap: { true: 'box_box_wrap_true__16c0ntc4b', false: 'box_box_wrap_false__16c0ntc4c' } }, defaultVariants: { align: 'stretch', direction: 'column', justify: 'start' }, compoundVariants: [] });
-var contentSizeVariants = { height: { xxsmall: { height: 'var(--content-xxsmall__1d4kmee17)' }, xsmall: { height: 'var(--content-xsmall__1d4kmee18)' }, small: { height: 'var(--content-small__1d4kmee19)' }, medium: { height: 'var(--content-medium__1d4kmee1a)' }, large: { height: 'var(--content-large__1d4kmee1b)' }, xlarge: { height: 'var(--content-xlarge__1d4kmee1c)' }, none: { height: 'initial' } }, width: { xxsmall: { width: 'var(--content-xxsmall__1d4kmee17)' }, xsmall: { width: 'var(--content-xsmall__1d4kmee18)' }, small: { width: 'var(--content-small__1d4kmee19)' }, medium: { width: 'var(--content-medium__1d4kmee1a)' }, large: { width: 'var(--content-large__1d4kmee1b)' }, xlarge: { width: 'var(--content-xlarge__1d4kmee1c)' }, none: { width: 'initial' } } };
-var gapVariants = { gap: { xxsmall: { gap: 'var(--spacing-xxsmall-desktop__1d4kmee26)' }, xsmall: { gap: 'var(--spacing-xsmall-desktop__1d4kmee29)' }, small: { gap: 'var(--spacing-small-desktop__1d4kmee2c)' }, medium: { gap: 'var(--spacing-medium-desktop__1d4kmee2f)' }, large: { gap: 'var(--spacing-large-desktop__1d4kmee2i)' }, xlarge: { gap: 'var(--spacing-xlarge-desktop__1d4kmee2l)' }, none: { gap: 0 } } };
-var marginVariants = { margin: { xxsmall: { margin: 'var(--spacing-xxsmall-desktop__1d4kmee26)' }, xsmall: { margin: 'var(--spacing-xsmall-desktop__1d4kmee29)' }, small: { margin: 'var(--spacing-small-desktop__1d4kmee2c)' }, medium: { margin: 'var(--spacing-medium-desktop__1d4kmee2f)' }, large: { margin: 'var(--spacing-large-desktop__1d4kmee2i)' }, xlarge: { margin: 'var(--spacing-xlarge-desktop__1d4kmee2l)' }, none: { margin: 0 } }, marginHorizontal: { xxsmall: { marginInlineStart: 'var(--spacing-xxsmall-desktop__1d4kmee26)', marginInlineEnd: 'var(--spacing-xxsmall-desktop__1d4kmee26)' }, xsmall: { marginInlineStart: 'var(--spacing-xsmall-desktop__1d4kmee29)', marginInlineEnd: 'var(--spacing-xsmall-desktop__1d4kmee29)' }, small: { marginInlineStart: 'var(--spacing-small-desktop__1d4kmee2c)', marginInlineEnd: 'var(--spacing-small-desktop__1d4kmee2c)' }, medium: { marginInlineStart: 'var(--spacing-medium-desktop__1d4kmee2f)', marginInlineEnd: 'var(--spacing-medium-desktop__1d4kmee2f)' }, large: { marginInlineStart: 'var(--spacing-large-desktop__1d4kmee2i)', marginInlineEnd: 'var(--spacing-large-desktop__1d4kmee2i)' }, xlarge: { marginInlineStart: 'var(--spacing-xlarge-desktop__1d4kmee2l)', marginInlineEnd: 'var(--spacing-xlarge-desktop__1d4kmee2l)' }, none: { marginInlineStart: 0, marginInlineEnd: 0 } }, marginVertical: { xxsmall: { marginTop: 'var(--spacing-xxsmall-desktop__1d4kmee26)', marginBottom: 'var(--spacing-xxsmall-desktop__1d4kmee26)' }, xsmall: { marginTop: 'var(--spacing-xsmall-desktop__1d4kmee29)', marginBottom: 'var(--spacing-xsmall-desktop__1d4kmee29)' }, small: { marginTop: 'var(--spacing-small-desktop__1d4kmee2c)', marginBottom: 'var(--spacing-small-desktop__1d4kmee2c)' }, medium: { marginTop: 'var(--spacing-medium-desktop__1d4kmee2f)', marginBottom: 'var(--spacing-medium-desktop__1d4kmee2f)' }, large: { marginTop: 'var(--spacing-large-desktop__1d4kmee2i)', marginBottom: 'var(--spacing-large-desktop__1d4kmee2i)' }, xlarge: { marginTop: 'var(--spacing-xlarge-desktop__1d4kmee2l)', marginBottom: 'var(--spacing-xlarge-desktop__1d4kmee2l)' }, none: { marginTop: 0, marginBottom: 0 } }, marginTop: { xxsmall: { marginTop: 'var(--spacing-xxsmall-desktop__1d4kmee26)' }, xsmall: { marginTop: 'var(--spacing-xsmall-desktop__1d4kmee29)' }, small: { marginTop: 'var(--spacing-small-desktop__1d4kmee2c)' }, medium: { marginTop: 'var(--spacing-medium-desktop__1d4kmee2f)' }, large: { marginTop: 'var(--spacing-large-desktop__1d4kmee2i)' }, xlarge: { marginTop: 'var(--spacing-xlarge-desktop__1d4kmee2l)' }, none: { marginTop: 0 } }, marginBottom: { xxsmall: { marginBottom: 'var(--spacing-xxsmall-desktop__1d4kmee26)' }, xsmall: { marginBottom: 'var(--spacing-xsmall-desktop__1d4kmee29)' }, small: { marginBottom: 'var(--spacing-small-desktop__1d4kmee2c)' }, medium: { marginBottom: 'var(--spacing-medium-desktop__1d4kmee2f)' }, large: { marginBottom: 'var(--spacing-large-desktop__1d4kmee2i)' }, xlarge: { marginBottom: 'var(--spacing-xlarge-desktop__1d4kmee2l)' }, none: { marginBottom: 0 } }, marginStart: { xxsmall: { marginInlineStart: 'var(--spacing-xxsmall-desktop__1d4kmee26)' }, xsmall: { marginInlineStart: 'var(--spacing-xsmall-desktop__1d4kmee29)' }, small: { marginInlineStart: 'var(--spacing-small-desktop__1d4kmee2c)' }, medium: { marginInlineStart: 'var(--spacing-medium-desktop__1d4kmee2f)' }, large: { marginInlineStart: 'var(--spacing-large-desktop__1d4kmee2i)' }, xlarge: { marginInlineStart: 'var(--spacing-xlarge-desktop__1d4kmee2l)' }, none: { marginInlineStart: 0 } }, marginEnd: { xxsmall: { marginInlineEnd: 'var(--spacing-xxsmall-desktop__1d4kmee26)' }, xsmall: { marginInlineEnd: 'var(--spacing-xsmall-desktop__1d4kmee29)' }, small: { marginInlineEnd: 'var(--spacing-small-desktop__1d4kmee2c)' }, medium: { marginInlineEnd: 'var(--spacing-medium-desktop__1d4kmee2f)' }, large: { marginInlineEnd: 'var(--spacing-large-desktop__1d4kmee2i)' }, xlarge: { marginInlineEnd: 'var(--spacing-xlarge-desktop__1d4kmee2l)' }, none: { marginInlineEnd: 0 } } };
-var padVariants = { pad: { xxsmall: { padding: 'var(--spacing-xxsmall-desktop__1d4kmee26)' }, xsmall: { padding: 'var(--spacing-xsmall-desktop__1d4kmee29)' }, small: { padding: 'var(--spacing-small-desktop__1d4kmee2c)' }, medium: { padding: 'var(--spacing-medium-desktop__1d4kmee2f)' }, large: { padding: 'var(--spacing-large-desktop__1d4kmee2i)' }, xlarge: { padding: 'var(--spacing-xlarge-desktop__1d4kmee2l)' }, none: { padding: 0 } }, padHorizontal: { xxsmall: { paddingInlineStart: 'var(--spacing-xxsmall-desktop__1d4kmee26)', paddingInlineEnd: 'var(--spacing-xxsmall-desktop__1d4kmee26)' }, xsmall: { paddingInlineStart: 'var(--spacing-xsmall-desktop__1d4kmee29)', paddingInlineEnd: 'var(--spacing-xsmall-desktop__1d4kmee29)' }, small: { paddingInlineStart: 'var(--spacing-small-desktop__1d4kmee2c)', paddingInlineEnd: 'var(--spacing-small-desktop__1d4kmee2c)' }, medium: { paddingInlineStart: 'var(--spacing-medium-desktop__1d4kmee2f)', paddingInlineEnd: 'var(--spacing-medium-desktop__1d4kmee2f)' }, large: { paddingInlineStart: 'var(--spacing-large-desktop__1d4kmee2i)', paddingInlineEnd: 'var(--spacing-large-desktop__1d4kmee2i)' }, xlarge: { paddingInlineStart: 'var(--spacing-xlarge-desktop__1d4kmee2l)', paddingInlineEnd: 'var(--spacing-xlarge-desktop__1d4kmee2l)' }, none: { paddingInlineStart: 0, paddingInlineEnd: 0 } }, padVertical: { xxsmall: { paddingTop: 'var(--spacing-xxsmall-desktop__1d4kmee26)', paddingBottom: 'var(--spacing-xxsmall-desktop__1d4kmee26)' }, xsmall: { paddingTop: 'var(--spacing-xsmall-desktop__1d4kmee29)', paddingBottom: 'var(--spacing-xsmall-desktop__1d4kmee29)' }, small: { paddingTop: 'var(--spacing-small-desktop__1d4kmee2c)', paddingBottom: 'var(--spacing-small-desktop__1d4kmee2c)' }, medium: { paddingTop: 'var(--spacing-medium-desktop__1d4kmee2f)', paddingBottom: 'var(--spacing-medium-desktop__1d4kmee2f)' }, large: { paddingTop: 'var(--spacing-large-desktop__1d4kmee2i)', paddingBottom: 'var(--spacing-large-desktop__1d4kmee2i)' }, xlarge: { paddingTop: 'var(--spacing-xlarge-desktop__1d4kmee2l)', paddingBottom: 'var(--spacing-xlarge-desktop__1d4kmee2l)' }, none: { paddingTop: 0, paddingBottom: 0 } }, padTop: { xxsmall: { paddingTop: 'var(--spacing-xxsmall-desktop__1d4kmee26)' }, xsmall: { paddingTop: 'var(--spacing-xsmall-desktop__1d4kmee29)' }, small: { paddingTop: 'var(--spacing-small-desktop__1d4kmee2c)' }, medium: { paddingTop: 'var(--spacing-medium-desktop__1d4kmee2f)' }, large: { paddingTop: 'var(--spacing-large-desktop__1d4kmee2i)' }, xlarge: { paddingTop: 'var(--spacing-xlarge-desktop__1d4kmee2l)' }, none: { paddingTop: 0 } }, padBottom: { xxsmall: { paddingBottom: 'var(--spacing-xxsmall-desktop__1d4kmee26)' }, xsmall: { paddingBottom: 'var(--spacing-xsmall-desktop__1d4kmee29)' }, small: { paddingBottom: 'var(--spacing-small-desktop__1d4kmee2c)' }, medium: { paddingBottom: 'var(--spacing-medium-desktop__1d4kmee2f)' }, large: { paddingBottom: 'var(--spacing-large-desktop__1d4kmee2i)' }, xlarge: { paddingBottom: 'var(--spacing-xlarge-desktop__1d4kmee2l)' }, none: { paddingBottom: 0 } }, padStart: { xxsmall: { paddingInlineStart: 'var(--spacing-xxsmall-desktop__1d4kmee26)' }, xsmall: { paddingInlineStart: 'var(--spacing-xsmall-desktop__1d4kmee29)' }, small: { paddingInlineStart: 'var(--spacing-small-desktop__1d4kmee2c)' }, medium: { paddingInlineStart: 'var(--spacing-medium-desktop__1d4kmee2f)' }, large: { paddingInlineStart: 'var(--spacing-large-desktop__1d4kmee2i)' }, xlarge: { paddingInlineStart: 'var(--spacing-xlarge-desktop__1d4kmee2l)' }, none: { paddingInlineStart: 0 } }, padEnd: { xxsmall: { paddingInlineEnd: 'var(--spacing-xxsmall-desktop__1d4kmee26)' }, xsmall: { paddingInlineEnd: 'var(--spacing-xsmall-desktop__1d4kmee29)' }, small: { paddingInlineEnd: 'var(--spacing-small-desktop__1d4kmee2c)' }, medium: { paddingInlineEnd: 'var(--spacing-medium-desktop__1d4kmee2f)' }, large: { paddingInlineEnd: 'var(--spacing-large-desktop__1d4kmee2i)' }, xlarge: { paddingInlineEnd: 'var(--spacing-xlarge-desktop__1d4kmee2l)' }, none: { paddingInlineEnd: 0 } } };
+const anchor = css.style({
+    color: vars.text.color.strong,
+});
 
-var button = createRuntimeFn.createRuntimeFn({ defaultClassName: 'button_button__16b94vq0', variantClassNames: { kind: { 'default': 'button_button_kind_default__16b94vq1', secondary: 'button_button_kind_secondary__16b94vq2', primary: 'button_button_kind_primary__16b94vq3' }, size: { xsmall: 'button_button_size_xsmall__16b94vq4', small: 'button_button_size_small__16b94vq5', medium: 'button_button_size_medium__16b94vq6', large: 'button_button_size_large__16b94vq7' }, active: { true: 'button_button_active_true__16b94vq8' } }, defaultVariants: { kind: 'default', size: 'medium' }, compoundVariants: [] });
+const contentSizeVariants = {
+    height: {
+        xxsmall: { height: vars.content.xxsmall },
+        xsmall: { height: vars.content.xsmall },
+        small: { height: vars.content.small },
+        medium: { height: vars.content.medium },
+        large: { height: vars.content.large },
+        xlarge: { height: vars.content.xlarge },
+        none: { height: "initial" },
+    },
+    width: {
+        xxsmall: { width: vars.content.xxsmall },
+        xsmall: { width: vars.content.xsmall },
+        small: { width: vars.content.small },
+        medium: { width: vars.content.medium },
+        large: { width: vars.content.large },
+        xlarge: { width: vars.content.xlarge },
+        none: { width: "initial" },
+    },
+};
+const gapVariants = {
+    gap: {
+        xxsmall: { gap: vars.spacing.xxsmall.desktop },
+        xsmall: { gap: vars.spacing.xsmall.desktop },
+        small: { gap: vars.spacing.small.desktop },
+        medium: { gap: vars.spacing.medium.desktop },
+        large: { gap: vars.spacing.large.desktop },
+        xlarge: { gap: vars.spacing.xlarge.desktop },
+        none: { gap: 0 },
+    },
+};
+const marginVariants = {
+    margin: {
+        xxsmall: { margin: vars.spacing.xxsmall.desktop },
+        xsmall: { margin: vars.spacing.xsmall.desktop },
+        small: { margin: vars.spacing.small.desktop },
+        medium: { margin: vars.spacing.medium.desktop },
+        large: { margin: vars.spacing.large.desktop },
+        xlarge: { margin: vars.spacing.xlarge.desktop },
+        none: { margin: 0 },
+    },
+    marginHorizontal: {
+        xxsmall: {
+            marginInlineStart: vars.spacing.xxsmall.desktop,
+            marginInlineEnd: vars.spacing.xxsmall.desktop,
+        },
+        xsmall: {
+            marginInlineStart: vars.spacing.xsmall.desktop,
+            marginInlineEnd: vars.spacing.xsmall.desktop,
+        },
+        small: {
+            marginInlineStart: vars.spacing.small.desktop,
+            marginInlineEnd: vars.spacing.small.desktop,
+        },
+        medium: {
+            marginInlineStart: vars.spacing.medium.desktop,
+            marginInlineEnd: vars.spacing.medium.desktop,
+        },
+        large: {
+            marginInlineStart: vars.spacing.large.desktop,
+            marginInlineEnd: vars.spacing.large.desktop,
+        },
+        xlarge: {
+            marginInlineStart: vars.spacing.xlarge.desktop,
+            marginInlineEnd: vars.spacing.xlarge.desktop,
+        },
+        none: { marginInlineStart: 0, marginInlineEnd: 0 },
+    },
+    marginVertical: {
+        xxsmall: {
+            marginTop: vars.spacing.xxsmall.desktop,
+            marginBottom: vars.spacing.xxsmall.desktop,
+        },
+        xsmall: {
+            marginTop: vars.spacing.xsmall.desktop,
+            marginBottom: vars.spacing.xsmall.desktop,
+        },
+        small: {
+            marginTop: vars.spacing.small.desktop,
+            marginBottom: vars.spacing.small.desktop,
+        },
+        medium: {
+            marginTop: vars.spacing.medium.desktop,
+            marginBottom: vars.spacing.medium.desktop,
+        },
+        large: {
+            marginTop: vars.spacing.large.desktop,
+            marginBottom: vars.spacing.large.desktop,
+        },
+        xlarge: {
+            marginTop: vars.spacing.xlarge.desktop,
+            marginBottom: vars.spacing.xlarge.desktop,
+        },
+        none: { marginTop: 0, marginBottom: 0 },
+    },
+    marginTop: {
+        xxsmall: { marginTop: vars.spacing.xxsmall.desktop },
+        xsmall: { marginTop: vars.spacing.xsmall.desktop },
+        small: { marginTop: vars.spacing.small.desktop },
+        medium: { marginTop: vars.spacing.medium.desktop },
+        large: { marginTop: vars.spacing.large.desktop },
+        xlarge: { marginTop: vars.spacing.xlarge.desktop },
+        none: { marginTop: 0 },
+    },
+    marginBottom: {
+        xxsmall: { marginBottom: vars.spacing.xxsmall.desktop },
+        xsmall: { marginBottom: vars.spacing.xsmall.desktop },
+        small: { marginBottom: vars.spacing.small.desktop },
+        medium: { marginBottom: vars.spacing.medium.desktop },
+        large: { marginBottom: vars.spacing.large.desktop },
+        xlarge: { marginBottom: vars.spacing.xlarge.desktop },
+        none: { marginBottom: 0 },
+    },
+    marginStart: {
+        xxsmall: { marginInlineStart: vars.spacing.xxsmall.desktop },
+        xsmall: { marginInlineStart: vars.spacing.xsmall.desktop },
+        small: { marginInlineStart: vars.spacing.small.desktop },
+        medium: { marginInlineStart: vars.spacing.medium.desktop },
+        large: { marginInlineStart: vars.spacing.large.desktop },
+        xlarge: { marginInlineStart: vars.spacing.xlarge.desktop },
+        none: { marginInlineStart: 0 },
+    },
+    marginEnd: {
+        xxsmall: { marginInlineEnd: vars.spacing.xxsmall.desktop },
+        xsmall: { marginInlineEnd: vars.spacing.xsmall.desktop },
+        small: { marginInlineEnd: vars.spacing.small.desktop },
+        medium: { marginInlineEnd: vars.spacing.medium.desktop },
+        large: { marginInlineEnd: vars.spacing.large.desktop },
+        xlarge: { marginInlineEnd: vars.spacing.xlarge.desktop },
+        none: { marginInlineEnd: 0 },
+    },
+};
+const padVariants = {
+    pad: {
+        xxsmall: { padding: vars.spacing.xxsmall.desktop },
+        xsmall: { padding: vars.spacing.xsmall.desktop },
+        small: { padding: vars.spacing.small.desktop },
+        medium: { padding: vars.spacing.medium.desktop },
+        large: { padding: vars.spacing.large.desktop },
+        xlarge: { padding: vars.spacing.xlarge.desktop },
+        none: { padding: 0 },
+    },
+    padHorizontal: {
+        xxsmall: {
+            paddingInlineStart: vars.spacing.xxsmall.desktop,
+            paddingInlineEnd: vars.spacing.xxsmall.desktop,
+        },
+        xsmall: {
+            paddingInlineStart: vars.spacing.xsmall.desktop,
+            paddingInlineEnd: vars.spacing.xsmall.desktop,
+        },
+        small: {
+            paddingInlineStart: vars.spacing.small.desktop,
+            paddingInlineEnd: vars.spacing.small.desktop,
+        },
+        medium: {
+            paddingInlineStart: vars.spacing.medium.desktop,
+            paddingInlineEnd: vars.spacing.medium.desktop,
+        },
+        large: {
+            paddingInlineStart: vars.spacing.large.desktop,
+            paddingInlineEnd: vars.spacing.large.desktop,
+        },
+        xlarge: {
+            paddingInlineStart: vars.spacing.xlarge.desktop,
+            paddingInlineEnd: vars.spacing.xlarge.desktop,
+        },
+        none: { paddingInlineStart: 0, paddingInlineEnd: 0 },
+    },
+    padVertical: {
+        xxsmall: {
+            paddingTop: vars.spacing.xxsmall.desktop,
+            paddingBottom: vars.spacing.xxsmall.desktop,
+        },
+        xsmall: {
+            paddingTop: vars.spacing.xsmall.desktop,
+            paddingBottom: vars.spacing.xsmall.desktop,
+        },
+        small: {
+            paddingTop: vars.spacing.small.desktop,
+            paddingBottom: vars.spacing.small.desktop,
+        },
+        medium: {
+            paddingTop: vars.spacing.medium.desktop,
+            paddingBottom: vars.spacing.medium.desktop,
+        },
+        large: {
+            paddingTop: vars.spacing.large.desktop,
+            paddingBottom: vars.spacing.large.desktop,
+        },
+        xlarge: {
+            paddingTop: vars.spacing.xlarge.desktop,
+            paddingBottom: vars.spacing.xlarge.desktop,
+        },
+        none: { paddingTop: 0, paddingBottom: 0 },
+    },
+    padTop: {
+        xxsmall: { paddingTop: vars.spacing.xxsmall.desktop },
+        xsmall: { paddingTop: vars.spacing.xsmall.desktop },
+        small: { paddingTop: vars.spacing.small.desktop },
+        medium: { paddingTop: vars.spacing.medium.desktop },
+        large: { paddingTop: vars.spacing.large.desktop },
+        xlarge: { paddingTop: vars.spacing.xlarge.desktop },
+        none: { paddingTop: 0 },
+    },
+    padBottom: {
+        xxsmall: { paddingBottom: vars.spacing.xxsmall.desktop },
+        xsmall: { paddingBottom: vars.spacing.xsmall.desktop },
+        small: { paddingBottom: vars.spacing.small.desktop },
+        medium: { paddingBottom: vars.spacing.medium.desktop },
+        large: { paddingBottom: vars.spacing.large.desktop },
+        xlarge: { paddingBottom: vars.spacing.xlarge.desktop },
+        none: { paddingBottom: 0 },
+    },
+    padStart: {
+        xxsmall: { paddingInlineStart: vars.spacing.xxsmall.desktop },
+        xsmall: { paddingInlineStart: vars.spacing.xsmall.desktop },
+        small: { paddingInlineStart: vars.spacing.small.desktop },
+        medium: { paddingInlineStart: vars.spacing.medium.desktop },
+        large: { paddingInlineStart: vars.spacing.large.desktop },
+        xlarge: { paddingInlineStart: vars.spacing.xlarge.desktop },
+        none: { paddingInlineStart: 0 },
+    },
+    padEnd: {
+        xxsmall: { paddingInlineEnd: vars.spacing.xxsmall.desktop },
+        xsmall: { paddingInlineEnd: vars.spacing.xsmall.desktop },
+        small: { paddingInlineEnd: vars.spacing.small.desktop },
+        medium: { paddingInlineEnd: vars.spacing.medium.desktop },
+        large: { paddingInlineEnd: vars.spacing.large.desktop },
+        xlarge: { paddingInlineEnd: vars.spacing.xlarge.desktop },
+        none: { paddingInlineEnd: 0 },
+    },
+};
+const box = recipes.recipe({
+    base: {
+        display: "flex",
+        boxSizing: "border-box",
+    },
+    variants: Object.assign(Object.assign(Object.assign(Object.assign(Object.assign(Object.assign({ align: {
+            start: { alignItems: "flex-start" },
+            center: { alignItems: "center" },
+            stretch: { alignItems: "stretch" },
+            end: { alignItems: "flex-end" },
+        }, background: {
+            default: { backgroundColor: vars.color.background.default },
+            back: { backgroundColor: vars.color.background.back },
+            front: { backgroundColor: vars.color.background.front },
+            contrast: { backgroundColor: vars.color.background.contrast },
+        }, border: {
+            true: {
+                border: `${vars.border.medium.desktop.width} solid ${vars.color.border}`,
+            },
+            false: { border: "none" },
+            top: {
+                borderTop: `${vars.border.medium.desktop.width} solid ${vars.color.border}`,
+            },
+            bottom: {
+                borderBottom: `${vars.border.medium.desktop.width} solid ${vars.color.border}`,
+            },
+        }, direction: {
+            column: { flexDirection: "column" },
+            row: { flexDirection: "row" },
+        }, elevation: {
+            small: { boxShadow: vars.elevation.small.boxShadow },
+            medium: { boxShadow: vars.elevation.medium.boxShadow },
+            large: { boxShadow: vars.elevation.large.boxShadow },
+            none: { boxShadow: "none" },
+        }, flex: {
+            true: { flex: "1 1 auto" },
+            false: { flex: "0 0 auto" },
+            grow: { flexGrow: "1 0 auto" },
+            shrink: { flexShrink: "0 1 auto" },
+        } }, gapVariants), contentSizeVariants), { justify: {
+            around: { justifyContent: "space-around" },
+            between: { justifyContent: "space-between" },
+            center: { justifyContent: "center" },
+            end: { justifyContent: "flex-end" },
+            evenly: { justifyContent: "space-evenly" },
+            start: { justifyContent: "flex-start" },
+        } }), marginVariants), padVariants), { round: {
+            xsmall: { borderRadius: vars.radius.xsmall },
+            small: { borderRadius: vars.radius.small },
+            medium: { borderRadius: vars.radius.medium },
+            large: { borderRadius: vars.radius.large },
+            xlarge: { borderRadius: vars.radius.xlarge },
+            full: { borderRadius: "2em" },
+            none: { padding: 0 },
+        }, wrap: {
+            true: { flexWrap: "wrap" },
+            false: { flexWrap: "nowrap" },
+        } }),
+    defaultVariants: {
+        align: "stretch",
+        direction: "column",
+        justify: "start",
+    },
+});
 
-var grid = createRuntimeFn.createRuntimeFn({ defaultClassName: 'grid_grid__1cxt3kb0', variantClassNames: { columns: { xxsmall: 'grid_grid_columns_xxsmall__1cxt3kb1', xsmall: 'grid_grid_columns_xsmall__1cxt3kb2', small: 'grid_grid_columns_small__1cxt3kb3', medium: 'grid_grid_columns_medium__1cxt3kb4', large: 'grid_grid_columns_large__1cxt3kb5', xlarge: 'grid_grid_columns_xlarge__1cxt3kb6', none: 'grid_grid_columns_none__1cxt3kb7', 'small-small': 'grid_grid_columns_small-small__1cxt3kb8', 'small-medium': 'grid_grid_columns_small-medium__1cxt3kb9', 'small-flex': 'grid_grid_columns_small-flex__1cxt3kba', 'flex-small': 'grid_grid_columns_flex-small__1cxt3kbb', 'medium-small': 'grid_grid_columns_medium-small__1cxt3kbc', 'medium-medium': 'grid_grid_columns_medium-medium__1cxt3kbd', 'medium-flex': 'grid_grid_columns_medium-flex__1cxt3kbe', 'flex-medium': 'grid_grid_columns_flex-medium__1cxt3kbf', 'small-flex-small': 'grid_grid_columns_small-flex-small__1cxt3kbg', 'medium-flex-medium': 'grid_grid_columns_medium-flex-medium__1cxt3kbh' }, gap: { xxsmall: 'grid_grid_gap_xxsmall__1cxt3kbi', xsmall: 'grid_grid_gap_xsmall__1cxt3kbj', small: 'grid_grid_gap_small__1cxt3kbk', medium: 'grid_grid_gap_medium__1cxt3kbl', large: 'grid_grid_gap_large__1cxt3kbm', xlarge: 'grid_grid_gap_xlarge__1cxt3kbn', none: 'grid_grid_gap_none__1cxt3kbo' }, gapColumn: { xxsmall: 'grid_grid_gapColumn_xxsmall__1cxt3kbp', xsmall: 'grid_grid_gapColumn_xsmall__1cxt3kbq', small: 'grid_grid_gapColumn_small__1cxt3kbr', medium: 'grid_grid_gapColumn_medium__1cxt3kbs', large: 'grid_grid_gapColumn_large__1cxt3kbt', xlarge: 'grid_grid_gapColumn_xlarge__1cxt3kbu', none: 'grid_grid_gapColumn_none__1cxt3kbv' }, gapRow: { xxsmall: 'grid_grid_gapRow_xxsmall__1cxt3kbw', xsmall: 'grid_grid_gapRow_xsmall__1cxt3kbx', small: 'grid_grid_gapRow_small__1cxt3kby', medium: 'grid_grid_gapRow_medium__1cxt3kbz', large: 'grid_grid_gapRow_large__1cxt3kb10', xlarge: 'grid_grid_gapRow_xlarge__1cxt3kb11', none: 'grid_grid_gapRow_none__1cxt3kb12' }, height: { xxsmall: 'grid_grid_height_xxsmall__1cxt3kb13', xsmall: 'grid_grid_height_xsmall__1cxt3kb14', small: 'grid_grid_height_small__1cxt3kb15', medium: 'grid_grid_height_medium__1cxt3kb16', large: 'grid_grid_height_large__1cxt3kb17', xlarge: 'grid_grid_height_xlarge__1cxt3kb18', none: 'grid_grid_height_none__1cxt3kb19' }, width: { xxsmall: 'grid_grid_width_xxsmall__1cxt3kb1a', xsmall: 'grid_grid_width_xsmall__1cxt3kb1b', small: 'grid_grid_width_small__1cxt3kb1c', medium: 'grid_grid_width_medium__1cxt3kb1d', large: 'grid_grid_width_large__1cxt3kb1e', xlarge: 'grid_grid_width_xlarge__1cxt3kb1f', none: 'grid_grid_width_none__1cxt3kb1g' }, margin: { xxsmall: 'grid_grid_margin_xxsmall__1cxt3kb1h', xsmall: 'grid_grid_margin_xsmall__1cxt3kb1i', small: 'grid_grid_margin_small__1cxt3kb1j', medium: 'grid_grid_margin_medium__1cxt3kb1k', large: 'grid_grid_margin_large__1cxt3kb1l', xlarge: 'grid_grid_margin_xlarge__1cxt3kb1m', none: 'grid_grid_margin_none__1cxt3kb1n' }, marginHorizontal: { xxsmall: 'grid_grid_marginHorizontal_xxsmall__1cxt3kb1o', xsmall: 'grid_grid_marginHorizontal_xsmall__1cxt3kb1p', small: 'grid_grid_marginHorizontal_small__1cxt3kb1q', medium: 'grid_grid_marginHorizontal_medium__1cxt3kb1r', large: 'grid_grid_marginHorizontal_large__1cxt3kb1s', xlarge: 'grid_grid_marginHorizontal_xlarge__1cxt3kb1t', none: 'grid_grid_marginHorizontal_none__1cxt3kb1u' }, marginVertical: { xxsmall: 'grid_grid_marginVertical_xxsmall__1cxt3kb1v', xsmall: 'grid_grid_marginVertical_xsmall__1cxt3kb1w', small: 'grid_grid_marginVertical_small__1cxt3kb1x', medium: 'grid_grid_marginVertical_medium__1cxt3kb1y', large: 'grid_grid_marginVertical_large__1cxt3kb1z', xlarge: 'grid_grid_marginVertical_xlarge__1cxt3kb20', none: 'grid_grid_marginVertical_none__1cxt3kb21' }, marginTop: { xxsmall: 'grid_grid_marginTop_xxsmall__1cxt3kb22', xsmall: 'grid_grid_marginTop_xsmall__1cxt3kb23', small: 'grid_grid_marginTop_small__1cxt3kb24', medium: 'grid_grid_marginTop_medium__1cxt3kb25', large: 'grid_grid_marginTop_large__1cxt3kb26', xlarge: 'grid_grid_marginTop_xlarge__1cxt3kb27', none: 'grid_grid_marginTop_none__1cxt3kb28' }, marginBottom: { xxsmall: 'grid_grid_marginBottom_xxsmall__1cxt3kb29', xsmall: 'grid_grid_marginBottom_xsmall__1cxt3kb2a', small: 'grid_grid_marginBottom_small__1cxt3kb2b', medium: 'grid_grid_marginBottom_medium__1cxt3kb2c', large: 'grid_grid_marginBottom_large__1cxt3kb2d', xlarge: 'grid_grid_marginBottom_xlarge__1cxt3kb2e', none: 'grid_grid_marginBottom_none__1cxt3kb2f' }, marginStart: { xxsmall: 'grid_grid_marginStart_xxsmall__1cxt3kb2g', xsmall: 'grid_grid_marginStart_xsmall__1cxt3kb2h', small: 'grid_grid_marginStart_small__1cxt3kb2i', medium: 'grid_grid_marginStart_medium__1cxt3kb2j', large: 'grid_grid_marginStart_large__1cxt3kb2k', xlarge: 'grid_grid_marginStart_xlarge__1cxt3kb2l', none: 'grid_grid_marginStart_none__1cxt3kb2m' }, marginEnd: { xxsmall: 'grid_grid_marginEnd_xxsmall__1cxt3kb2n', xsmall: 'grid_grid_marginEnd_xsmall__1cxt3kb2o', small: 'grid_grid_marginEnd_small__1cxt3kb2p', medium: 'grid_grid_marginEnd_medium__1cxt3kb2q', large: 'grid_grid_marginEnd_large__1cxt3kb2r', xlarge: 'grid_grid_marginEnd_xlarge__1cxt3kb2s', none: 'grid_grid_marginEnd_none__1cxt3kb2t' }, pad: { xxsmall: 'grid_grid_pad_xxsmall__1cxt3kb2u', xsmall: 'grid_grid_pad_xsmall__1cxt3kb2v', small: 'grid_grid_pad_small__1cxt3kb2w', medium: 'grid_grid_pad_medium__1cxt3kb2x', large: 'grid_grid_pad_large__1cxt3kb2y', xlarge: 'grid_grid_pad_xlarge__1cxt3kb2z', none: 'grid_grid_pad_none__1cxt3kb30' }, padHorizontal: { xxsmall: 'grid_grid_padHorizontal_xxsmall__1cxt3kb31', xsmall: 'grid_grid_padHorizontal_xsmall__1cxt3kb32', small: 'grid_grid_padHorizontal_small__1cxt3kb33', medium: 'grid_grid_padHorizontal_medium__1cxt3kb34', large: 'grid_grid_padHorizontal_large__1cxt3kb35', xlarge: 'grid_grid_padHorizontal_xlarge__1cxt3kb36', none: 'grid_grid_padHorizontal_none__1cxt3kb37' }, padVertical: { xxsmall: 'grid_grid_padVertical_xxsmall__1cxt3kb38', xsmall: 'grid_grid_padVertical_xsmall__1cxt3kb39', small: 'grid_grid_padVertical_small__1cxt3kb3a', medium: 'grid_grid_padVertical_medium__1cxt3kb3b', large: 'grid_grid_padVertical_large__1cxt3kb3c', xlarge: 'grid_grid_padVertical_xlarge__1cxt3kb3d', none: 'grid_grid_padVertical_none__1cxt3kb3e' }, padTop: { xxsmall: 'grid_grid_padTop_xxsmall__1cxt3kb3f', xsmall: 'grid_grid_padTop_xsmall__1cxt3kb3g', small: 'grid_grid_padTop_small__1cxt3kb3h', medium: 'grid_grid_padTop_medium__1cxt3kb3i', large: 'grid_grid_padTop_large__1cxt3kb3j', xlarge: 'grid_grid_padTop_xlarge__1cxt3kb3k', none: 'grid_grid_padTop_none__1cxt3kb3l' }, padBottom: { xxsmall: 'grid_grid_padBottom_xxsmall__1cxt3kb3m', xsmall: 'grid_grid_padBottom_xsmall__1cxt3kb3n', small: 'grid_grid_padBottom_small__1cxt3kb3o', medium: 'grid_grid_padBottom_medium__1cxt3kb3p', large: 'grid_grid_padBottom_large__1cxt3kb3q', xlarge: 'grid_grid_padBottom_xlarge__1cxt3kb3r', none: 'grid_grid_padBottom_none__1cxt3kb3s' }, padStart: { xxsmall: 'grid_grid_padStart_xxsmall__1cxt3kb3t', xsmall: 'grid_grid_padStart_xsmall__1cxt3kb3u', small: 'grid_grid_padStart_small__1cxt3kb3v', medium: 'grid_grid_padStart_medium__1cxt3kb3w', large: 'grid_grid_padStart_large__1cxt3kb3x', xlarge: 'grid_grid_padStart_xlarge__1cxt3kb3y', none: 'grid_grid_padStart_none__1cxt3kb3z' }, padEnd: { xxsmall: 'grid_grid_padEnd_xxsmall__1cxt3kb40', xsmall: 'grid_grid_padEnd_xsmall__1cxt3kb41', small: 'grid_grid_padEnd_small__1cxt3kb42', medium: 'grid_grid_padEnd_medium__1cxt3kb43', large: 'grid_grid_padEnd_large__1cxt3kb44', xlarge: 'grid_grid_padEnd_xlarge__1cxt3kb45', none: 'grid_grid_padEnd_none__1cxt3kb46' } }, defaultVariants: {}, compoundVariants: [] });
+const button = recipes.recipe({
+    base: {
+        background: "none",
+        borderRadius: "2em",
+        boxSizing: "border-box",
+        color: vars.text.color.strong,
+        fontFamily: vars.font.fontFamily,
+        fontWeight: vars.font.bold.fontWeight,
+        selectors: {
+            [`&:hover`]: {
+                cursor: `pointer`,
+            },
+        },
+    },
+    variants: {
+        kind: {
+            default: {
+                borderStyle: "none",
+                ":hover": {
+                    backgroundColor: vars.color.background.contrast,
+                    color: undefined,
+                },
+            },
+            secondary: {
+                // borderWidth: vars.stroke.small,
+                // borderColor: vars.color.brand,
+                borderStyle: `solid`,
+            },
+            primary: {
+                background: vars.color.brand,
+                border: `none`,
+                color: `#FFF`,
+            },
+        },
+        size: {
+            xsmall: {
+                paddingLeft: vars.spacing.small.desktop,
+                paddingRight: vars.spacing.small.desktop,
+                paddingTop: vars.spacing.xsmall.desktop,
+                paddingBottom: vars.spacing.xsmall.desktop,
+                fontSize: vars.text.xsmall.desktop.fontSize,
+                lineHeight: vars.text.lineHeight,
+            },
+            small: {
+                paddingLeft: vars.spacing.medium.desktop,
+                paddingRight: vars.spacing.medium.desktop,
+                paddingTop: vars.spacing.xsmall.desktop,
+                paddingBottom: vars.spacing.xsmall.desktop,
+                fontSize: vars.text.small.desktop.fontSize,
+                lineHeight: vars.text.lineHeight,
+            },
+            medium: {
+                paddingLeft: vars.spacing.medium.desktop,
+                paddingRight: vars.spacing.medium.desktop,
+                paddingTop: vars.spacing.xsmall.desktop,
+                paddingBottom: vars.spacing.xsmall.desktop,
+                fontSize: "19px",
+                lineHeight: vars.text.lineHeight,
+            },
+            large: {
+                paddingLeft: vars.spacing.medium.desktop,
+                paddingRight: vars.spacing.medium.desktop,
+                paddingTop: vars.spacing.small.desktop,
+                paddingBottom: vars.spacing.small.desktop,
+                fontSize: vars.text.large.desktop.fontSize,
+                lineHeight: vars.text.lineHeight,
+            },
+        },
+        // iconOnly: {
+        //   true: {
+        //     padding: vars.spacing.xsmall.desktop,
+        //     lineHeight: 0,
+        //   },
+        // },
+        active: {
+            true: {
+                background: vars.color.background.active,
+            },
+        },
+    },
+    // Applied when multiple variants are set at once
+    // compoundVariants: [
+    //   {
+    //     variants: {
+    //       iconOnly: true,
+    //       size: `medium`,
+    //     },
+    //     style: {
+    //       padding: vars.spacing.xsmall.desktop,
+    //     },
+    //   },
+    // ],
+    defaultVariants: {
+        kind: `default`,
+        size: `medium`,
+    },
+});
 
-var grommet = 'theme_theme__1d4kmee7r grommet_font__105p1bw0';
+const grid = recipes.recipe({
+    base: {
+        display: "grid",
+        boxSizing: "border-box",
+    },
+    variants: Object.assign(Object.assign(Object.assign(Object.assign(Object.assign({ columns: {
+            // repeated columns
+            xxsmall: {
+                gridTemplateColumns: `repeat(auto-fill, minmax(min(${vars.content.xxsmall}, 100%), 1fr))`,
+            },
+            xsmall: {
+                gridTemplateColumns: `repeat(auto-fill, minmax(min(${vars.content.xsmall}, 100%), 1fr))`,
+            },
+            small: {
+                gridTemplateColumns: `repeat(auto-fill, minmax(min(${vars.content.small}, 100%), 1fr))`,
+            },
+            medium: {
+                gridTemplateColumns: `repeat(auto-fill, minmax(min(${vars.content.medium}, 100%), 1fr))`,
+            },
+            large: {
+                gridTemplateColumns: `repeat(auto-fill, minmax(min(${vars.content.large}, 100%), 1fr))`,
+            },
+            xlarge: {
+                gridTemplateColumns: `repeat(auto-fill, minmax(min(${vars.content.xlarge}, 100%), 1fr))`,
+            },
+            none: { gridAutoColumns: "auto" },
+            // two columns
+            "small-small": {
+                gridTemplateColumns: `${vars.content.small} ${vars.content.small}`,
+            },
+            "small-medium": {
+                gridTemplateColumns: `${vars.content.small} ${vars.content.medium}`,
+            },
+            "small-flex": {
+                gridTemplateColumns: `${vars.content.small} 1fr`,
+            },
+            "flex-small": {
+                gridTemplateColumns: `1fr ${vars.content.small}`,
+            },
+            "medium-small": {
+                gridTemplateColumns: `${vars.content.medium} ${vars.content.small}`,
+            },
+            "medium-medium": {
+                gridTemplateColumns: `${vars.content.medium} ${vars.content.medium}`,
+            },
+            "medium-flex": {
+                gridTemplateColumns: `${vars.content.medium} 1fr`,
+            },
+            "flex-medium": {
+                gridTemplateColumns: `1fr ${vars.content.medium}`,
+            },
+            // three column
+            "small-flex-small": {
+                gridTemplateColumns: `${vars.content.small} 1fr ${vars.content.small}`,
+            },
+            "medium-flex-medium": {
+                gridTemplateColumns: `${vars.content.medium} 1fr ${vars.content.medium}`,
+            },
+        } }, gapVariants), { gapColumn: {
+            xxsmall: { columnGap: vars.spacing.xxsmall.desktop },
+            xsmall: { columnGap: vars.spacing.xsmall.desktop },
+            small: { columnGap: vars.spacing.small.desktop },
+            medium: { columnGap: vars.spacing.medium.desktop },
+            large: { columnGap: vars.spacing.large.desktop },
+            xlarge: { columnGap: vars.spacing.xlarge.desktop },
+            none: { columnGap: 0 },
+        }, gapRow: {
+            xxsmall: { rowGap: vars.spacing.xxsmall.desktop },
+            xsmall: { rowGap: vars.spacing.xsmall.desktop },
+            small: { rowGap: vars.spacing.small.desktop },
+            medium: { rowGap: vars.spacing.medium.desktop },
+            large: { rowGap: vars.spacing.large.desktop },
+            xlarge: { rowGap: vars.spacing.xlarge.desktop },
+            none: { rowGap: 0 },
+        } }), contentSizeVariants), marginVariants), padVariants),
+});
 
-var heading = createRuntimeFn.createRuntimeFn({ defaultClassName: 'heading_heading__id0w400', variantClassNames: { level: { '1': 'heading_heading_level_1__id0w401', '2': 'heading_heading_level_2__id0w402', '3': 'heading_heading_level_3__id0w403' } }, defaultVariants: {}, compoundVariants: [] });
+// Since globalFontFace is global, we cannot use theme variables for it
+// and must use tokens directly.
+const family = hpeDesignTokens.structuredTokens.font.fontFamily.split(' ')[0];
+const weights = [
+    "light",
+    "regular",
+    "medium",
+    "semibold",
+    "bold",
+];
+weights.forEach((weight) => {
+    css.globalFontFace(family, {
+        src: `url("${hpeDesignTokens.structuredTokens.font[weight].url}") format("woff2")`,
+        fontWeight: hpeDesignTokens.structuredTokens.font[weight].fontWeight,
+    });
+});
+const font = css.style({
+    fontFamily: hpeDesignTokens.structuredTokens.font.fontFamily,
+});
+const grommet = css.style([theme, font]);
 
-var icon = createRuntimeFn.createRuntimeFn({ defaultClassName: 'icon_icon__1pjtre90', variantClassNames: { size: { small: 'icon_icon_size_small__1pjtre91', medium: 'icon_icon_size_medium__1pjtre92', large: 'icon_icon_size_large__1pjtre93', xlarge: 'icon_icon_size_xlarge__1pjtre94' }, height: { small: 'icon_icon_height_small__1pjtre95', medium: 'icon_icon_height_medium__1pjtre96', large: 'icon_icon_height_large__1pjtre97' } }, defaultVariants: { size: 'medium' }, compoundVariants: [] });
+const responsiveStyle$1 = ({ desktop, tablet, }) => ({
+    "@media": {
+        "only screen and (min-width: 768px)": tablet,
+        "only screen and (min-width: 1536px)": desktop,
+    },
+});
+const sizeStyle$1 = (size) => [
+    {
+        fontSize: vars.heading[size].mobile.fontSize,
+        fontWeight: vars.heading[size].mobile.fontWeight,
+    },
+    responsiveStyle$1({
+        desktop: {
+            fontSize: vars.heading[size].desktop.fontSize,
+            fontWeight: vars.heading[size].desktop.fontWeight,
+        },
+        tablet: {
+            fontSize: vars.heading[size].tablet.fontSize,
+            fontWeight: vars.heading[size].tablet.fontWeight,
+        },
+    }),
+];
+const heading = recipes.recipe({
+    base: {
+        color: vars.heading.color,
+        margin: 0,
+        lineHeight: 1,
+    },
+    variants: {
+        level: {
+            1: sizeStyle$1(1),
+            2: sizeStyle$1(2),
+            3: sizeStyle$1(3),
+        },
+    },
+});
 
-var page = 'page_page__105516f0';
+const rem = 16;
+const icon = recipes.recipe({
+    base: {
+        boxSizing: "content-box",
+    },
+    defaultVariants: {
+        size: "medium",
+    },
+    variants: {
+        size: {
+            small: { height: vars.icon.small.height },
+            medium: { height: vars.icon.medium.height },
+            large: { height: vars.icon.large.height },
+            xlarge: { height: vars.icon.xlarge.height },
+        },
+        height: {
+            small: {
+                paddingTop: `calc((${parseInt(vars.text.small.desktop.fontSize, 10) *
+                    rem *
+                    parseInt(vars.text.lineHeight, 10)} - ${vars.icon.small}) / 2)px`,
+                paddingBottom: `calc((${parseInt(vars.text.small.desktop.fontSize, 10) *
+                    rem *
+                    parseInt(vars.text.lineHeight, 10)} - ${vars.icon.small}) / 2)px`,
+            },
+            medium: {
+                paddingTop: `calc((${parseInt(vars.text.medium.desktop.fontSize, 10) *
+                    rem *
+                    parseInt(vars.text.lineHeight, 10)} - ${vars.icon.medium}) / 2)px`,
+                paddingBottom: `calc((${parseInt(vars.text.medium.desktop.fontSize, 10) *
+                    rem *
+                    parseInt(vars.text.lineHeight, 10)} - ${vars.icon.medium}) / 2)px`,
+            },
+            large: {
+                paddingTop: `calc((${parseInt(vars.text.large.desktop.fontSize, 10) *
+                    rem *
+                    parseInt(vars.text.lineHeight, 10)} - ${vars.icon.large}) / 2)px`,
+                paddingBottom: `calc((${parseInt(vars.text.large.desktop.fontSize, 10) *
+                    rem *
+                    parseInt(vars.text.lineHeight, 10)} - ${vars.icon.large}) / 2)px`,
+            },
+        },
+    },
+});
 
-var pageContent = createRuntimeFn.createRuntimeFn({ defaultClassName: 'pageContent_pageContent__9yy46x0', variantClassNames: { background: { 'default': 'var(--color-background-default__1d4kmeeh)', back: 'var(--color-background-back__1d4kmeej)', front: 'var(--color-background-front__1d4kmeei)', contrast: 'var(--color-background-contrast__1d4kmeek)' }, kind: { wide: 'pageContent_pageContent_kind_wide__9yy46x5', narrow: 'pageContent_pageContent_kind_narrow__9yy46x6', full: 'pageContent_pageContent_kind_full__9yy46x7' } }, defaultVariants: {}, compoundVariants: [] });
+// TODO: use container context
+const page = css.style({
+    display: "flex",
+    flexDirection: "column",
+});
 
-var text = createRuntimeFn.createRuntimeFn({ defaultClassName: 'text_text__1gx4hf20', variantClassNames: { color: { strong: 'text_text_color_strong__1gx4hf21', weak: 'text_text_color_weak__1gx4hf22', xweak: 'text_text_color_xweak__1gx4hf23' }, size: { xlarge: 'text_text_size_xlarge__1gx4hf24', large: 'text_text_size_large__1gx4hf25', medium: 'text_text_size_medium__1gx4hf26', small: 'text_text_size_small__1gx4hf27', xsmall: 'text_text_size_xsmall__1gx4hf28' }, level: { '1': 'text_text_level_1__1gx4hf29', '2': 'text_text_level_2__1gx4hf2a', '3': 'text_text_level_3__1gx4hf2b' }, textAlign: { start: 'text_text_textAlign_start__1gx4hf2c', center: 'text_text_textAlign_center__1gx4hf2d', end: 'text_text_textAlign_end__1gx4hf2e' }, weight: { light: 'text_text_weight_light__1gx4hf2f', regular: 'text_text_weight_regular__1gx4hf2g', medium: 'text_text_weight_medium__1gx4hf2h', semibold: 'text_text_weight_semibold__1gx4hf2i', bold: 'text_text_weight_bold__1gx4hf2j' } }, defaultVariants: {}, compoundVariants: [] });
+// TODO: container queries for padding
+const pageContent = recipes.recipe({
+    base: {
+        alignSelf: "center",
+    },
+    variants: {
+        background: {
+            default: vars.color.background.default,
+            back: vars.color.background.back,
+            front: vars.color.background.front,
+            contrast: vars.color.background.contrast,
+        },
+        kind: {
+            wide: {
+                minWidth: vars.page.narrow.maxWidth,
+                maxWidth: vars.page.wide.maxWidth,
+            },
+            narrow: {
+                maxWidth: vars.page.narrow.maxWidth,
+            },
+            full: {
+                minWidth: vars.page.wide.maxWidth,
+                maxWidth: '100%',
+            },
+        },
+    },
+});
 
-var textInput = 'textInput_textInput__1vlandf0';
+css.globalStyle('html, body', {
+    margin: 0
+});
 
-var theme = 'theme_theme__1d4kmee7r';
-var vars = { border: { xsmall: { mobile: { width: 'var(--border-xsmall-mobile-width__1d4kmee0)' }, tablet: { width: 'var(--border-xsmall-tablet-width__1d4kmee1)' }, desktop: { width: 'var(--border-xsmall-desktop-width__1d4kmee2)' } }, small: { mobile: { width: 'var(--border-small-mobile-width__1d4kmee3)' }, tablet: { width: 'var(--border-small-tablet-width__1d4kmee4)' }, desktop: { width: 'var(--border-small-desktop-width__1d4kmee5)' } }, medium: { mobile: { width: 'var(--border-medium-mobile-width__1d4kmee6)' }, tablet: { width: 'var(--border-medium-tablet-width__1d4kmee7)' }, desktop: { width: 'var(--border-medium-desktop-width__1d4kmee8)' } }, large: { mobile: { width: 'var(--border-large-mobile-width__1d4kmee9)' }, tablet: { width: 'var(--border-large-tablet-width__1d4kmeea)' }, desktop: { width: 'var(--border-large-desktop-width__1d4kmeeb)' } }, xlarge: { mobile: { width: 'var(--border-xlarge-mobile-width__1d4kmeec)' }, tablet: { width: 'var(--border-xlarge-tablet-width__1d4kmeed)' }, desktop: { width: 'var(--border-xlarge-desktop-width__1d4kmeee)' } } }, breakpoints: { tablet: { minWidth: 'var(--breakpoints-tablet-minWidth__1d4kmeef)' }, desktop: { minWidth: 'var(--breakpoints-desktop-minWidth__1d4kmeeg)' } }, color: { background: { 'default': 'var(--color-background-default__1d4kmeeh)', front: 'var(--color-background-front__1d4kmeei)', back: 'var(--color-background-back__1d4kmeej)', contrast: 'var(--color-background-contrast__1d4kmeek)', layer: { overlay: 'var(--color-background-layer-overlay__1d4kmeel)' }, validation: { critical: 'var(--color-background-validation-critical__1d4kmeem)', warning: 'var(--color-background-validation-warning__1d4kmeen)', ok: 'var(--color-background-validation-ok__1d4kmeeo)' }, selected: 'var(--color-background-selected__1d4kmeep)', active: 'var(--color-background-active__1d4kmeeq)' }, brand: 'var(--color-brand__1d4kmeer)', border: { 'default': 'var(--color-border-default__1d4kmees)', strong: 'var(--color-border-strong__1d4kmeet)', weak: 'var(--color-border-weak__1d4kmeeu)' }, status: { critical: 'var(--color-status-critical__1d4kmeev)', warning: 'var(--color-status-warning__1d4kmeew)', ok: 'var(--color-status-ok__1d4kmeex)', unknown: 'var(--color-status-unknown__1d4kmeey)' }, text: { 'default': 'var(--color-text-default__1d4kmeez)', strong: 'var(--color-text-strong__1d4kmee10)', weak: 'var(--color-text-weak__1d4kmee11)', xweak: 'var(--color-text-xweak__1d4kmee12)', disabled: 'var(--color-text-disabled__1d4kmee13)', selected: 'var(--color-text-selected__1d4kmee14)', active: 'var(--color-text-active__1d4kmee15)' }, focus: 'var(--color-focus__1d4kmee16)' }, content: { xxsmall: 'var(--content-xxsmall__1d4kmee17)', xsmall: 'var(--content-xsmall__1d4kmee18)', small: 'var(--content-small__1d4kmee19)', medium: 'var(--content-medium__1d4kmee1a)', large: 'var(--content-large__1d4kmee1b)', xlarge: 'var(--content-xlarge__1d4kmee1c)', xxlarge: 'var(--content-xxlarge__1d4kmee1d)' }, elevation: { small: { boxShadow: 'var(--elevation-small-boxShadow__1d4kmee1e)' }, medium: { boxShadow: 'var(--elevation-medium-boxShadow__1d4kmee1f)' }, large: { boxShadow: 'var(--elevation-large-boxShadow__1d4kmee1g)' } }, font: { fontFamily: 'var(--font-fontFamily__1d4kmee1h)', light: { url: 'var(--font-light-url__1d4kmee1i)', fontWeight: 'var(--font-light-fontWeight__1d4kmee1j)' }, regular: { url: 'var(--font-regular-url__1d4kmee1k)', fontWeight: 'var(--font-regular-fontWeight__1d4kmee1l)' }, medium: { url: 'var(--font-medium-url__1d4kmee1m)', fontWeight: 'var(--font-medium-fontWeight__1d4kmee1n)' }, semibold: { url: 'var(--font-semibold-url__1d4kmee1o)', fontWeight: 'var(--font-semibold-fontWeight__1d4kmee1p)' }, bold: { url: 'var(--font-bold-url__1d4kmee1q)', fontWeight: 'var(--font-bold-fontWeight__1d4kmee1r)' }, black: { fontWeight: 'var(--font-black-fontWeight__1d4kmee1s)' } }, opacity: { disabled: 'var(--opacity-disabled__1d4kmee1t)' }, radius: { none: 'var(--radius-none__1d4kmee1u)', xsmall: 'var(--radius-xsmall__1d4kmee1v)', small: 'var(--radius-small__1d4kmee1w)', medium: 'var(--radius-medium__1d4kmee1x)', large: 'var(--radius-large__1d4kmee1y)', xlarge: 'var(--radius-xlarge__1d4kmee1z)', full: 'var(--radius-full__1d4kmee20)' }, spacing: { '3xsmall': { mobile: 'var(--spacing-3xsmall-mobile__1d4kmee21)', tablet: 'var(--spacing-3xsmall-tablet__1d4kmee22)', desktop: 'var(--spacing-3xsmall-desktop__1d4kmee23)' }, xxsmall: { mobile: 'var(--spacing-xxsmall-mobile__1d4kmee24)', tablet: 'var(--spacing-xxsmall-tablet__1d4kmee25)', desktop: 'var(--spacing-xxsmall-desktop__1d4kmee26)' }, xsmall: { mobile: 'var(--spacing-xsmall-mobile__1d4kmee27)', tablet: 'var(--spacing-xsmall-tablet__1d4kmee28)', desktop: 'var(--spacing-xsmall-desktop__1d4kmee29)' }, small: { mobile: 'var(--spacing-small-mobile__1d4kmee2a)', tablet: 'var(--spacing-small-tablet__1d4kmee2b)', desktop: 'var(--spacing-small-desktop__1d4kmee2c)' }, medium: { mobile: 'var(--spacing-medium-mobile__1d4kmee2d)', tablet: 'var(--spacing-medium-tablet__1d4kmee2e)', desktop: 'var(--spacing-medium-desktop__1d4kmee2f)' }, large: { mobile: 'var(--spacing-large-mobile__1d4kmee2g)', tablet: 'var(--spacing-large-tablet__1d4kmee2h)', desktop: 'var(--spacing-large-desktop__1d4kmee2i)' }, xlarge: { mobile: 'var(--spacing-xlarge-mobile__1d4kmee2j)', tablet: 'var(--spacing-xlarge-tablet__1d4kmee2k)', desktop: 'var(--spacing-xlarge-desktop__1d4kmee2l)' } }, anchor: { color: 'var(--anchor-color__1d4kmee2m)', textDecoration: 'var(--anchor-textDecoration__1d4kmee2n)', fontWeight: 'var(--anchor-fontWeight__1d4kmee2o)', hover: { textDecoration: 'var(--anchor-hover-textDecoration__1d4kmee2p)' }, icon: { color: 'var(--anchor-icon-color__1d4kmee2q)' }, label: { lineHeight: 'var(--anchor-label-lineHeight__1d4kmee2r)', color: { 'default': 'var(--anchor-label-color-default__1d4kmee2s)', strong: 'var(--anchor-label-color-strong__1d4kmee2t)', weak: 'var(--anchor-label-color-weak__1d4kmee2u)', xweak: 'var(--anchor-label-color-xweak__1d4kmee2v)', disabled: 'var(--anchor-label-color-disabled__1d4kmee2w)', selected: 'var(--anchor-label-color-selected__1d4kmee2x)', active: 'var(--anchor-label-color-active__1d4kmee2y)' }, xsmall: { mobile: { fontSize: 'var(--anchor-label-xsmall-mobile-fontSize__1d4kmee2z)' }, tablet: { fontSize: 'var(--anchor-label-xsmall-tablet-fontSize__1d4kmee30)' }, desktop: { fontSize: 'var(--anchor-label-xsmall-desktop-fontSize__1d4kmee31)' } }, small: { mobile: { fontSize: 'var(--anchor-label-small-mobile-fontSize__1d4kmee32)' }, tablet: { fontSize: 'var(--anchor-label-small-tablet-fontSize__1d4kmee33)' }, desktop: { fontSize: 'var(--anchor-label-small-desktop-fontSize__1d4kmee34)' } }, medium: { mobile: { fontSize: 'var(--anchor-label-medium-mobile-fontSize__1d4kmee35)' }, tablet: { fontSize: 'var(--anchor-label-medium-tablet-fontSize__1d4kmee36)' }, desktop: { fontSize: 'var(--anchor-label-medium-desktop-fontSize__1d4kmee37)' } }, large: { mobile: { fontSize: 'var(--anchor-label-large-mobile-fontSize__1d4kmee38)' }, tablet: { fontSize: 'var(--anchor-label-large-tablet-fontSize__1d4kmee39)' }, desktop: { fontSize: 'var(--anchor-label-large-desktop-fontSize__1d4kmee3a)', fontWeight: 'var(--anchor-label-large-desktop-fontWeight__1d4kmee3b)' } }, xlarge: { mobile: { fontSize: 'var(--anchor-label-xlarge-mobile-fontSize__1d4kmee3c)' }, tablet: { fontSize: 'var(--anchor-label-xlarge-tablet-fontSize__1d4kmee3d)', fontWeight: 'var(--anchor-label-xlarge-tablet-fontWeight__1d4kmee3e)' }, desktop: { fontSize: 'var(--anchor-label-xlarge-desktop-fontSize__1d4kmee3f)', fontWeight: 'var(--anchor-label-xlarge-desktop-fontWeight__1d4kmee3g)' } } }, large: { color: 'var(--anchor-large-color__1d4kmee3h)', textDecoration: 'var(--anchor-large-textDecoration__1d4kmee3i)' }, xlarge: { color: 'var(--anchor-xlarge-color__1d4kmee3j)', textDecoration: 'var(--anchor-xlarge-textDecoration__1d4kmee3k)' } }, button: { borderRadius: 'var(--button-borderRadius__1d4kmee3l)', hover: { background: 'var(--button-hover-background__1d4kmee3m)' }, active: { background: 'var(--button-active-background__1d4kmee3n)' }, disabled: { opacity: 'var(--button-disabled-opacity__1d4kmee3o)' }, small: { paddingTop: 'var(--button-small-paddingTop__1d4kmee3p)', paddingBottom: 'var(--button-small-paddingBottom__1d4kmee3q)', paddingLeft: 'var(--button-small-paddingLeft__1d4kmee3r)', paddingRight: 'var(--button-small-paddingRight__1d4kmee3s)', iconOnly: { padding: 'var(--button-small-iconOnly-padding__1d4kmee3t)' } }, medium: { paddingTop: 'var(--button-medium-paddingTop__1d4kmee3u)', paddingBottom: 'var(--button-medium-paddingBottom__1d4kmee3v)', paddingLeft: 'var(--button-medium-paddingLeft__1d4kmee3w)', paddingRight: 'var(--button-medium-paddingRight__1d4kmee3x)', iconOnly: { padding: 'var(--button-medium-iconOnly-padding__1d4kmee3y)' }, toolbar: { paddingTop: 'var(--button-medium-toolbar-paddingTop__1d4kmee3z)', paddingBottom: 'var(--button-medium-toolbar-paddingBottom__1d4kmee40)', paddingLeft: 'var(--button-medium-toolbar-paddingLeft__1d4kmee41)', paddingRight: 'var(--button-medium-toolbar-paddingRight__1d4kmee42)' } }, large: { paddingTop: 'var(--button-large-paddingTop__1d4kmee43)', paddingBottom: 'var(--button-large-paddingBottom__1d4kmee44)', paddingLeft: 'var(--button-large-paddingLeft__1d4kmee45)', paddingRight: 'var(--button-large-paddingRight__1d4kmee46)', iconOnly: { padding: 'var(--button-large-iconOnly-padding__1d4kmee47)' } }, xlarge: { paddingTop: 'var(--button-xlarge-paddingTop__1d4kmee48)', paddingBottom: 'var(--button-xlarge-paddingBottom__1d4kmee49)', paddingLeft: 'var(--button-xlarge-paddingLeft__1d4kmee4a)', paddingRight: 'var(--button-xlarge-paddingRight__1d4kmee4b)', iconOnly: { padding: 'var(--button-xlarge-iconOnly-padding__1d4kmee4c)' } }, 'cta-primary': { background: 'var(--button-cta-primary-background__1d4kmee4d)', hover: { background: 'var(--button-cta-primary-hover-background__1d4kmee4e)' } }, primary: { background: 'var(--button-primary-background__1d4kmee4f)', hover: { background: 'var(--button-primary-hover-background__1d4kmee4g)' } }, option: { borderRadius: 'var(--button-option-borderRadius__1d4kmee4h)', paddingLeft: { mobile: 'var(--button-option-paddingLeft-mobile__1d4kmee4i)', tablet: 'var(--button-option-paddingLeft-tablet__1d4kmee4j)', desktop: 'var(--button-option-paddingLeft-desktop__1d4kmee4k)' }, paddingRight: { mobile: 'var(--button-option-paddingRight-mobile__1d4kmee4l)', tablet: 'var(--button-option-paddingRight-tablet__1d4kmee4m)', desktop: 'var(--button-option-paddingRight-desktop__1d4kmee4n)' }, paddingTop: { mobile: 'var(--button-option-paddingTop-mobile__1d4kmee4o)', tablet: 'var(--button-option-paddingTop-tablet__1d4kmee4p)', desktop: 'var(--button-option-paddingTop-desktop__1d4kmee4q)' }, paddingBottom: { mobile: 'var(--button-option-paddingBottom-mobile__1d4kmee4r)', tablet: 'var(--button-option-paddingBottom-tablet__1d4kmee4s)', desktop: 'var(--button-option-paddingBottom-desktop__1d4kmee4t)' }, selected: { background: 'var(--button-option-selected-background__1d4kmee4u)' } }, secondary: { borderWidth: { mobile: { width: 'var(--button-secondary-borderWidth-mobile-width__1d4kmee4v)' }, tablet: { width: 'var(--button-secondary-borderWidth-tablet-width__1d4kmee4w)' }, desktop: { width: 'var(--button-secondary-borderWidth-desktop-width__1d4kmee4x)' } }, borderColor: 'var(--button-secondary-borderColor__1d4kmee4y)', active: { borderColor: 'var(--button-secondary-active-borderColor__1d4kmee4z)' }, hover: { borderWidth: 'var(--button-secondary-hover-borderWidth__1d4kmee50)', background: 'var(--button-secondary-hover-background__1d4kmee51)' } }, toolbar: { borderRadius: 'var(--button-toolbar-borderRadius__1d4kmee52)' }, badge: { background: 'var(--button-badge-background__1d4kmee53)', label: { fontSize: 'var(--button-badge-label-fontSize__1d4kmee54)' } }, label: 'var(--button-label__1d4kmee55)' }, card: { background: 'var(--card-background__1d4kmee56)', boxShadow: 'var(--card-boxShadow__1d4kmee57)', borderRadius: 'var(--card-borderRadius__1d4kmee58)', body: { padding: { mobile: 'var(--card-body-padding-mobile__1d4kmee59)', tablet: 'var(--card-body-padding-tablet__1d4kmee5a)', desktop: 'var(--card-body-padding-desktop__1d4kmee5b)' } } }, heading: { '1': { desktop: { fontSize: 'var(--heading-1-desktop-fontSize__1d4kmee5c)', fontWeight: 'var(--heading-1-desktop-fontWeight__1d4kmee5d)' }, tablet: { fontSize: 'var(--heading-1-tablet-fontSize__1d4kmee5e)', fontWeight: 'var(--heading-1-tablet-fontWeight__1d4kmee5f)' }, mobile: { fontSize: 'var(--heading-1-mobile-fontSize__1d4kmee5g)', fontWeight: 'var(--heading-1-mobile-fontWeight__1d4kmee5h)' } }, '2': { desktop: { fontSize: 'var(--heading-2-desktop-fontSize__1d4kmee5i)', fontWeight: 'var(--heading-2-desktop-fontWeight__1d4kmee5j)' }, tablet: { fontSize: 'var(--heading-2-tablet-fontSize__1d4kmee5k)', fontWeight: 'var(--heading-2-tablet-fontWeight__1d4kmee5l)' }, mobile: { fontSize: 'var(--heading-2-mobile-fontSize__1d4kmee5m)', fontWeight: 'var(--heading-2-mobile-fontWeight__1d4kmee5n)' } }, '3': { desktop: { fontSize: 'var(--heading-3-desktop-fontSize__1d4kmee5o)', fontWeight: 'var(--heading-3-desktop-fontWeight__1d4kmee5p)' }, tablet: { fontSize: 'var(--heading-3-tablet-fontSize__1d4kmee5q)', fontWeight: 'var(--heading-3-tablet-fontWeight__1d4kmee5r)' }, mobile: { fontSize: 'var(--heading-3-mobile-fontSize__1d4kmee5s)', fontWeight: 'var(--heading-3-mobile-fontWeight__1d4kmee5t)' } }, color: 'var(--heading-color__1d4kmee5u)', lineHeight: 'var(--heading-lineHeight__1d4kmee5v)' }, icon: { small: { height: 'var(--icon-small-height__1d4kmee5w)' }, medium: { height: 'var(--icon-medium-height__1d4kmee5x)' }, large: { height: 'var(--icon-large-height__1d4kmee5y)' }, xlarge: { height: 'var(--icon-xlarge-height__1d4kmee5z)' }, xxlarge: { height: 'var(--icon-xxlarge-height__1d4kmee60)' } }, input: { borderColor: { 'default': 'var(--input-borderColor-default__1d4kmee61)', strong: 'var(--input-borderColor-strong__1d4kmee62)', weak: 'var(--input-borderColor-weak__1d4kmee63)' }, borderRadius: 'var(--input-borderRadius__1d4kmee64)', borderSize: { width: 'var(--input-borderSize-width__1d4kmee65)' }, padding: 'var(--input-padding__1d4kmee66)', placeholder: { color: 'var(--input-placeholder-color__1d4kmee67)', fontWeight: 'var(--input-placeholder-fontWeight__1d4kmee68)' }, value: { color: 'var(--input-value-color__1d4kmee69)', fontWeight: 'var(--input-value-fontWeight__1d4kmee6a)' } }, layer: { background: { 'default': 'var(--layer-background-default__1d4kmee6b)', front: 'var(--layer-background-front__1d4kmee6c)', back: 'var(--layer-background-back__1d4kmee6d)', contrast: 'var(--layer-background-contrast__1d4kmee6e)', layer: { overlay: 'var(--layer-background-layer-overlay__1d4kmee6f)' }, validation: { critical: 'var(--layer-background-validation-critical__1d4kmee6g)', warning: 'var(--layer-background-validation-warning__1d4kmee6h)', ok: 'var(--layer-background-validation-ok__1d4kmee6i)' }, selected: 'var(--layer-background-selected__1d4kmee6j)', active: 'var(--layer-background-active__1d4kmee6k)' }, borderRadius: 'var(--layer-borderRadius__1d4kmee6l)', boxShadow: 'var(--layer-boxShadow__1d4kmee6m)', overlay: { background: 'var(--layer-overlay-background__1d4kmee6n)' } }, namevaluepair: { name: { color: 'var(--namevaluepair-name-color__1d4kmee6o)', fontWeight: 'var(--namevaluepair-name-fontWeight__1d4kmee6p)' } }, page: { minWidth: 'var(--page-minWidth__1d4kmee6q)', narrow: { maxWidth: 'var(--page-narrow-maxWidth__1d4kmee6r)' }, wide: { maxWidth: 'var(--page-wide-maxWidth__1d4kmee6s)' }, padding: { mobile: 'var(--page-padding-mobile__1d4kmee6t)', tablet: 'var(--page-padding-tablet__1d4kmee6u)', desktop: 'var(--page-padding-desktop__1d4kmee6v)' } }, pageheader: { subtitle: { typography: { mobile: { fontSize: 'var(--pageheader-subtitle-typography-mobile-fontSize__1d4kmee6w)' }, tablet: { fontSize: 'var(--pageheader-subtitle-typography-tablet-fontSize__1d4kmee6x)', fontWeight: 'var(--pageheader-subtitle-typography-tablet-fontWeight__1d4kmee6y)' }, desktop: { fontSize: 'var(--pageheader-subtitle-typography-desktop-fontSize__1d4kmee6z)', fontWeight: 'var(--pageheader-subtitle-typography-desktop-fontWeight__1d4kmee70)' } } } }, text: { lineHeight: 'var(--text-lineHeight__1d4kmee71)', color: { 'default': 'var(--text-color-default__1d4kmee72)', strong: 'var(--text-color-strong__1d4kmee73)', weak: 'var(--text-color-weak__1d4kmee74)', xweak: 'var(--text-color-xweak__1d4kmee75)', disabled: 'var(--text-color-disabled__1d4kmee76)', selected: 'var(--text-color-selected__1d4kmee77)', active: 'var(--text-color-active__1d4kmee78)' }, xsmall: { mobile: { fontSize: 'var(--text-xsmall-mobile-fontSize__1d4kmee79)' }, tablet: { fontSize: 'var(--text-xsmall-tablet-fontSize__1d4kmee7a)' }, desktop: { fontSize: 'var(--text-xsmall-desktop-fontSize__1d4kmee7b)' } }, small: { mobile: { fontSize: 'var(--text-small-mobile-fontSize__1d4kmee7c)' }, tablet: { fontSize: 'var(--text-small-tablet-fontSize__1d4kmee7d)' }, desktop: { fontSize: 'var(--text-small-desktop-fontSize__1d4kmee7e)' } }, medium: { mobile: { fontSize: 'var(--text-medium-mobile-fontSize__1d4kmee7f)' }, tablet: { fontSize: 'var(--text-medium-tablet-fontSize__1d4kmee7g)' }, desktop: { fontSize: 'var(--text-medium-desktop-fontSize__1d4kmee7h)' } }, large: { mobile: { fontSize: 'var(--text-large-mobile-fontSize__1d4kmee7i)' }, tablet: { fontSize: 'var(--text-large-tablet-fontSize__1d4kmee7j)' }, desktop: { fontSize: 'var(--text-large-desktop-fontSize__1d4kmee7k)', fontWeight: 'var(--text-large-desktop-fontWeight__1d4kmee7l)' } }, xlarge: { mobile: { fontSize: 'var(--text-xlarge-mobile-fontSize__1d4kmee7m)' }, tablet: { fontSize: 'var(--text-xlarge-tablet-fontSize__1d4kmee7n)', fontWeight: 'var(--text-xlarge-tablet-fontWeight__1d4kmee7o)' }, desktop: { fontSize: 'var(--text-xlarge-desktop-fontSize__1d4kmee7p)', fontWeight: 'var(--text-xlarge-desktop-fontWeight__1d4kmee7q)' } } } };
+const responsiveStyle = ({ desktop, tablet, }) => ({
+    "@media": {
+        "only screen and (min-width: 768px)": tablet,
+        "only screen and (min-width: 1536px)": desktop,
+    },
+});
+const sizeStyle = (size) => [
+    {
+        fontSize: vars.text[size].mobile.fontSize,
+        // fontWeight: vars.text[size].mobile.fontWeight,
+    },
+    responsiveStyle({
+        desktop: {
+            fontSize: vars.text[size].desktop.fontSize,
+            // fontWeight: vars.text[size].desktop.fontWeight,
+        },
+        tablet: {
+            fontSize: vars.text[size].tablet.fontSize,
+            // fontWeight: vars.text[size].tablet.fontWeight,
+        },
+    }),
+];
+const xsmall = sizeStyle("xsmall");
+const small = sizeStyle("small");
+const medium = sizeStyle("medium");
+const large = sizeStyle("large");
+const xlarge = sizeStyle("xlarge");
+const text = recipes.recipe({
+    base: {
+        color: vars.text.color.default,
+        lineHeight: vars.text.lineHeight,
+        margin: 0,
+        maxWidth: "25em",
+    },
+    variants: {
+        color: {
+            strong: { color: vars.text.color.strong },
+            weak: { color: vars.text.color.weak },
+            xweak: { color: vars.text.color.xweak },
+        },
+        size: {
+            xlarge: xlarge,
+            large: large,
+            medium: medium,
+            small: small,
+            xsmall: xsmall,
+        },
+        level: {
+            1: xlarge,
+            2: large,
+            3: medium,
+        },
+        textAlign: {
+            start: { textAlign: "left" },
+            center: { textAlign: "center" },
+            end: { textAlign: "right" },
+        },
+        weight: {
+            light: {
+                fontWeight: vars.font.light.fontWeight,
+            },
+            regular: {
+                fontWeight: vars.font.regular.fontWeight,
+            },
+            medium: {
+                fontWeight: vars.font.medium.fontWeight,
+            },
+            semibold: {
+                fontWeight: vars.font.semibold.fontWeight,
+            },
+            bold: {
+                fontWeight: vars.font.bold.fontWeight,
+            },
+        },
+    },
+});
+
+const textInput = css.style({
+    boxSizing: 'border-box',
+    fontFamily: 'inherit',
+    fontSize: 'inherit',
+    lineHeight: 'inherit',
+    WebkitAppearance: 'none',
+    background: 'transparent',
+    color: vars.input.value.color,
+    fontWeight: vars.input.value.fontWeight,
+    width: '100%',
+    padding: `${vars.input.padding}`,
+    borderWidth: `${vars.input.borderSize.width}`,
+    borderColor: `${vars.input.borderColor.default}`,
+});
 
 exports.anchor = anchor;
 exports.box = box;
