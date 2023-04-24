@@ -1329,8 +1329,8 @@ homedir-polyfill@^1.0.1:
     parse-passwd "^1.0.0"
 
 "hpe-design-tokens@https://github.com/grommet/hpe-design-tokens/tarball/stable":
-  version "0.0.0"
-  resolved "https://github.com/grommet/hpe-design-tokens/tarball/stable#b95d6165a3392fc2d7fd184126fb2b9f23034c38"
+  version "0.1.0"
+  resolved "https://github.com/grommet/hpe-design-tokens/tarball/stable#8850bfbf0c251693cdeb1a5061b634146fffbeb5"
 
 ignore@^5.1.1, ignore@^5.2.0:
   version "5.2.4"
