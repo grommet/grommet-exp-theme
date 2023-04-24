@@ -10,7 +10,7 @@
     "lint": "eslint",
     "build": "rollup -c ./rollup.config.mjs",
     "test": "tsc --noEmit index.ts",
-    "release-stable": "babel-node ./tools/release-stable.js"
+    "release-stable": "babel-node ./tools/release-stable.mjs"
   },
   "authors": [
     "Eric Soderberg",
