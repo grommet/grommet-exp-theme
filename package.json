@@ -1,0 +1,41 @@
+{
+  "name": "grommet-exp-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "lint": "eslint",
+    "build": "rollup -c ./rollup.config.mjs",
+    "test": "tsc --noEmit index.ts",
+    "release-stable": "babel-node ./tools/release-stable.mjs"
+  },
+  "authors": [
+    "Eric Soderberg",
+    "Taylor Seamans"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@vanilla-extract/css": "^1.9.5",
+    "@vanilla-extract/recipes": "^0.3.0",
+    "hpe-design-tokens": "https://github.com/grommet/hpe-design-tokens/tarball/stable"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/node": "^7.20.7",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "del": "^6.1.1",
+    "eslint": "^8.37.0",
+    "fs-extra": "^11.1.1",
+    "rollup": "^3.21.0",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "simple-git": "^3.17.0",
+    "typescript": "^5.0.3"
+  }
+}
