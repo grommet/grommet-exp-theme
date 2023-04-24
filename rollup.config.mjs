@@ -3,6 +3,7 @@ import pkg from './package.json' assert { type: 'json' };
 
 export default {
   input: './index.ts',
+  treeshake: false,
   output: [
     {
       file: './dist/index.js',
