@@ -29,6 +29,7 @@
     "@babel/node": "^7.20.7",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
     "@typescript-eslint/parser": "^5.57.0",
+    "@vanilla-extract/rollup-plugin": "^1.2.1",
     "del": "^6.1.1",
     "eslint": "^8.37.0",
     "fs-extra": "^11.1.1",
