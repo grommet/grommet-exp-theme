@@ -70,31 +70,31 @@ export const button = recipe({
         lineHeight: vars.text.lineHeight,
       },
     },
-    iconOnly: {
-      true: {
-        padding: vars.spacing.xsmall.desktop,
-        lineHeight: 0,
-      },
-    },
+    // iconOnly: {
+    //   true: {
+    //     padding: vars.spacing.xsmall.desktop,
+    //     lineHeight: 0,
+    //   },
+    // },
     active: {
       true: {
         background: vars.color.background.active,
-      }
-    }
+      },
+    },
   },
 
   // Applied when multiple variants are set at once
-  compoundVariants: [
-    {
-      variants: {
-        iconOnly: true,
-        size: `medium`,
-      },
-      style: {
-        padding: vars.spacing.xsmall.desktop,
-      },
-    },
-  ],
+  // compoundVariants: [
+  //   {
+  //     variants: {
+  //       iconOnly: true,
+  //       size: `medium`,
+  //     },
+  //     style: {
+  //       padding: vars.spacing.xsmall.desktop,
+  //     },
+  //   },
+  // ],
 
   defaultVariants: {
     kind: `default`,
