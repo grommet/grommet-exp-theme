@@ -2,15 +2,12 @@
   "name": "grommet-exp-theme",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "module": "index.mjs",
   "files": [
     "dist"
   ],
-  "types": "./dist/index.d.ts",
   "scripts": {
     "lint": "eslint",
-    "build": "rollup -c ./rollup.config.mjs",
+    "build": "rm -rf dist && mkdir dist && cp *.ts LICENSE README.md package.json dist/",
     "test": "tsc --noEmit index.ts",
     "release-stable": "babel-node ./tools/release-stable.mjs"
   },
@@ -35,7 +32,6 @@
     "fs-extra": "^11.1.1",
     "rollup": "^3.21.0",
     "rollup-plugin-copy": "^3.4.0",
-    "rollup-plugin-typescript2": "^0.34.1",
     "simple-git": "^3.17.0",
     "typescript": "^5.0.3"
   }
