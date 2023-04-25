@@ -1,4 +1,3 @@
-import typescript from "rollup-plugin-typescript2";
 import copy from "rollup-plugin-copy";
 import pkg from "./package.json" assert { type: "json" };
 
@@ -7,12 +6,9 @@ export default {
   treeshake: false,
   output: [
     {
-      file: "./dist/index.js",
-      format: "cjs",
-    },
-    {
-      file: "./dist/index.mjs",
+      dir: "./dist",
       format: "es",
+      preserveModules: true,
     },
   ],
   external: [
@@ -20,7 +16,6 @@ export default {
     ...Object.keys(pkg.peerDependencies || {}),
   ],
   plugins: [
-    typescript(),
     copy({
       targets: [
         { src: ["package.json", "LICENSE", "README.md"], dest: "dist" },
