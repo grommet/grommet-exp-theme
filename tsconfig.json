@@ -15,5 +15,4 @@
     "moduleResolution": "node"
   },
   "include": ["*.ts"],
-  "exclude": ["node_modules", "dist"]
 }
