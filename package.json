@@ -2,9 +2,7 @@
   "name": "grommet-exp-theme",
   "version": "1.0.0",
   "description": "",
-  "files": [
-    "dist"
-  ],
+  "exports": "./index.ts",
   "scripts": {
     "lint": "eslint",
     "build": "rm -rf dist && mkdir dist && cp *.ts LICENSE README.md package.json dist/",
