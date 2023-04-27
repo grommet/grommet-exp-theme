@@ -1,14 +1,21 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "./theme.css";
 
+const rounded = {
+  borderRadius: "2em",
+  color: vars.text.color.strong,
+  fontFamily: vars.font.fontFamily,
+  fontWeight: vars.font.bold.fontWeight,
+};
+
 export const button = recipe({
   base: {
     background: "none",
-    borderRadius: "2em",
     boxSizing: "border-box",
-    color: vars.text.color.strong,
-    fontFamily: vars.font.fontFamily,
-    fontWeight: vars.font.bold.fontWeight,
+    borderRadius: 0,
+    color: "inherit",
+    fontSize: "inherit",
+    fontWeight: "inherit",
     selectors: {
       [`&:hover`]: {
         cursor: `pointer`,
@@ -19,21 +26,33 @@ export const button = recipe({
   variants: {
     kind: {
       default: {
+        ...rounded,
         borderStyle: "none",
         ":hover": {
           backgroundColor: vars.button.hover.background,
-          color: undefined,
+          color: 'inherit',
         },
       },
       secondary: {
+        ...rounded,
         borderWidth: vars.button.secondary.borderWidth.desktop.width,
         borderColor: vars.button.secondary.borderColor,
         borderStyle: `solid`,
       },
       primary: {
+        ...rounded,
         background: vars.button.primary.background,
         border: `none`,
         color: `#FFF`,
+      },
+      nav: {
+        borderStyle: "none",
+        textAlign: "start",
+        borderRadius: vars.radius.small,
+        ":hover": {
+          backgroundColor: vars.button.hover.background,
+          color: 'inherit',
+        },
       },
     },
     size: {
