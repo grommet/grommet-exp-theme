@@ -5,7 +5,10 @@ import { vars } from "./theme.css";
 
 export const pageContent = recipe({
   base: {
+    boxSizing: "border-box",
     alignSelf: "center",
+    paddingLeft: vars.spacing.large.desktop,
+    paddingRight: vars.spacing.large.desktop,
   },
   variants: {
     background: {
@@ -23,8 +26,7 @@ export const pageContent = recipe({
         maxWidth: vars.page.narrow.maxWidth,
       },
       full: {
-        minWidth: vars.page.wide.maxWidth,
-        maxWidth: '100%',
+        width: "100%",
       },
     },
   },
