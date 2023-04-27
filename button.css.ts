@@ -88,10 +88,22 @@ export const button = recipe({
     {
       variants: {
         iconOnly: true,
-        size: `medium`,
+        size: "medium",
       },
       style: {
         padding: vars.button.medium.iconOnly.padding,
+      },
+    },
+    {
+      variants: {
+        kind: "secondary",
+        size: "medium",
+      },
+      style: {
+        paddingLeft: `calc(${vars.button.medium.paddingLeft} - ${vars.button.secondary.borderWidth.desktop.width})`,
+        paddingRight: `calc(${vars.button.medium.paddingRight} - ${vars.button.secondary.borderWidth.desktop.width})`,
+        paddingTop: `calc(${vars.button.medium.paddingTop} - ${vars.button.secondary.borderWidth.desktop.width})`,
+        paddingBottom: `calc(${vars.button.medium.paddingBottom} - ${vars.button.secondary.borderWidth.desktop.width})`,
       },
     },
   ],
