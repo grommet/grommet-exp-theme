@@ -7,8 +7,8 @@ export const pageContent = recipe({
   base: {
     boxSizing: "border-box",
     alignSelf: "center",
-    paddingLeft: vars.spacing.medium.desktop,
-    paddingRight: vars.spacing.medium.desktop,
+    paddingLeft: vars.spacing.large.desktop,
+    paddingRight: vars.spacing.large.desktop,
   },
   variants: {
     background: {
