@@ -302,6 +302,11 @@ export const box = recipe({
     },
     ...marginVariants,
     ...padVariants,
+    position: {
+      absolute: { position: 'absolute' },
+      fixed: { position: 'fixed' },
+      relative: { position: 'relative' },
+    },
     round: {
       xsmall: { borderRadius: vars.radius.xsmall },
       small: { borderRadius: vars.radius.small },
