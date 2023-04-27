@@ -262,10 +262,16 @@ export const box = recipe({
       },
       false: { border: "none" },
       top: {
-        borderTop: `${vars.border.medium.desktop.width} solid ${vars.color.border}`,
+        borderTop: `${vars.border.medium.desktop.width} solid ${vars.color.border.default}`,
       },
       bottom: {
-        borderBottom: `${vars.border.medium.desktop.width} solid ${vars.color.border}`,
+        borderBottom: `${vars.border.medium.desktop.width} solid ${vars.color.border.default}`,
+      },
+      left: {
+        borderLeft: `${vars.border.medium.desktop.width} solid ${vars.color.border.default}`,
+      },
+      right: {
+        borderRight: `${vars.border.medium.desktop.width} solid ${vars.color.border.default}`,
       },
     },
     direction: {
@@ -310,7 +316,7 @@ export const box = recipe({
       full: { borderRadius: "2em" },
       none: { padding: 0 },
     },
-    
+
     wrap: {
       true: { flexWrap: "wrap" },
       false: { flexWrap: "nowrap" },
