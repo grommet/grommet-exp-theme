@@ -2,6 +2,36 @@ import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "./theme.css";
 
 // TODO: container queries for padding
+const responsiveStyle = ({
+  desktop,
+  tablet,
+}: {
+  desktop: object;
+  tablet: object;
+}) => ({
+  "@media": {
+    "only screen and (min-width: 768px)": tablet,
+    "only screen and (min-width: 1536px)": desktop,
+  },
+});
+
+const columnsStyle = () => [
+  {
+    display: "grid",
+    minWidth: vars.page.narrow.maxWidth,
+    maxWidth: vars.page.wide.maxWidth,
+    gridTemplateColumns: `1fr`,
+    gridGap: vars.spacing.large.desktop,
+  },
+  responsiveStyle({
+    desktop: {
+      gridTemplateColumns: `${vars.content.medium} 1fr minmax(${vars.content.small}, ${vars.content.medium})`,
+    },
+    tablet: {
+      gridTemplateColumns: `1fr`,
+    },
+  }),
+];
 
 export const pageContent = recipe({
   base: {
@@ -18,10 +48,7 @@ export const pageContent = recipe({
       contrast: vars.color.background.contrast,
     },
     kind: {
-      wide: {
-        minWidth: vars.page.narrow.maxWidth,
-        maxWidth: vars.page.wide.maxWidth,
-      },
+      wide: columnsStyle(),
       narrow: {
         maxWidth: vars.page.narrow.maxWidth,
       },
