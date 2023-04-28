@@ -1,6 +1,7 @@
 export * from "./anchor.css";
 export * from "./box.css";
 export * from "./button.css";
+export * from "./carousel.css";
 export * from "./drop.css";
 export * from "./grid.css";
 export * from "./grommet.css";

@@ -1,6 +1,11 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "./theme.css";
-import { contentSizeVariants, gapVariants, padVariants, marginVariants } from "./box.css";
+import {
+  contentSizeVariants,
+  gapVariants,
+  padVariants,
+  marginVariants,
+} from "./box.css";
 
 export const grid = recipe({
   base: {
@@ -28,6 +33,7 @@ export const grid = recipe({
       xlarge: {
         gridTemplateColumns: `repeat(auto-fill, minmax(min(${vars.content.xlarge}, 100%), 1fr))`,
       },
+      full: { gridTemplateColumns: "1fr" },
       none: { gridAutoColumns: "auto" },
       // two columns
       "small-small": {

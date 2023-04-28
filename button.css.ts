@@ -54,6 +54,13 @@ export const button = recipe({
           color: 'inherit',
         },
       },
+      plain: {
+        borderStyle: "none",
+        ":hover": {
+          backgroundColor: vars.button.hover.background,
+          color: 'inherit',
+        },
+      },
     },
     size: {
       xsmall: {
@@ -100,6 +107,11 @@ export const button = recipe({
         background: vars.button.active.background,
       },
     },
+    selected: {
+      true: {
+        background: vars.button.selected.background,
+      },
+    },
   },
 
   // Applied when multiple variants are set at once
@@ -123,6 +135,15 @@ export const button = recipe({
         paddingRight: `calc(${vars.button.medium.paddingRight} - ${vars.button.secondary.borderWidth.desktop.width})`,
         paddingTop: `calc(${vars.button.medium.paddingTop} - ${vars.button.secondary.borderWidth.desktop.width})`,
         paddingBottom: `calc(${vars.button.medium.paddingBottom} - ${vars.button.secondary.borderWidth.desktop.width})`,
+      },
+    },
+    {
+      variants: {
+        kind: "plain",
+        size: "medium",
+      },
+      style: {
+        padding: 0,
       },
     },
   ],
