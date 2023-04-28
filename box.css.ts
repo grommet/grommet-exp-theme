@@ -9,6 +9,7 @@ export const contentSizeVariants = {
     medium: { height: vars.content.medium },
     large: { height: vars.content.large },
     xlarge: { height: vars.content.xlarge },
+    full: { height: "100%" },
     none: { height: "initial" },
   },
   width: {
@@ -18,6 +19,7 @@ export const contentSizeVariants = {
     medium: { width: vars.content.medium },
     large: { width: vars.content.large },
     xlarge: { width: vars.content.xlarge },
+    full: { width: "100%" },
     none: { width: "initial" },
   },
 };
@@ -255,6 +257,8 @@ export const box = recipe({
       back: { backgroundColor: vars.color.background.back },
       front: { backgroundColor: vars.color.background.front },
       contrast: { backgroundColor: vars.color.background.contrast },
+      active: { backgroundColor: vars.color.background.active },
+      selected: { backgroundColor: vars.color.background.selected },
     },
     border: {
       true: {
@@ -303,9 +307,9 @@ export const box = recipe({
     ...marginVariants,
     ...padVariants,
     position: {
-      absolute: { position: 'absolute' },
-      fixed: { position: 'fixed' },
-      relative: { position: 'relative' },
+      absolute: { position: "absolute" },
+      fixed: { position: "fixed" },
+      relative: { position: "relative" },
     },
     round: {
       xsmall: { borderRadius: vars.radius.xsmall },
