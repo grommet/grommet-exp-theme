@@ -84,7 +84,7 @@ export const button = recipe({
         paddingTop: vars.button.medium.paddingTop,
         paddingBottom: vars.button.medium.paddingBottom,
         fontSize: "19px",
-        lineHeight: vars.text.lineHeight,
+        lineHeight: "24px", // don't rely on rem calculation because of custom fontSize
       },
       large: {
         paddingLeft: vars.button.large.paddingLeft,
