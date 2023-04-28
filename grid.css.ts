@@ -1,6 +1,7 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "./theme.css";
 import {
+  alignVariants,
   contentSizeVariants,
   gapVariants,
   padVariants,
@@ -87,6 +88,7 @@ export const grid = recipe({
       xlarge: { rowGap: vars.spacing.xlarge.desktop },
       none: { rowGap: 0 },
     },
+    ...alignVariants,
     ...contentSizeVariants,
     ...marginVariants,
     ...padVariants,
