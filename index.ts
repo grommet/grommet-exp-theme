@@ -12,6 +12,7 @@ export * from "./page.css";
 export * from "./pageContent.css";
 export * from "./reset.css";
 export * from "./select.css";
+export * from "./tabs.css";
 export * from "./text.css";
 export * from "./textInput.css";
 export * from "./theme.css";
