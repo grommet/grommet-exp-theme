@@ -30,7 +30,6 @@ export const button = recipe({
         borderStyle: "none",
         ":hover": {
           backgroundColor: vars.button.hover.background,
-          color: "inherit",
         },
       },
       secondary: {
@@ -46,12 +45,12 @@ export const button = recipe({
         color: `#FFF`,
       },
       nav: {
+        borderRadius: vars.radius.full,
         borderStyle: "none",
+        color: vars.text.color.strong,
         textAlign: "start",
-        borderRadius: vars.radius.small,
         ":hover": {
           backgroundColor: vars.button.hover.background,
-          color: "inherit",
         },
       },
       plain: {
@@ -123,6 +122,15 @@ export const button = recipe({
       },
       style: {
         padding: vars.button.medium.iconOnly.padding,
+      },
+    },
+    {
+      variants: {
+        kind: "nav",
+        active: true,
+      },
+      style: {
+        fontWeight: vars.font.medium.fontWeight,
       },
     },
     {
