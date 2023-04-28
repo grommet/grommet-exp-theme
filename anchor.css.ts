@@ -1,6 +1,8 @@
-import { style } from '@vanilla-extract/css';
+import { style } from "@vanilla-extract/css";
 import { vars } from "./theme.css";
 
 export const anchor = style({
   color: vars.text.color.strong,
+  fontWeight: vars.font.medium.fontWeight,
+  fontSize: "inherit",
 });

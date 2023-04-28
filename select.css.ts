@@ -12,6 +12,7 @@ export const optionButton = style({
   color: "inherit",
   fontFamily: "inherit",
   fontSize: "19px",
+  lineHeight: "24px",
   fontWeight: vars.font.medium.fontWeight,
   textAlign: "start",
   paddingLeft: vars.spacing.small.desktop,

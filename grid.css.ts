@@ -36,6 +36,9 @@ export const grid = recipe({
       },
       full: { gridTemplateColumns: "1fr" },
       none: { gridAutoColumns: "auto" },
+      2: {
+        gridTemplateColumns: `1fr 1fr`,
+      },
       // two columns
       "small-small": {
         gridTemplateColumns: `${vars.content.small} ${vars.content.small}`,
