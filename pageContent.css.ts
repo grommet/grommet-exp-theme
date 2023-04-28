@@ -29,6 +29,7 @@ const columnsStyle = () => [
     },
     tablet: {
       gridTemplateColumns: `1fr`,
+      width: "100%",
     },
   }),
 ];
