@@ -1,6 +1,15 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "./theme.css";
 
+export const alignVariants = {
+  align: {
+    start: { alignItems: "flex-start" },
+    center: { alignItems: "center" },
+    stretch: { alignItems: "stretch" },
+    end: { alignItems: "flex-end" },
+  },
+};
+
 export const contentSizeVariants = {
   height: {
     xxsmall: { height: vars.content.xxsmall },
@@ -246,12 +255,7 @@ export const box = recipe({
     boxSizing: "border-box",
   },
   variants: {
-    align: {
-      start: { alignItems: "flex-start" },
-      center: { alignItems: "center" },
-      stretch: { alignItems: "stretch" },
-      end: { alignItems: "flex-end" },
-    },
+    ...alignVariants,
     background: {
       default: { backgroundColor: vars.color.background.default },
       back: { backgroundColor: vars.color.background.back },

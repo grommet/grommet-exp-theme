@@ -3,8 +3,8 @@ import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "./theme.css";
 
 export const tabsHeader = style({
-  alignSelf: 'start',
-  borderBottom: `${vars.border.xsmall.desktop.width} solid ${vars.color.border.default}`,
+  alignSelf: "start",
+  borderBottom: `${vars.border.xsmall.desktop.width} solid ${vars.color.border.weak}`,
 });
 
 export const tabsButton = recipe({
@@ -22,7 +22,7 @@ export const tabsButton = recipe({
     lineHeight: vars.text.lineHeight,
     ":hover": {
       cursor: `pointer`,
-      borderColor: vars.color.background.active,
+      borderColor: vars.color.border.default,
     },
   },
   variants: {

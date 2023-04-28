@@ -10,6 +10,7 @@ export * from "./icon.css";
 export * from "./input.css";
 export * from "./page.css";
 export * from "./pageContent.css";
+export * from "./pageHeader.css";
 export * from "./reset.css";
 export * from "./select.css";
 export * from "./tabs.css";

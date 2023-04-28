@@ -30,7 +30,7 @@ export const button = recipe({
         borderStyle: "none",
         ":hover": {
           backgroundColor: vars.button.hover.background,
-          color: 'inherit',
+          color: "inherit",
         },
       },
       secondary: {
@@ -51,14 +51,14 @@ export const button = recipe({
         borderRadius: vars.radius.small,
         ":hover": {
           backgroundColor: vars.button.hover.background,
-          color: 'inherit',
+          color: "inherit",
         },
       },
       plain: {
         borderStyle: "none",
         ":hover": {
           backgroundColor: vars.button.hover.background,
-          color: 'inherit',
+          color: "inherit",
         },
       },
     },
@@ -135,6 +135,13 @@ export const button = recipe({
         paddingRight: `calc(${vars.button.medium.paddingRight} - ${vars.button.secondary.borderWidth.desktop.width})`,
         paddingTop: `calc(${vars.button.medium.paddingTop} - ${vars.button.secondary.borderWidth.desktop.width})`,
         paddingBottom: `calc(${vars.button.medium.paddingBottom} - ${vars.button.secondary.borderWidth.desktop.width})`,
+        ":hover": {
+          borderWidth: `${vars.button.secondary.hover.borderWidth}`,
+          paddingLeft: `calc(${vars.button.medium.paddingLeft} - ${vars.button.secondary.hover.borderWidth})`,
+          paddingRight: `calc(${vars.button.medium.paddingRight} - ${vars.button.secondary.hover.borderWidth})`,
+          paddingTop: `calc(${vars.button.medium.paddingTop} - ${vars.button.secondary.hover.borderWidth})`,
+          paddingBottom: `calc(${vars.button.medium.paddingBottom} - ${vars.button.secondary.hover.borderWidth})`,
+        },
       },
     },
     {
