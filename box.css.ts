@@ -1,5 +1,6 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "./theme.css";
+import { container } from "./container.css";
 
 export const alignVariants = {
   align: {
@@ -285,6 +286,14 @@ export const box = recipe({
     direction: {
       column: { flexDirection: "column" },
       row: { flexDirection: "row" },
+      "row-responsive": {
+        flexDirection: "row",
+        "@container": {
+          [`${container} (max-width: 384px)`]: {
+            flexDirection: "column",
+          },
+        },
+      },
     },
     elevation: {
       small: { boxShadow: vars.elevation.small.boxShadow },

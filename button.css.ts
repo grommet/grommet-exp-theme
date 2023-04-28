@@ -4,7 +4,6 @@ import { vars } from "./theme.css";
 const rounded = {
   borderRadius: "2em",
   color: vars.text.color.strong,
-  fontFamily: vars.font.fontFamily,
   fontWeight: vars.font.bold.fontWeight,
 };
 
@@ -14,6 +13,7 @@ export const button = recipe({
     boxSizing: "border-box",
     borderRadius: 0,
     color: "inherit",
+    fontFamily: "inherit",
     fontSize: "inherit",
     fontWeight: "inherit",
     selectors: {

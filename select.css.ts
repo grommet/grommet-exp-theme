@@ -10,6 +10,7 @@ export const optionButton = style({
   borderRadius: 0,
   border: "none",
   color: "inherit",
+  fontFamily: "inherit",
   fontSize: "inherit",
   fontWeight: "inherit",
   textAlign: "start",
@@ -19,9 +20,13 @@ export const optionButton = style({
   paddingBottom: vars.spacing.xsmall.desktop,
   ":hover": {
     backgroundColor: vars.color.background.active,
+    cursor: "pointer",
   },
 });
 
 export const activeOptionButton = style({
   backgroundColor: vars.color.background.active,
+  ":hover": {
+    cursor: "pointer",
+  },
 });

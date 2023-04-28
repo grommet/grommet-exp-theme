@@ -18,6 +18,7 @@ export const tabsButton = recipe({
     paddingRight: vars.button.medium.paddingRight,
     paddingTop: vars.button.medium.paddingTop,
     paddingBottom: vars.button.medium.paddingBottom,
+    fontFamily: "inherit",
     fontSize: vars.text.medium.desktop.fontSize,
     lineHeight: vars.text.lineHeight,
     ":hover": {
