@@ -1,5 +1,6 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "./theme.css";
+
 export const table = style({
   borderSpacing: 0,
   borderCollapse: "collapse",
