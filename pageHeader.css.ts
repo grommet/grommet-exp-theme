@@ -10,6 +10,7 @@ const responsiveContainerStyle = ({ large }: { large: object }) => ({
 });
 
 export const pageHeaderContainerStyle = style({
+  contain: "layout inline-size style",
   containerName: pageHeaderContainer,
   containerType: "inline-size",
 });
