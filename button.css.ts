@@ -43,6 +43,9 @@ export const button = recipe({
         background: vars.button.primary.background,
         border: `none`,
         color: `#FFF`,
+        ":hover": {
+          backgroundColor: vars.button.primary.hover.backgroundColor,
+        },
       },
       nav: {
         borderRadius: vars.radius.full,
