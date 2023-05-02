@@ -13,8 +13,8 @@ export const tabsButton = recipe({
     boxSizing: "border-box",
     background: "none",
     border: "none",
-    borderBottom: `${vars.border.small.desktop.width} solid transparent`,
-    color: vars.text.color.default,
+    borderBottom: `${vars.border.medium.desktop.width} solid transparent`,
+    color: vars.color.text.default,
     paddingLeft: vars.button.medium.paddingLeft,
     paddingRight: vars.button.medium.paddingRight,
     paddingTop: vars.button.medium.paddingTop,
@@ -25,7 +25,6 @@ export const tabsButton = recipe({
     ":hover": {
       cursor: `pointer`,
       borderColor: vars.color.border.weak,
-      borderWidth: vars.border.medium.desktop.width,
     },
   },
   variants: {
