@@ -18,8 +18,8 @@ const responsiveStyle = ({
 const columnsStyle = () => [
   {
     display: "grid",
-    minWidth: vars.page.narrow.maxWidth,
     maxWidth: vars.page.wide.maxWidth,
+    width: "100%",
     gridTemplateColumns: `1fr`,
     gridGap: vars.spacing.large.desktop,
   },
@@ -29,6 +29,7 @@ const columnsStyle = () => [
     },
     tablet: {
       gridTemplateColumns: `1fr`,
+      minWidth: vars.page.narrow.maxWidth,
       width: "100%",
     },
   }),

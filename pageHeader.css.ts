@@ -31,18 +31,14 @@ export const pageHeader = style({
   }),
 });
 
-export const pageHeaderParent = style({
-  gridArea: "parent",
-});
-
-export const pageHeaderTitle = style({
-  gridArea: "title",
-});
-
-export const pageHeaderSubtitle = style({
-  gridArea: "subtitle",
-});
-
-export const pageHeaderActions = style({
-  gridArea: "actions",
+export const pageHeaderWrapper = style({
+  gridTemplateColumns: `"auto" "flex"`,
+  gridTemplateRows: "auto",
+  gap: `${vars.spacing.xsmall.desktop} ${vars.spacing.medium.desktop}`,
+  "@container": {
+    [`${pageHeaderContainer} (min-width: 768px)`]: {
+      gridTemplateColumns: `1fr`,
+      gridTemplateRows: `"auto" "auto"`,
+    },
+  },
 });
