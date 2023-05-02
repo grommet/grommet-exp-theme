@@ -304,8 +304,8 @@ export const box = recipe({
     flex: {
       true: { flex: "1 1 auto" },
       false: { flex: "0 0 auto" },
-      grow: { flexGrow: "1 0 auto" },
-      shrink: { flexShrink: "0 1 auto" },
+      grow: { flex: "1 0 auto" },
+      shrink: { flex: "0 1 auto" },
     },
     ...gapVariants,
     ...contentSizeVariants,

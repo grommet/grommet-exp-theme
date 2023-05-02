@@ -2,7 +2,7 @@
   "version": "v1",
   "packages": {
     "hpe-design-tokens": {
-      "signature": "a9e1723b4bc917e8a8460c4883af6e69",
+      "signature": "e0841b499da5b76621adeaf5ef1f9e1d",
       "file": true,
       "replaced": "https://github.com/grommet/hpe-design-tokens/tarball/stable"
     }
