@@ -8,7 +8,7 @@ const columnsStyle = () => [
     maxWidth: vars.page.wide.maxWidth,
     width: "100%",
     gridTemplateColumns: `1fr`,
-    gridGap: vars.spacing.large.desktop,
+    gridGap: vars.spacing.medium.desktop,
   },
   responsiveStyle({
     desktop: {
