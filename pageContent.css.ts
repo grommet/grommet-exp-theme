@@ -29,7 +29,6 @@ const columnsStyle = () => [
     },
     tablet: {
       gridTemplateColumns: `1fr`,
-      minWidth: vars.page.narrow.maxWidth,
       width: "100%",
     },
   }),
