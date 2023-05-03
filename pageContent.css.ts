@@ -1,19 +1,6 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "./theme.css";
-
-// TODO: container queries for padding
-const responsiveStyle = ({
-  desktop,
-  tablet,
-}: {
-  desktop: object;
-  tablet: object;
-}) => ({
-  "@media": {
-    "only screen and (min-width: 768px)": tablet,
-    "only screen and (min-width: 1536px)": desktop,
-  },
-});
+import { responsiveStyle } from "./utils";
 
 const columnsStyle = () => [
   {
@@ -38,7 +25,15 @@ export const pageContent = recipe({
   base: {
     boxSizing: "border-box",
     alignSelf: "center",
-    padding: vars.spacing.large.desktop,
+    padding: vars.pageContent.padding.mobile,
+    ...responsiveStyle({
+      tablet: {
+        padding: vars.pageContent.padding.tablet,
+      },
+      desktop: {
+        padding: vars.pageContent.padding.desktop,
+      },
+    }),
   },
   variants: {
     background: {

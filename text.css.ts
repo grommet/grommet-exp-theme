@@ -1,18 +1,6 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "./theme.css";
-
-const responsiveStyle = ({
-  desktop,
-  tablet,
-}: {
-  desktop: object;
-  tablet: object;
-}) => ({
-  "@media": {
-    "only screen and (min-width: 768px)": tablet,
-    "only screen and (min-width: 1536px)": desktop,
-  },
-});
+import { responsiveStyle } from "./utils";
 
 const sizeStyle = (
   size: "xsmall" | "small" | "medium" | "large" | "xlarge"
