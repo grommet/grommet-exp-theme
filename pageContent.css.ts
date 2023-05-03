@@ -36,12 +36,6 @@ export const pageContent = recipe({
     }),
   },
   variants: {
-    background: {
-      default: vars.color.background.default,
-      back: vars.color.background.back,
-      front: vars.color.background.front,
-      contrast: vars.color.background.contrast,
-    },
     kind: {
       wide: columnsStyle(),
       narrow: {
