@@ -2,22 +2,22 @@ import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "./theme.css";
 import { responsiveStyle } from "./utils";
 
-const columnsStyle = () => [
+const gridStyle = ({
+  mobile,
+  desktop,
+  tablet,
+}: {
+  mobile?: object;
+  desktop: object;
+  tablet: object;
+}) => [
   {
     display: "grid",
-    maxWidth: vars.page.wide.maxWidth,
-    width: "100%",
-    gridTemplateColumns: `1fr`,
-    gridGap: vars.spacing.medium.desktop,
+    ...mobile,
   },
   responsiveStyle({
-    desktop: {
-      gridTemplateColumns: `${vars.content.medium} 1fr minmax(${vars.content.small}, ${vars.content.medium})`,
-    },
-    tablet: {
-      gridTemplateColumns: `1fr`,
-      width: "100%",
-    },
+    desktop: desktop,
+    tablet: tablet,
   }),
 ];
 
@@ -37,13 +37,52 @@ export const pageContent = recipe({
   },
   variants: {
     kind: {
-      wide: columnsStyle(),
+      wide: {
+        maxWidth: vars.page.wide.maxWidth,
+        width: "100%",
+      },
       narrow: {
         maxWidth: vars.page.narrow.maxWidth,
       },
       full: {
         width: "100%",
       },
+    },
+    layout: {
+      "header-main": gridStyle({
+        mobile: {
+          gridTemplateAreas: `"pageHeader" "pageMain"`,
+          gridTemplateColumns: `1fr`,
+          gridTemplateRows: "auto auto",
+          gridGap: vars.spacing.medium.desktop,
+        },
+        tablet: {
+          gridTemplateAreas: `"pageHeader pageMain"`,
+          gridTemplateColumns: `${vars.content.medium} 1fr`,
+        },
+        desktop: {
+          gridTemplateAreas: `"pageHeader pageMain"`,
+          gridTemplateColumns: `${vars.content.medium} 1fr`,
+        },
+      }),
+      "header-main-aside": gridStyle({
+        mobile: {
+          gridTemplateAreas: `"pageHeader" "pageMain" "pageAside"`,
+          gridTemplateColumns: `1fr`,
+          gridTemplateRows: "auto auto auto",
+          gridGap: vars.spacing.medium.desktop,
+        },
+        desktop: {
+          gridTemplateAreas: `"pageHeader pageMain pageAside"`,
+          gridTemplateColumns: `${vars.content.medium} 1fr auto`,
+        },
+        tablet: {
+          gridTemplateAreas: `"pageHeader pageMain" "pageHeader pageAside"`,
+          gridTemplateColumns: `${vars.content.medium} 1fr`,
+          gridTemplateRows: "auto auto",
+          width: "100%",
+        },
+      }),
     },
   },
 });
