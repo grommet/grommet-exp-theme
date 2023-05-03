@@ -9,6 +9,7 @@ export * from "./grommet.css";
 export * from "./heading.css";
 export * from "./icon.css";
 export * from "./input.css";
+export * from "./legend.css";
 export * from "./page.css";
 export * from "./pageContent.css";
 export * from "./pageHeader.css";
