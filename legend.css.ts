@@ -20,7 +20,16 @@ export const legend = style({
   }
 });
 
+export const legendItem = style({
+  width: 'min-content',
+});
+
+export const legendLabel = style({
+  flex: '0 0 auto',
+});
+
 export const legendSwatch = style({
   width: `1rem`,
   height: `1rem`,
-})
+  flex: '0 0 auto',
+});
