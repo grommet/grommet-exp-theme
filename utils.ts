@@ -1,5 +1,3 @@
-import { vars } from "./theme.css";
-
 export const responsiveStyle = ({
   desktop,
   tablet,
