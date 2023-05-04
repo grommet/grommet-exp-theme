@@ -42,7 +42,7 @@ export const button = recipe({
         ...rounded,
         background: vars.button.primary.background,
         border: `none`,
-        color: `#FFF`,
+        color: vars.button.primary.color,
         ":hover": {
           backgroundColor: vars.button.primary.hover.backgroundColor,
         },
