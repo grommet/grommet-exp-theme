@@ -9,10 +9,10 @@ export const table = style({
 
 const tableCell = style({
   margin: 0,
-  paddingTop: vars.spacing.xsmall.desktop,
-  paddingBottom: vars.spacing.xsmall.desktop,
-  paddingLeft: vars.spacing.small.desktop,
-  paddingRight: vars.spacing.small.desktop,
+  paddingTop: vars.dataTable.cell.paddingTop,
+  paddingBottom: vars.dataTable.cell.paddingBottom,
+  paddingLeft: vars.dataTable.cell.paddingLeft,
+  paddingRight: vars.dataTable.cell.paddingRight,
   textAlign: "start",
 });
 
