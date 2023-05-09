@@ -74,11 +74,12 @@ export const pageContent = recipe({
         },
         desktop: {
           gridTemplateAreas: `"pageHeader pageMain pageAside"`,
-          gridTemplateColumns: `${vars.content.medium} 1fr auto`,
+          // TO DO use t-shirt size, this is midpoint of small/medium
+          gridTemplateColumns: `288px 1fr auto`,
         },
         tablet: {
           gridTemplateAreas: `"pageHeader pageMain" "pageHeader pageAside"`,
-          gridTemplateColumns: `${vars.content.medium} 1fr`,
+          gridTemplateColumns: `288px 1fr`,
           gridTemplateRows: "auto auto",
           width: "100%",
         },
