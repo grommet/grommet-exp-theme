@@ -1,5 +1,26 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "./theme.css";
+import { responsiveStyle } from "./utils";
+
+const sizeStyle = (size: "xsmall" | "small" | "medium" | "large") => [
+  {
+    paddingLeft: vars.button[size].paddingLeft,
+    paddingRight: vars.button[size].paddingRight,
+    paddingTop: vars.button[size].paddingTop,
+    paddingBottom: vars.button[size].paddingBottom,
+    fontSize: vars.button[size].mobile.fontSize,
+    lineHeight: vars.text.lineHeight,
+  },
+  responsiveStyle({
+    desktop: {
+      fontSize: vars.button[size].desktop.fontSize,
+      lineHeight: size === 'medium' ? vars.button.medium.desktop.lineHeight : vars.text.lineHeight,
+    },
+    tablet: {
+      fontSize: vars.button[size].tablet.fontSize,
+    },
+  }),
+];
 
 const rounded = {
   borderRadius: "2em",
@@ -65,38 +86,10 @@ export const button = recipe({
       },
     },
     size: {
-      xsmall: {
-        paddingLeft: vars.spacing.small.desktop,
-        paddingRight: vars.spacing.small.desktop,
-        paddingTop: vars.spacing.xsmall.desktop,
-        paddingBottom: vars.spacing.xsmall.desktop,
-        fontSize: vars.text.xsmall.desktop.fontSize,
-        lineHeight: vars.text.lineHeight,
-      },
-      small: {
-        paddingLeft: vars.button.small.paddingLeft,
-        paddingRight: vars.button.small.paddingRight,
-        paddingTop: vars.button.small.paddingTop,
-        paddingBottom: vars.button.small.paddingBottom,
-        fontSize: vars.text.small.desktop.fontSize,
-        lineHeight: vars.text.lineHeight,
-      },
-      medium: {
-        paddingLeft: vars.button.medium.paddingLeft,
-        paddingRight: vars.button.medium.paddingRight,
-        paddingTop: vars.button.medium.paddingTop,
-        paddingBottom: vars.button.medium.paddingBottom,
-        fontSize: "19px",
-        lineHeight: "24px", // don't rely on rem calculation because of custom fontSize
-      },
-      large: {
-        paddingLeft: vars.button.large.paddingLeft,
-        paddingRight: vars.button.large.paddingRight,
-        paddingTop: vars.button.large.paddingTop,
-        paddingBottom: vars.button.large.paddingBottom,
-        fontSize: vars.text.large.desktop.fontSize,
-        lineHeight: vars.text.lineHeight,
-      },
+      xsmall: sizeStyle("xsmall"),
+      small: sizeStyle("small"),
+      medium: sizeStyle("medium"),
+      large: sizeStyle("large"),
     },
     iconOnly: {
       true: {
