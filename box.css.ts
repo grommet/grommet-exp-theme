@@ -317,6 +317,11 @@ export const box = recipe({
       start: { justifyContent: "flex-start" },
     },
     ...marginVariants,
+    overflow: {
+      hidden: {
+        overflow: "hidden",
+      },
+    },
     ...padVariants,
     position: {
       absolute: { position: "absolute" },
