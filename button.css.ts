@@ -14,7 +14,10 @@ const sizeStyle = (size: "xsmall" | "small" | "medium" | "large") => [
   responsiveStyle({
     desktop: {
       fontSize: vars.button[size].desktop.fontSize,
-      lineHeight: size === 'medium' ? vars.button.medium.desktop.lineHeight : vars.text.lineHeight,
+      lineHeight:
+        size === "medium"
+          ? vars.button.medium.desktop.lineHeight
+          : vars.text.lineHeight,
     },
     tablet: {
       fontSize: vars.button[size].tablet.fontSize,
@@ -185,11 +188,20 @@ const iconSizeStyle = (size: "xsmall" | "small" | "medium" | "large") => [
 
 export const buttonIcon = recipe({
   variants: {
+    kind: {
+      primary: {
+        stroke: vars.button.primary.color,
+      },
+      secondary: {},
+      default: {},
+      nav: {},
+      plain: {},
+    },
     size: {
-      xsmall: iconSizeStyle('xsmall'),
-      small: iconSizeStyle('small'),
-      medium: iconSizeStyle('medium'),
-      large: iconSizeStyle('large'),
-    }
-  }
+      xsmall: iconSizeStyle("xsmall"),
+      small: iconSizeStyle("small"),
+      medium: iconSizeStyle("medium"),
+      large: iconSizeStyle("large"),
+    },
+  },
 });
