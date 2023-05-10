@@ -1,6 +1,27 @@
+import { style } from "@vanilla-extract/css";
 import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "./theme.css";
 import { responsiveStyle } from "./utils";
+import { structuredTokens } from "hpe-design-tokens";
+
+const responsiveContainerStyle = ({
+  small,
+  medium,
+  large,
+  xlarge,
+}: {
+  small?: object;
+  medium?: object;
+  large?: object;
+  xlarge?: object;
+}) => ({
+  "@container": {
+    [`(min-width: ${structuredTokens.content.small})`]: small || {},
+    [`(min-width: ${structuredTokens.content.medium})`]: medium || {},
+    [`(min-width: ${structuredTokens.content.large})`]: large || {},
+    [`(min-width: ${structuredTokens.content.xlarge})`]: xlarge || {},
+  },
+});
 
 const gridStyle = ({
   mobile,
@@ -74,15 +95,27 @@ export const pageContent = recipe({
         },
         desktop: {
           gridTemplateAreas: `"pageHeader pageMain pageAside"`,
-          gridTemplateColumns: `${vars.content.medium} 1fr auto`,
+          // TO DO use t-shirt size, this is midpoint of small/medium
+          gridTemplateColumns: `288px 1fr min(${vars.content.medium}, 100%)`,
         },
         tablet: {
           gridTemplateAreas: `"pageHeader pageMain" "pageHeader pageAside"`,
-          gridTemplateColumns: `${vars.content.medium} 1fr`,
+          gridTemplateColumns: `288px 1fr`,
           gridTemplateRows: "auto auto",
           width: "100%",
         },
       }),
     },
   },
+});
+
+export const actions = style({
+  ...responsiveContainerStyle({
+    small: {
+      paddingTop: vars.spacing.small.desktop,
+    },
+    large: {
+      paddingTop: "0px",
+    },
+  }),
 });
