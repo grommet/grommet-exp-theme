@@ -118,6 +118,7 @@ export const button = recipe({
       },
       style: {
         padding: vars.button.medium.iconOnly.padding,
+        lineHeight: 0,
       },
     },
     {
