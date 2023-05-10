@@ -1,8 +1,35 @@
-import { style } from "@vanilla-extract/css";
+import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "./theme.css";
+import { responsiveStyle } from "./utils";
 
-export const anchor = style({
-  color: vars.text.color.strong,
-  fontWeight: vars.font.medium.fontWeight,
-  fontSize: "inherit",
+const sizeStyle = (size: 'xsmall' | 'small' | 'medium' | 'large') => [
+  {
+    fontSize: vars.anchor[size].mobile.fontSize,
+  },
+  responsiveStyle({
+    desktop: {
+      fontSize: vars.anchor[size].desktop.fontSize,
+    },
+    tablet: {
+      fontSize: vars.anchor[size].tablet.fontSize,
+    },
+  }),
+];
+
+export const anchor = recipe({
+  base: {
+    color: vars.anchor.color,
+    fontWeight: vars.anchor.fontWeight,
+    fontSize: "inherit",
+    textDecoration: vars.anchor.textDecoration,
+  },
+  variants: {
+    size: {
+      xsmall: sizeStyle('xsmall'),
+      small: sizeStyle('small'),
+      medium: sizeStyle('medium'),
+      large: sizeStyle('large'),
+    },
+  },
 });
+

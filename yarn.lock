@@ -605,9 +605,9 @@
   integrity sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==
 
 "@types/node@*":
-  version "20.1.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.1.1.tgz#afc492e8dbe7f672dd3a13674823522b467a45ad"
-  integrity sha512-uKBEevTNb+l6/aCQaKVnUModfEMjAl98lw2Si9P5y4hLu9tm6AlX2ZIoXZX6Wh9lJueYPrGPKk5WMCNHg/u6/A==
+  version "20.1.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.1.2.tgz#8fd63447e3f99aba6c3168fd2ec4580d5b97886f"
+  integrity sha512-CTO/wa8x+rZU626cL2BlbCDzydgnFNgc19h4YvizpTO88MFQxab8wqisxaofQJ/9bLGugRdWIuX/TbIs6VVF6g==
 
 "@types/semver@^7.3.12":
   version "7.5.0"
@@ -1070,9 +1070,9 @@ doctrine@^3.0.0:
     esutils "^2.0.2"
 
 electron-to-chromium@^1.4.284:
-  version "1.4.388"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.388.tgz#ec0d1be823d5b14da56d91ec5c57e84b4624ea45"
-  integrity sha512-xZ0y4zjWZgp65okzwwt00f2rYibkFPHUv9qBz+Vzn8cB9UXIo9Zc6Dw81LJYhhNt0G/vR1OJEfStZ49NKl0YxQ==
+  version "1.4.389"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.389.tgz#ad70b94514f633ee2d12bdd8d7db5e8b13b7816a"
+  integrity sha512-WDgWUOK8ROR7sDFyYmxCUOoDc50lPgYAHAHwnnD1iN3SKO/mpqftb9iIPiEkMKmqYdkrR0j3N/O+YB/U7lSxwg==
 
 es-abstract@^1.19.0, es-abstract@^1.20.4, es-abstract@^1.21.2:
   version "1.21.2"
@@ -1624,7 +1624,7 @@ homedir-polyfill@^1.0.1:
 
 "hpe-design-tokens@https://github.com/grommet/hpe-design-tokens/tarball/stable":
   version "0.1.0"
-  resolved "https://github.com/grommet/hpe-design-tokens/tarball/stable#a032478a1959f0af7148a1210b050e1a5668750f"
+  resolved "https://github.com/grommet/hpe-design-tokens/tarball/stable#62df6de94c3a6ff89e5926646ba8d1dc97742648"
 
 ignore@^5.1.1, ignore@^5.2.0:
   version "5.2.4"
@@ -2258,9 +2258,9 @@ rollup-plugin-copy@^3.4.0:
     is-plain-object "^3.0.0"
 
 rollup@^3.21.0:
-  version "3.21.5"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-3.21.5.tgz#1fbae43dc1079497b04604707f1cf979e51bfe49"
-  integrity sha512-a4NTKS4u9PusbUJcfF4IMxuqjFzjm6ifj76P54a7cKnvVzJaG12BLVR+hgU2YDGHzyMMQNxLAZWuALsn8q2oQg==
+  version "3.21.6"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-3.21.6.tgz#f5649ccdf8fcc7729254faa457cbea9547eb86db"
+  integrity sha512-SXIICxvxQxR3D4dp/3LDHZIJPC8a4anKMHd4E3Jiz2/JnY+2bEjqrOokAauc5ShGVNFHlEFjBXAXlaxkJqIqSg==
   optionalDependencies:
     fsevents "~2.3.2"
 
