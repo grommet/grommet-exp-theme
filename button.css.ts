@@ -164,3 +164,31 @@ export const button = recipe({
     size: `medium`,
   },
 });
+
+const iconSizeStyle = (size: "xsmall" | "small" | "medium" | "large") => [
+  {
+    height: vars.button[size].mobile.fontSize,
+    width: vars.button[size].mobile.fontSize,
+  },
+  responsiveStyle({
+    desktop: {
+      height: vars.button[size].desktop.fontSize,
+      width: vars.button[size].desktop.fontSize,
+    },
+    tablet: {
+      height: vars.button[size].tablet.fontSize,
+      width: vars.button[size].tablet.fontSize,
+    },
+  }),
+];
+
+export const buttonIcon = recipe({
+  variants: {
+    size: {
+      xsmall: iconSizeStyle('xsmall'),
+      small: iconSizeStyle('small'),
+      medium: iconSizeStyle('medium'),
+      large: iconSizeStyle('large'),
+    }
+  }
+});
