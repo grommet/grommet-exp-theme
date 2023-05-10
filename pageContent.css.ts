@@ -112,7 +112,7 @@ export const pageContent = recipe({
 export const actions = style({
   ...responsiveContainerStyle({
     small: {
-      paddingTop: vars.spacing.small.desktop,
+      paddingTop: vars.spacing.medium.desktop,
     },
     large: {
       paddingTop: "0px",
