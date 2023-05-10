@@ -3,7 +3,17 @@ import { vars } from "./theme.css";
 import { responsiveStyle } from "./utils";
 
 const sizeStyle = (
-  size: "xsmall" | "small" | "medium" | "large" | "xlarge"
+  size:
+    | "xsmall"
+    | "small"
+    | "medium"
+    | "large"
+    | "xlarge"
+    | "xxlarge"
+    | "3xl"
+    | "4xl"
+    | "5xl"
+    | "6xl"
 ) => [
   {
     fontSize: vars.text[size].mobile.fontSize,
@@ -26,6 +36,7 @@ const small = sizeStyle("small");
 const medium = sizeStyle("medium");
 const large = sizeStyle("large");
 const xlarge = sizeStyle("xlarge");
+const xxlarge = sizeStyle("xxlarge");
 
 export const text = recipe({
   base: {
@@ -41,6 +52,11 @@ export const text = recipe({
       xweak: { color: vars.text.color.xweak },
     },
     size: {
+      "6xl": sizeStyle("6xl"),
+      "5xl": sizeStyle("5xl"),
+      "4xl": sizeStyle("4xl"),
+      "3xl": sizeStyle("3xl"),
+      xxlarge: xxlarge,
       xlarge: xlarge,
       large: large,
       medium: medium,
