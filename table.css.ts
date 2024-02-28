@@ -7,7 +7,7 @@ export const table = style({
   width: "inherit",
 });
 
-const tableCell = style({
+const baseCell = style({
   margin: 0,
   paddingTop: vars.dataTable.cell.paddingTop,
   paddingBottom: vars.dataTable.cell.paddingBottom,
@@ -17,7 +17,7 @@ const tableCell = style({
 });
 
 export const th = style([
-  tableCell,
+  baseCell,
   {
     color: vars.dataTable.header.cell.color,
     fontWeight: vars.dataTable.header.cell.fontWeight,
@@ -25,7 +25,7 @@ export const th = style([
 ]);
 
 export const td = style([
-  tableCell,
+  baseCell,
   {
     borderBottom: `${vars.dataTable.body.cell.borderWidth} solid ${vars.dataTable.body.cell.borderColor}`,
   },
